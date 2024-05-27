@@ -1,0 +1,54 @@
+{
+    "name": "TouchActionAsset",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "41fbde1d-5677-4785-a392-5211df566d7d",
+            "actions": [
+                {
+                    "name": "SingleTapPosition",
+                    "type": "Value",
+                    "id": "fc197124-b78c-4fd0-8d24-9f76823050d8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SingleTapPressed",
+                    "type": "Button",
+                    "id": "31d32a8e-ba47-4634-86fa-f4e5abf1e589",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3cf5642e-bcdc-4383-b658-959125a369a2",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SingleTapPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31b619a6-f50d-408a-ac31-0aa0dcc5d6a4",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SingleTapPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

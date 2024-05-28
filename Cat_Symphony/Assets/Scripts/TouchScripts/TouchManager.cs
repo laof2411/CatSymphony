@@ -19,17 +19,23 @@ public class TouchManager : MonoBehaviour
 
     private void OnEnable()
     {
+        touchPositionAction.Enable();
+        touchPressedAction.Enable();   
         touchPressedAction.performed += TouchPressed;
     }
     private void OnDisable()
     {
+        touchPositionAction.Disable();
+        touchPressedAction.Disable();
         touchPressedAction.performed -= TouchPressed;
     }
 
     private void TouchPressed(InputAction.CallbackContext context)
     {
 
-        float _value = context.ReadValue<float>();
+        //Vector3 _value = Camera.main.ScreenToWorldPoint(touchPositionAction.ReadValue<Vector2>());
+        Vector3 _value = touchPositionAction.ReadValue<Vector2>();
+        
         Debug.Log(_value);
     }
 

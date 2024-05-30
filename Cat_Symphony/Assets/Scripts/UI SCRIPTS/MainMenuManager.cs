@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject mainMenuScreen;
-    [SerializeField] private GameObject songSelectionScreen;
-    [SerializeField] private GameObject dripStoreScreen;
-    [SerializeField] private GameObject settingsScreen;
-    [SerializeField] private GameObject creditsScreen;
+    [SerializeField] private GameObject[] mainMenuScreen;
+    [SerializeField] private GameObject[] songSelectionScreen;
+    [SerializeField] private GameObject[] dripStoreScreen;
+    [SerializeField] private GameObject[] settingsScreen;
+    [SerializeField] private GameObject[] creditsScreen;
+
+    [SerializeField] private GameObject[] sides;
 
     [SerializeField] private bool menuScreenHasBeenEntered;
 
@@ -35,7 +37,10 @@ public class MainMenuManager : MonoBehaviour
     void OpenMainMenuScreen()
     {
         HideAllScreens();
-        mainMenuScreen.SetActive(true);
+        for (int i = 0; i < mainMenuScreen.Length; i++)
+        {
+            mainMenuScreen[i].SetActive(true);
+        }
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[0];
         menusButtonHolderObj.SetActive(false);
@@ -46,7 +51,10 @@ public class MainMenuManager : MonoBehaviour
     public void OpenSongSelectionScreen()
     {
         HideAllScreens();
-        songSelectionScreen.SetActive(true);
+        for (int i = 0; i < songSelectionScreen.Length; i++)
+        {
+            songSelectionScreen[i].SetActive(true);
+        }
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[1];
         menusButtonHolderObj.SetActive(true);
@@ -55,7 +63,10 @@ public class MainMenuManager : MonoBehaviour
     public void OpenDripStoreScreen()
     {
         HideAllScreens();
-        dripStoreScreen.SetActive(true);
+        for (int i = 0; i < dripStoreScreen.Length; i++)
+        {
+            dripStoreScreen[i].SetActive(true);
+        }
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[2];
         menusButtonHolderObj.SetActive(true);
@@ -64,7 +75,10 @@ public class MainMenuManager : MonoBehaviour
     public void OpenSettingsScreen()
     {
         HideAllScreens();
-        settingsScreen.SetActive(true);
+        for (int i = 0; i < settingsScreen.Length; i++)
+        {
+            settingsScreen[i].SetActive(true);
+        }
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[3];
         menusButtonHolderObj.SetActive(true);
@@ -73,7 +87,10 @@ public class MainMenuManager : MonoBehaviour
     public void OpenCreditsScreen()
     {
         HideAllScreens();
-        creditsScreen.SetActive(true);
+        for (int i = 0; i < creditsScreen.Length; i++)
+        {
+            creditsScreen[i].SetActive(true);
+        }
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[4];
         menusButtonHolderObj.SetActive(false);
@@ -81,9 +98,25 @@ public class MainMenuManager : MonoBehaviour
 
     public void HideAllScreens()
     {
-        songSelectionScreen.SetActive(false);
-        dripStoreScreen.SetActive(false);
-        settingsScreen.SetActive(false);
-        creditsScreen.SetActive(false);
+        for (int i = 0; i < mainMenuScreen.Length; i++)
+        {
+            mainMenuScreen[i].SetActive(false);
+        }
+        for (int i = 0; i < songSelectionScreen.Length; i++)
+        {
+            songSelectionScreen[i].SetActive(false);
+        }
+        for (int i = 0; i < dripStoreScreen.Length; i++)
+        {
+            dripStoreScreen[i].SetActive(false);
+        }
+        for (int i = 0; i < settingsScreen.Length; i++)
+        {
+            settingsScreen[i].SetActive(false);
+        }
+        for (int i = 0; i < creditsScreen.Length; i++)
+        {
+            creditsScreen[i].SetActive(false);
+        }
     }
 }

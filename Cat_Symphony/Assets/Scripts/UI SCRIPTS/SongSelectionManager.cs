@@ -37,9 +37,9 @@ public class SongSelectionManager : MonoBehaviour
     {
         ResetSeletionToDefault();
         songSelection1[0].transform.localScale = newSize;
-        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 120, songSelection1[0].transform.position.z);
-        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y - 35, songSelection2[0].transform.position.z);
-        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - 35, songSelection3[0].transform.position.z);
+        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 275, songSelection1[0].transform.position.z);
+        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y - 50, songSelection2[0].transform.position.z);
+        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - 50, songSelection3[0].transform.position.z);
 
         songSelection1[1].GetComponent<Image>().color = Color.white;
         songSelection1[2].SetActive(true);
@@ -51,9 +51,9 @@ public class SongSelectionManager : MonoBehaviour
     {
         ResetSeletionToDefault();
         songSelection2[0].transform.localScale = newSize;
-        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 132, songSelection1[0].transform.position.z);
-        songSelection2[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + 230, songSelection3[0].transform.position.z);
-        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - 55, songSelection3[0].transform.position.z);
+        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 268, songSelection1[0].transform.position.z);
+        songSelection2[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + 528, songSelection3[0].transform.position.z);
+        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - 67, songSelection3[0].transform.position.z);
 
         songSelection2[1].GetComponent<Image>().color = Color.white;
         songSelection2[2].SetActive(true);
@@ -65,9 +65,9 @@ public class SongSelectionManager : MonoBehaviour
     {
         ResetSeletionToDefault();
         songSelection3[0].transform.localScale = newSize;
-        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 130, songSelection1[0].transform.position.z);
-        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y + 130, songSelection2[0].transform.position.z);
-        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + 105, songSelection3[0].transform.position.z);
+        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 265, songSelection1[0].transform.position.z);
+        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y + 265, songSelection2[0].transform.position.z);
+        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + 250, songSelection3[0].transform.position.z);
 
         songSelection3[1].GetComponent<Image>().color = Color.white;
         songSelection3[2].SetActive(true);

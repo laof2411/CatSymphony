@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class NoteBasicMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private Transform transformObjective;
+    [SerializeField] private float moveSpeed;
+
+    private void Start()
     {
         
+        transform.LookAt(transformObjective);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
+        transform.position += moveSpeed * Time.deltaTime * transform.forward;
+
     }
+
 }

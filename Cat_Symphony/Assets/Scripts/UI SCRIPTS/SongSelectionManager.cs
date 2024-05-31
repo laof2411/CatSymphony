@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,9 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] public int[] starsInSong2 = new int[3];
     [SerializeField] public int[] starsInSong3 = new int[3];
 
+    [SerializeField] private GameObject box;
+    [SerializeField] private float boxHeight;
+
     private void Start()
     {
         originalPosition[0] = songSelection1[0].transform.position;
@@ -31,15 +35,19 @@ public class SongSelectionManager : MonoBehaviour
         MenuTitle.SetActive(true);
 
         selectedSong = 0;
+
+        boxHeight = box.GetComponent<RectTransform>().rect.height;
     }
 
     public void Selection1Selected()
     {
         ResetSeletionToDefault();
         songSelection1[0].transform.localScale = newSize;
-        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 275, songSelection1[0].transform.position.z);
-        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y - 50, songSelection2[0].transform.position.z);
-        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - 50, songSelection3[0].transform.position.z);
+
+
+        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + EquationDistanceMove(275), songSelection1[0].transform.position.z);
+        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y - EquationDistanceMove(50), songSelection2[0].transform.position.z);
+        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - EquationDistanceMove(50), songSelection3[0].transform.position.z);
 
         songSelection1[1].GetComponent<Image>().color = Color.white;
         songSelection1[2].SetActive(true);
@@ -47,13 +55,18 @@ public class SongSelectionManager : MonoBehaviour
         selectedSong = 1;
     }
 
+    private float EquationDistanceMove(int number)
+    {
+        return (number / boxHeight) * 500;
+    }
+
     public void Selection2Selected()
     {
         ResetSeletionToDefault();
         songSelection2[0].transform.localScale = newSize;
-        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 268, songSelection1[0].transform.position.z);
-        songSelection2[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + 528, songSelection3[0].transform.position.z);
-        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - 67, songSelection3[0].transform.position.z);
+        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + EquationDistanceMove(268), songSelection1[0].transform.position.z);
+        songSelection2[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + EquationDistanceMove(528), songSelection3[0].transform.position.z);
+        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y - EquationDistanceMove(67), songSelection3[0].transform.position.z);
 
         songSelection2[1].GetComponent<Image>().color = Color.white;
         songSelection2[2].SetActive(true);
@@ -65,9 +78,9 @@ public class SongSelectionManager : MonoBehaviour
     {
         ResetSeletionToDefault();
         songSelection3[0].transform.localScale = newSize;
-        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + 265, songSelection1[0].transform.position.z);
-        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y + 265, songSelection2[0].transform.position.z);
-        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + 250, songSelection3[0].transform.position.z);
+        songSelection1[0].transform.position = new Vector3(songSelection1[0].transform.position.x, songSelection1[0].transform.position.y + EquationDistanceMove(265), songSelection1[0].transform.position.z);
+        songSelection2[0].transform.position = new Vector3(songSelection2[0].transform.position.x, songSelection2[0].transform.position.y + EquationDistanceMove(265), songSelection2[0].transform.position.z);
+        songSelection3[0].transform.position = new Vector3(songSelection3[0].transform.position.x, songSelection3[0].transform.position.y + EquationDistanceMove(250), songSelection3[0].transform.position.z);
 
         songSelection3[1].GetComponent<Image>().color = Color.white;
         songSelection3[2].SetActive(true);

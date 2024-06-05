@@ -23,34 +23,7 @@ public class SingleTapNoteEvent : MonoBehaviour, IPointerClickHandler
     private void SingleTap()
     {
 
-        if(Vector3.Distance(transformObjective.position, transform.position) <= purrfectDistance)
-        {
-
-            UItext.text = "Purrfect";
-            Destroy(gameObject);
-
-        }
-        else if(Vector3.Distance(transformObjective.position, transform.position) <= greatDistance)
-        {
-
-            UItext.text = "Great";
-            Destroy(gameObject);
-
-        }
-        else if (Vector3.Distance(transformObjective.position, transform.position) <= okayDistance)
-        {
-
-            UItext.text = "Okay";
-            Destroy(gameObject);
-
-        }
-        else
-        {
-
-            UItext.text = "Miss";
-            Destroy(gameObject);
-
-        }
+        FindFirstObjectByType<NoteTouchManager>().ProcessTap(transform,transformObjective);
 
     }
 

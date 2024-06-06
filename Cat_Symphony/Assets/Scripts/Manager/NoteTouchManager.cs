@@ -1,46 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class NoteTouchManager : MonoBehaviour
 {
     [SerializeField] private HUDManager HUD;
+    [SerializeField] private ScoreManager scoreManager;
 
     [SerializeField] private float missDistance;
     [SerializeField] private float okayDistance;
     [SerializeField] private float greatDistance;
     [SerializeField] private float purrfectDistance;
 
+    [SerializeField] private int missScore;
+    [SerializeField] private int okayScore;
+    [SerializeField] private int greatScore;
+    [SerializeField] private int purrfectScore;
+
     public void ProcessTap(Transform noteTransform, Transform transformObjective)
     {
+
+        Debug.Log(Vector3.Distance(transformObjective.position, noteTransform.position));
 
         if (Vector3.Distance(transformObjective.position, noteTransform.position) <= purrfectDistance)
         {
 
             HUD.UpdateSuccessText("Purrfect!");
-            Destroy(gameObject);
+            scoreManager.UpdateScore(purrfectScore);
+            Destroy(noteTransform.gameObject);
 
         }
         else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= greatDistance)
         {
 
             HUD.UpdateSuccessText("Great");
-            Destroy(gameObject);
+            scoreManager.UpdateScore(greatScore);
+            Destroy(noteTransform.gameObject);
 
         }
         else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= okayDistance)
         {
 
             HUD.UpdateSuccessText("Okay");
-            Destroy(gameObject);
+            scoreManager.UpdateScore(okayScore);
+            Destroy(noteTransform.gameObject);
 
         }
         else
         {
 
             HUD.UpdateSuccessText("Miss");
-            Destroy(gameObject);
+            Destroy(noteTransform.gameObject);
 
         }
 

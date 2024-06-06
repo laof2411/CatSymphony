@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
@@ -18,17 +16,17 @@ public class HUDManager : MonoBehaviour
 
     }
 
-    public void UpdateComboText(string stringToUse)
+    public void UpdateComboText(int valueToUse)
     {
 
-        comboText.text = stringToUse;
+        comboText.text = "x" + valueToUse.ToString();
 
     }
 
-    public void UpdateScoreText(string stringToUse)
+    public void UpdateScoreText(int valueToUse)
     {
 
-        scoreText.text = stringToUse;
+        scoreText.text = valueToUse.ToString();
 
     }
 

@@ -9,7 +9,7 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private GameObject[] songSelection1 = new GameObject[4];
     [SerializeField] private GameObject[] songSelection2 = new GameObject[4];
     [SerializeField] private GameObject[] songSelection3 = new GameObject[4];
-    [SerializeField] private GameObject MenuTitle;
+    [SerializeField] private GameObject menuTitle;
 
     [SerializeField] private int selectedSong;
 
@@ -43,7 +43,7 @@ public class SongSelectionManager : MonoBehaviour
         originalPosition[2] = songSelection3[0].transform.position;
 
         ResetSeletionToDefault();
-        MenuTitle.SetActive(true);
+        menuTitle.SetActive(true);
 
         selectedSong = 0;
 
@@ -175,7 +175,7 @@ public class SongSelectionManager : MonoBehaviour
 
     public void ResetSeletionToDefault()
     {
-        MenuTitle.SetActive(false);
+        menuTitle.SetActive(false);
 
         songSelection1[2].SetActive(false);
         songSelection2[2].SetActive(false);

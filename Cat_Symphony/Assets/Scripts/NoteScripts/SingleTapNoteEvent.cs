@@ -16,7 +16,7 @@ public class SingleTapNoteEvent : MonoBehaviour, IPointerClickHandler
     private void SingleTap()
     {
 
-        FindFirstObjectByType<NoteTouchManager>().ProcessTap(transform,transformObjective);
+        FindFirstObjectByType<NoteTouchManager>().ProcessSingleTap(transform,transformObjective);
 
     }
 

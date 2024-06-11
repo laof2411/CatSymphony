@@ -1,18 +1,43 @@
 using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class HoldTapNoteEvent : MonoBehaviour
+public class HoldTapNoteEvent : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public bool isHoldingTouch = false;
+    public bool firstTimeTouch = true;
+    public float timer = 3f;
+
+    [SerializeField] private Transform transformObjective;
+
+    public void OnPointerDown(PointerEventData eventData)
     {
-        
+
+        FindFirstObjectByType<NoteTouchManager>().ProcessHoldTap(this.transform, transformObjective, timer <= 0);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerUp(PointerEventData eventData)
     {
-        
+
+
+
     }
+
+    private IEnumerator HoldPointer()
+    {
+
+        while(isHoldingTouch)
+        {
+
+            timer -= Time.deltaTime;
+            
+
+        }
+
+        return null;
+    }
+
 }

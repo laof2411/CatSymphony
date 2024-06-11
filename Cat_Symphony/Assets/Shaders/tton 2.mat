@@ -66,6 +66,6 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Toon_Ramp_Tint: {r: 0.4716981, g: 0.23807405, b: 0.23807405, a: 1}
-    - _Color: {r: 0, g: 1, b: 0.43849897, a: 1}
+    - Toon_Ramp_Tint: {r: 1, g: 0, b: 0, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

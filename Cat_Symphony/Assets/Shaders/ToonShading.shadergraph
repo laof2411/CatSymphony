@@ -1929,7 +1929,7 @@
     "m_RefNameGeneratedByDisplayName": "Rim Power",
     "m_DefaultReferenceName": "Rim_Power",
     "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
+    "m_GeneratePropertyBlock": false,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
     "m_DismissedVersion": 0,

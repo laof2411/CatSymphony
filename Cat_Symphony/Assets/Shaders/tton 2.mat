@@ -62,10 +62,10 @@ Material:
     - Brightness_Rim: 3.25
     - Rim_Power: 1.76
     - Toon_Ramp_Offset: 0.49
-    - Toon_Ramp_Smoothness: 0.203
+    - Toon_Ramp_Smoothness: 0.314
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Toon_Ramp_Tint: {r: 1, g: 0, b: 0, a: 1}
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - Toon_Ramp_Tint: {r: 0, g: 0.045058772, b: 0.1509434, a: 1}
+    - _Color: {r: 0.0039215707, g: 0.047065977, b: 0.09411765, a: 1}
   m_BuildTextureStacks: []

@@ -32,18 +32,39 @@ public class DripStoreManager : MonoBehaviour
 
     [SerializeField] private GameObject[] modifiableObjSprites = new GameObject[4];
     [SerializeField] private GameObject[] lightframesAdOns = new GameObject[4];
+    [SerializeField] private GameObject[] locks = new GameObject[4];
 
 
     [SerializeField] private TextMeshProUGUI itemNamePlaceholder;
+    [SerializeField] private TextMeshProUGUI itemPricePlaceholder;
 
     [SerializeField] private int currentLookCombination;
 
     [SerializeField] private bool movementRight = true;
 
+
     void Start()
     {
-        textShowCurrentMoney.text = "" + currentMoney;
+        UpdateCurrentMoney();
         ShutdownLightFrame();
+
+        currentListSelection = 0;
+        CleanUp();
+    }
+
+    private void UpdateCurrentMoney()
+    {
+        textShowCurrentMoney.text = "" + currentMoney;
+    }
+
+
+    private void CleanUp()
+    {
+        for (int i = 0; i < lightframesAdOns.Length; i++)
+        {
+            lightframesAdOns[i].SetActive(false);
+            locks[i].SetActive(false);
+        }
     }
 
     #region forwardOrbackWardOnList
@@ -99,6 +120,8 @@ public class DripStoreManager : MonoBehaviour
                         }
                     }
 
+                    UpdateItemPrice(catStoreItem[selectionListCat].itemCost, catStoreItem[selectionListCat].unlocked);
+                    LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
                     UpdateItemName(catStoreItem[selectionListCat].itemName);
                     UpdateSelectionList(catStoreItem[selectionListCat].itemSprite);
                     break;
@@ -136,6 +159,9 @@ public class DripStoreManager : MonoBehaviour
                         }
                     }
 
+
+                    UpdateItemPrice(clothesStoreItem[selectionListClothes].itemCost, clothesStoreItem[selectionListClothes].unlocked);
+                    LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
                     UpdateItemName(clothesStoreItem[selectionListClothes].itemName);
                     UpdateSelectionList(clothesStoreItem[selectionListClothes].itemSprite);
                     break;
@@ -173,6 +199,9 @@ public class DripStoreManager : MonoBehaviour
                         }
                     }
 
+
+                    UpdateItemPrice(accessoriesStoreItem[selectionListAccesories].itemCost, accessoriesStoreItem[selectionListAccesories].unlocked);
+                    LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
                     UpdateItemName(accessoriesStoreItem[selectionListAccesories].itemName);
                     UpdateSelectionList(accessoriesStoreItem[selectionListAccesories].itemSprite);
                     break;
@@ -210,6 +239,8 @@ public class DripStoreManager : MonoBehaviour
                         }
                     }
 
+                    UpdateItemPrice(bongosStoreItem[selectionListBongo].itemCost, bongosStoreItem[selectionListBongo].unlocked);
+                    LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
                     UpdateItemName(bongosStoreItem[selectionListBongo].itemName);
                     UpdateSelectionList(bongosStoreItem[selectionListBongo].itemSprite);
                     break;
@@ -229,11 +260,149 @@ public class DripStoreManager : MonoBehaviour
         modifiableObjSprites[currentListSelection].GetComponent<Image>().sprite = newSprite;
     }
 
+    private void LockedOrUnlocked(bool unlocked)
+    {
+        if (unlocked)
+        {
+            locks[currentListSelection].SetActive(false);
+        }
+        else if (!unlocked)
+        {
+            locks[currentListSelection].SetActive(true);
+        }
+        Debug.Log(unlocked);
+    }
+
     private void UpdateItemName(string newName)
     {
         itemNamePlaceholder.text = newName;
     }
 
+    private void UpdateItemPrice(int newPrice, bool unlocked)
+    {
+        if (unlocked)
+        {
+            itemPricePlaceholder.text = "$ --";
+        }
+        else if (!unlocked)
+        {
+            itemPricePlaceholder.text = "$ " + newPrice;
+        }
+    }
+
+    private void UpdateItemPriceToNull()
+    {
+
+    }
+
+    public void TryToBuy()
+    {
+        switch (currentListSelection)
+        {
+            case 0:
+                {
+                    if (catStoreItem[selectionListCat].unlocked == false)
+                    {
+                        if (currentMoney >= catStoreItem[selectionListCat].itemCost)
+                        {
+                            currentMoney -= catStoreItem[selectionListCat].itemCost;
+
+                            catStoreItem[selectionListCat].unlocked = true;
+                            LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
+                            UpdateItemPrice(catStoreItem[selectionListCat].itemCost, catStoreItem[selectionListCat].unlocked);
+                        }
+                        else
+                        {
+                            Debug.Log("You dont have enough money");
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Item already adquired");
+                    }
+
+                    break;
+                }
+            case 1:
+                {
+                    if (clothesStoreItem[selectionListClothes].unlocked == false)
+                    {
+                        if (currentMoney >= clothesStoreItem[selectionListClothes].itemCost)
+                        {
+                            currentMoney -= clothesStoreItem[selectionListClothes].itemCost;
+
+                            clothesStoreItem[selectionListClothes].unlocked = true;
+                            LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
+                            UpdateItemPrice(clothesStoreItem[selectionListClothes].itemCost, clothesStoreItem[selectionListClothes].unlocked);
+                        }
+                        else
+                        {
+                            Debug.Log("You dont have enough money");
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Item already adquired");
+                    }
+
+
+                    break;
+                }
+            case 2:
+                {
+                    if (accessoriesStoreItem[selectionListAccesories].unlocked == false)
+                    {
+                        if (currentMoney >= accessoriesStoreItem[selectionListAccesories].itemCost)
+                        {
+                            currentMoney -= accessoriesStoreItem[selectionListAccesories].itemCost;
+
+                            accessoriesStoreItem[selectionListAccesories].unlocked = true;
+                            LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
+                            UpdateItemPrice(accessoriesStoreItem[selectionListAccesories].itemCost, accessoriesStoreItem[selectionListAccesories].unlocked);
+                        }
+                        else
+                        {
+                            Debug.Log("You dont have enough money");
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Item already adquired");
+                    }
+
+                    break;
+                }
+            case 3:
+                {
+                    if (bongosStoreItem[selectionListBongo].unlocked == false)
+                    {
+                        if (currentMoney >= bongosStoreItem[selectionListBongo].itemCost)
+                        {
+                            currentMoney -= bongosStoreItem[selectionListBongo].itemCost;
+                            bongosStoreItem[selectionListBongo].unlocked = true;
+                            LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
+                            UpdateItemPrice(bongosStoreItem[selectionListBongo].itemCost, bongosStoreItem[selectionListBongo].unlocked);
+                        }
+                        else
+                        {
+                            Debug.Log("You dont have enough money");
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Item already adquired");
+                    }
+
+                    break;
+                }
+            default:
+                {
+                    Debug.LogError("GAME ERROR: 'currentListSelection' does not contain a valid selection!");
+                    break;
+                }
+        }
+        UpdateCurrentMoney();
+    }
 
     #region changeListSelection
     public void ChangeSelectionCat()
@@ -277,7 +446,6 @@ public class DripStoreManager : MonoBehaviour
 
         lightframesAdOns[3].SetActive(true);
     }
-
 
     public void ShutdownLightFrame()
     {

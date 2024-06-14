@@ -6,38 +6,48 @@ using UnityEngine.EventSystems;
 public class HoldTapNoteEvent : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
 
+    public bool isFirstNote = true;
     public bool isHoldingTouch = false;
     public bool firstTimeTouch = true;
-    public float timer = 3f;
 
     [SerializeField] private Transform transformObjective;
+    [SerializeField] private HoldTapNoteEvent otherNote;
+
+    [SerializeField] private LayerMask layerMask;
+
 
     public void OnPointerDown(PointerEventData eventData)
     {
 
-        FindFirstObjectByType<NoteTouchManager>().ProcessHoldTap(this.transform, transformObjective, timer <= 0);
+        if (isFirstNote && firstTimeTouch)
+        {
+
+            FindFirstObjectByType<NoteTouchManager>().ProcessHoldTap(this.transform, transformObjective);
+            firstTimeTouch = false;
+            otherNote.firstTimeTouch = false;
+
+        }
 
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
 
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
 
-
-    }
-
-    private IEnumerator HoldPointer()
-    {
-
-        while(isHoldingTouch)
+        if (!firstTimeTouch)
         {
+            if(Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+            {
+                if(hit.transform.gameObject == otherNote.gameObject)
+                {
 
-            timer -= Time.deltaTime;
-            
+                    FindFirstObjectByType<NoteTouchManager>().ProcessHoldTap(otherNote.transform, transformObjective);
 
+                }
+
+            }
         }
-
-        return null;
     }
 
 }

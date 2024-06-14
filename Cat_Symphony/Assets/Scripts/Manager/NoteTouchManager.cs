@@ -54,7 +54,7 @@ public class NoteTouchManager : MonoBehaviour
 
     }
 
-    public void ProcessHoldTap(Transform noteTransform, Transform transformObjective, bool endOfNote)
+    public void ProcessHoldTap(Transform noteTransform, Transform transformObjective)
     {
 
         if (Vector3.Distance(transformObjective.position, noteTransform.position) <= purrfectDistance)
@@ -84,9 +84,17 @@ public class NoteTouchManager : MonoBehaviour
         {
 
             HUD.UpdateSuccessText("Miss");
+            scoreManager.UpdateScore(missScore);
             //Destroy(noteTransform.gameObject);
 
         }
+
+    }
+
+    public void InstaMissNote()
+    {
+
+        HUD.UpdateSuccessText("Miss");
 
     }
 

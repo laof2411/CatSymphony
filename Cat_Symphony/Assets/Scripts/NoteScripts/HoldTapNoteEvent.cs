@@ -1,5 +1,3 @@
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,6 +7,8 @@ public class HoldTapNoteEvent : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public bool isFirstNote = true;
     public bool isHoldingTouch = false;
     public bool firstTimeTouch = true;
+
+    [SerializeField] private bool hasPaw;
 
     [SerializeField] private Transform transformObjective;
     [SerializeField] private HoldTapNoteEvent otherNote;
@@ -22,7 +22,7 @@ public class HoldTapNoteEvent : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         if (isFirstNote && firstTimeTouch)
         {
 
-            FindFirstObjectByType<NoteTouchManager>().ProcessHoldTap(this.transform, transformObjective);
+            FindFirstObjectByType<NoteTouchManager>().ProcessTap(this.transform, transformObjective, hasPaw);
             firstTimeTouch = false;
             otherNote.firstTimeTouch = false;
 
@@ -42,7 +42,7 @@ public class HoldTapNoteEvent : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 if(hit.transform.gameObject == otherNote.gameObject)
                 {
 
-                    FindFirstObjectByType<NoteTouchManager>().ProcessHoldTap(otherNote.transform, transformObjective);
+                    FindFirstObjectByType<NoteTouchManager>().ProcessTap(otherNote.transform, transformObjective, hasPaw);
 
                 }
 

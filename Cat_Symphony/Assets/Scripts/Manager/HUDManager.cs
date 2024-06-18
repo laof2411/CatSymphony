@@ -8,6 +8,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI sucessText;
     [SerializeField] private TextMeshProUGUI comboText;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI pawsText;
 
     public void UpdateSuccessText(string stringToUse)
     {
@@ -27,6 +28,13 @@ public class HUDManager : MonoBehaviour
     {
 
         scoreText.text = valueToUse.ToString();
+
+    }
+
+    public void UpdatePawsText(int valueToUse)
+    {
+
+        pawsText.text = valueToUse.ToString() + "/3";
 
     }
 

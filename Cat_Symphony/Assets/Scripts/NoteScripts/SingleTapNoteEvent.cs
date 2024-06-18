@@ -5,6 +5,7 @@ public class SingleTapNoteEvent : MonoBehaviour, IPointerClickHandler
 {
 
     [SerializeField] private Transform transformObjective;
+    [SerializeField] private bool hasPaw;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -16,7 +17,7 @@ public class SingleTapNoteEvent : MonoBehaviour, IPointerClickHandler
     private void SingleTap()
     {
 
-        FindFirstObjectByType<NoteTouchManager>().ProcessSingleTap(transform,transformObjective);
+        FindFirstObjectByType<NoteTouchManager>().ProcessTap(transform,transformObjective, hasPaw);
 
     }
 

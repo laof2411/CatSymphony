@@ -15,46 +15,7 @@ public class NoteTouchManager : MonoBehaviour
     [SerializeField] private int greatScore;
     [SerializeField] private int purrfectScore;
 
-    public void ProcessSingleTap(Transform noteTransform, Transform transformObjective)
-    {
-
-        Debug.Log(Vector3.Distance(transformObjective.position, noteTransform.position));
-
-        if (Vector3.Distance(transformObjective.position, noteTransform.position) <= purrfectDistance)
-        {
-
-            HUD.UpdateSuccessText("Purrfect!");
-            scoreManager.UpdateScore(purrfectScore);
-            Destroy(noteTransform.gameObject);
-
-        }
-        else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= greatDistance)
-        {
-
-            HUD.UpdateSuccessText("Great");
-            scoreManager.UpdateScore(greatScore);
-            Destroy(noteTransform.gameObject);
-
-        }
-        else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= okayDistance)
-        {
-
-            HUD.UpdateSuccessText("Okay");
-            scoreManager.UpdateScore(okayScore);
-            Destroy(noteTransform.gameObject);
-
-        }
-        else
-        {
-
-            HUD.UpdateSuccessText("Miss");
-            Destroy(noteTransform.gameObject);
-
-        }
-
-    }
-
-    public void ProcessHoldTap(Transform noteTransform, Transform transformObjective)
+    public void ProcessTap(Transform noteTransform, Transform transformObjective, bool hasPaw)
     {
 
         if (Vector3.Distance(transformObjective.position, noteTransform.position) <= purrfectDistance)
@@ -63,6 +24,7 @@ public class NoteTouchManager : MonoBehaviour
             HUD.UpdateSuccessText("Purrfect!");
             scoreManager.UpdateScore(purrfectScore);
             //Destroy(noteTransform.gameObject);
+
         }
         else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= greatDistance)
         {
@@ -91,10 +53,19 @@ public class NoteTouchManager : MonoBehaviour
 
     }
 
+    public void ProcessFreeStyleNote(Transform noteTransform)
+    {
+
+        HUD.UpdateSuccessText("Okay");
+        scoreManager.UpdateScore(okayScore);
+
+    }
+
     public void InstaMissNote()
     {
 
         HUD.UpdateSuccessText("Miss");
+        scoreManager.UpdateScore(missScore);
 
     }
 

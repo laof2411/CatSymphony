@@ -1,23 +1,29 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SingleTapNoteEvent : MonoBehaviour, IPointerClickHandler
+public class SingleTapNoteEvent : BaseNoteScript, IPointerClickHandler
 {
 
     [SerializeField] private Transform transformObjective;
-    [SerializeField] private bool hasPaw;
 
     public void OnPointerClick(PointerEventData eventData)
     {
 
-        SingleTap();
+        if (!hasBeenInteractedWith)
+        {
+
+            SingleTap();
+            hasBeenInteractedWith = true;
+
+        }
+
 
     }    
 
     private void SingleTap()
     {
 
-        FindFirstObjectByType<NoteTouchManager>().ProcessTap(transform,transformObjective, hasPaw);
+        FindFirstObjectByType<NoteTouchManager>().ProcessTap(transform,transformObjective);
 
     }
 

@@ -15,7 +15,7 @@ public class NoteTouchManager : MonoBehaviour
     [SerializeField] private int greatScore;
     [SerializeField] private int purrfectScore;
 
-    public void ProcessTap(Transform noteTransform, Transform transformObjective, bool hasPaw)
+    public void ProcessTap(Transform noteTransform, Transform transformObjective)
     {
 
         if (Vector3.Distance(transformObjective.position, noteTransform.position) <= purrfectDistance)
@@ -23,6 +23,7 @@ public class NoteTouchManager : MonoBehaviour
 
             HUD.UpdateSuccessText("Purrfect!");
             scoreManager.UpdateScore(purrfectScore);
+            noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
             //Destroy(noteTransform.gameObject);
 
         }
@@ -31,6 +32,7 @@ public class NoteTouchManager : MonoBehaviour
 
             HUD.UpdateSuccessText("Great");
             scoreManager.UpdateScore(greatScore);
+            noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
             //Destroy(noteTransform.gameObject);
 
         }
@@ -39,6 +41,7 @@ public class NoteTouchManager : MonoBehaviour
 
             HUD.UpdateSuccessText("Okay");
             scoreManager.UpdateScore(okayScore);
+            noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
             //Destroy(noteTransform.gameObject);
 
         }

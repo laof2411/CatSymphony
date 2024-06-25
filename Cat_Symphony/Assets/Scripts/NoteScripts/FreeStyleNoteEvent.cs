@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class FreeStyleNoteEvent : MonoBehaviour, IPointerClickHandler
+public class FreeStyleNoteEvent : BaseNoteScript, IPointerClickHandler 
 {
 
     public void OnPointerClick(PointerEventData eventData)

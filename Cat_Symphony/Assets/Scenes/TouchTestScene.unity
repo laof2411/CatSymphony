@@ -610,6 +610,51 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &775162480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775162481}
+  - component: {fileID: 775162482}
+  m_Layer: 0
+  m_Name: PawsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &775162481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775162480}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1413767732}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775162482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775162480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83c55f8af67e1f40bb619567bb576c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hudManager: {fileID: 1462500821}
 --- !u!1 &980332770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1329,7 @@ Transform:
   m_Children:
   - {fileID: 1846540003}
   - {fileID: 2146837957}
+  - {fileID: 775162481}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462500816
@@ -1407,7 +1453,7 @@ MonoBehaviour:
   sucessText: {fileID: 980332772}
   comboText: {fileID: 255655420}
   scoreText: {fileID: 2141123578}
-  pawsText: {fileID: 0}
+  pawsText: {fileID: 1743988744}
 --- !u!1 &1595353719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1702,7 @@ GameObject:
   - component: {fileID: 1743988745}
   - component: {fileID: 1743988744}
   m_Layer: 5
-  m_Name: SuccessText (1)
+  m_Name: PawsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2223,7 +2269,7 @@ PrefabInstance:
     - target: {fileID: 4628159068956697651, guid: 858dd3d42e1d0a64bb106dcfb3e38191,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4844939182849012112, guid: 858dd3d42e1d0a64bb106dcfb3e38191,
         type: 3}
@@ -2378,7 +2424,12 @@ PrefabInstance:
     - target: {fileID: 6038594513151742525, guid: 03894699cc2aecb43b84d213a6e2741e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194045812130878632, guid: 03894699cc2aecb43b84d213a6e2741e,
+        type: 3}
+      propertyPath: hasPaw
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9194045812130878632, guid: 03894699cc2aecb43b84d213a6e2741e,
         type: 3}

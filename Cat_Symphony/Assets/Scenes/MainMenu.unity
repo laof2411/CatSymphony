@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2241,7 +2241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &309022965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2254,11 +2254,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 538891145}
   - {fileID: 438913313}
   - {fileID: 603400319}
   - {fileID: 566626718}
   - {fileID: 357341447}
-  - {fileID: 538891145}
   m_Father: {fileID: 1408510297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3605,7 +3605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &537172839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3618,11 +3618,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1414920984}
   - {fileID: 1346119263}
   - {fileID: 1839881457}
   - {fileID: 404405274}
   - {fileID: 88468898}
-  - {fileID: 1414920984}
   m_Father: {fileID: 1408510297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6177,11 +6177,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 746618207}
   - {fileID: 1134531325}
   - {fileID: 330279393}
   - {fileID: 151114855}
   - {fileID: 89878990}
-  - {fileID: 746618207}
   m_Father: {fileID: 1408510297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -12765,11 +12765,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OtherInfo
-      objectReference: {fileID: 0}
-    - target: {fileID: 2982637832763863001, guid: 09c2b4112d752ee47996d9de9a6a37fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7508852072348751217, guid: 09c2b4112d752ee47996d9de9a6a37fa,
         type: 3}

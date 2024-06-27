@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f5a972cb5153a24f892f77fcb354c94, type: 2}
+  - {fileID: 2100000, guid: 41a6342742f529d45aa67c318c56a314, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,10 +113,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2ffa7b076846345a2008342ae23986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasPaw: 0
+  hasBeenInteractedWith: 0
   isFirstNote: 1
   isHoldingTouch: 0
   firstTimeTouch: 1
   transformObjective: {fileID: 0}
+  otherNote: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!135 &3403994197023902408
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -201,7 +207,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f5a972cb5153a24f892f77fcb354c94, type: 2}
+  - {fileID: 2100000, guid: 41a6342742f529d45aa67c318c56a314, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -235,10 +241,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2ffa7b076846345a2008342ae23986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasPaw: 0
+  hasBeenInteractedWith: 0
   isFirstNote: 1
   isHoldingTouch: 0
   firstTimeTouch: 1
   transformObjective: {fileID: 0}
+  otherNote: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!135 &2557624131926736930
 SphereCollider:
   m_ObjectHideFlags: 0

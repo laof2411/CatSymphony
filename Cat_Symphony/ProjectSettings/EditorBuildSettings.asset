@@ -4,7 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9969a94249b991d4bbd1e1309e2e2f48
+  - enabled: 1
+    path: Assets/Scenes/block out.unity
+    guid: 4ee563fb0aa149a4ca9f8dcc32c93903
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: c850ee8c3b14cc8459e7e186857cf567
+  - enabled: 1
+    path: Assets/Scenes/Test JMSR.unity
+    guid: 0b70e33ae002d68428574613b280eddc
+  - enabled: 1
+    path: Assets/Scenes/TouchTestScene.unity
+    guid: 42a5187411801164288ee0c47d2474b1
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: 989b86242e12bda4fbcb58a8d0272d2e, type: 2}

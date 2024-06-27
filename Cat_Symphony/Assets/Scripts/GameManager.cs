@@ -78,4 +78,40 @@ public class GameManager : MonoBehaviour
             Debug.Log("Save File NO encontrado");
         }
     }
+
+
+    #region LoadScenes
+    public void LoadLevel1()
+    {
+        Debug.Log("Load Scene level 1...");
+        SceneManager.LoadScene(1);
+
+        Debug.Log("Scene level 1 loaded!!");
+    }
+
+    public void LoadLevel2()
+    {
+        Debug.Log("Load Scene level 2...");
+        SceneManager.LoadScene(2);
+
+        Debug.Log("Scene level 2 loaded!!");
+    }
+
+    public void LoadLevel3()
+    {
+        Debug.Log("Load Scene level 3...");
+        SceneManager.LoadScene(3);
+
+        Debug.Log("Scene level 3 loaded!!");
+    }
+
+    public void LoadMainMenu()
+    {
+        Debug.Log("Load Scene Main Menu...");
+        SceneManager.LoadScene(0);
+
+        Debug.Log("Scene Main Menu loaded!!");
+    }
+
+    #endregion
 }

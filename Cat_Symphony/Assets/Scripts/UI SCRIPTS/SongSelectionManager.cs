@@ -152,16 +152,19 @@ public class SongSelectionManager : MonoBehaviour
                 }
             case 1:
                 {
+                    GameManager.Instance.LoadLevel1();
                     Debug.Log("Song " + selectedSong + " selected");
                     break;
                 }
             case 2:
                 {
+                    GameManager.Instance.LoadLevel2();
                     Debug.Log("Song " + selectedSong + " selected");
                     break;
                 }
             case 3:
                 {
+                    GameManager.Instance.LoadLevel3();
                     Debug.Log("Song " + selectedSong + " selected");
                     break;
                 }

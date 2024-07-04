@@ -71,6 +71,10 @@ public class GameManager : MonoBehaviour
             levelSavesPoints[2, 2] = data.levelSavesPoints[2, 2];
 
             //SceneManager.LoadScene(1);
+
+            Debug.Log("Level 1: " + levelSavesPoints[0, 0] + "/" + levelSavesStars[0, 0] + "; " + levelSavesPoints[0, 1] + "/" + levelSavesStars[0, 1] + "; " + levelSavesPoints[0, 2] + "/" + levelSavesStars[0, 2] + "; ");
+            Debug.Log("Level 2: " + levelSavesPoints[1, 0] + "/" + levelSavesStars[1, 0] + "; " + levelSavesPoints[1, 1] + "/" + levelSavesStars[1, 1] + "; " + levelSavesPoints[1, 2] + "/" + levelSavesStars[2, 2] + "; ");
+            Debug.Log("Level 3: " + levelSavesPoints[2, 0] + "/" + levelSavesStars[2, 0] + "; " + levelSavesPoints[2, 1] + "/" + levelSavesStars[2, 1] + "; " + levelSavesPoints[2, 2] + "/" + levelSavesStars[2, 2] + "; ");
         }
         else
         {

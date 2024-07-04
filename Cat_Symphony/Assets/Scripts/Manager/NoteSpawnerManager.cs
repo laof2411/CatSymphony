@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,18 +14,12 @@ public class NoteSpawnerManager : MonoBehaviour
     [SerializeField] private GameObject[] spawnPoints;
     [SerializeField] private GameObject[] objectives;
 
-    [SerializeField] private NoteInformation[] notesToSpawn;
-
-    private void Update()
-    {
-
-
-
-    }
+     public NoteInformation[] notesToSpawn;
 
 }
 
 
+[Serializable]
 public struct NoteInformation
 {
 
@@ -35,6 +30,7 @@ public struct NoteInformation
     public float timeToReachPerfect;
 
 }
+
 
 public enum NoteType
 {

@@ -894,6 +894,7 @@ MonoBehaviour:
   - {fileID: 1871968962}
   - {fileID: 1656673075}
   - {fileID: 615400205}
+  notesToSpawn: []
 --- !u!1 &986210762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +2047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: layerMask.m_Bits
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7515740101029700595, guid: 790c43b109ae93446b36514cbddc332d,
+        type: 3}
+      propertyPath: notes.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7515740101029700595, guid: 790c43b109ae93446b36514cbddc332d,
         type: 3}

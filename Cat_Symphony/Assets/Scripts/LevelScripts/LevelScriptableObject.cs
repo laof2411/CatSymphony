@@ -11,4 +11,6 @@ public class LevelScriptableObject : ScriptableObject
 
     public int dificulty;
     public int sceneNumber;
+
+    public float noteSpeed;
 }

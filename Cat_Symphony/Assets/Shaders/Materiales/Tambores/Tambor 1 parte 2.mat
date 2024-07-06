@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tton 7
+  m_Name: Tambor 1 parte 2
   m_Shader: {fileID: -6465566751694194690, guid: 43d74ee7dde9d134c90252edfef10414,
     type: 3}
   m_Parent: {fileID: 0}
@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 2800000, guid: 1a781fd0b53c9d347994a53350bd19a6, type: 3}
+        m_Texture: {fileID: 2800000, guid: ecfec98d84d583c43afb2d9b2f98572c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Mask_R_Emission:
@@ -61,11 +61,11 @@ Material:
     m_Floats:
     - Brightness_Rim: 0.82
     - Rim_Power: 1.76
-    - Toon_Ramp_Offset: 0.694
-    - Toon_Ramp_Smoothness: 0.012
+    - Toon_Ramp_Offset: 0.6
+    - Toon_Ramp_Smoothness: 0.05
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Toon_Ramp_Tint: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+    - Toon_Ramp_Tint: {r: 0, g: 0.043137256, b: 0.14901961, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

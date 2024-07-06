@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int[,] levelSavesPoints = new int[3, 3];
     public int testInt;
 
+    public LevelScriptableObject levelData;
 
     void Awake()
     {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+
 
     }
 

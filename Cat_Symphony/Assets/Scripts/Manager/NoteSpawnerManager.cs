@@ -23,9 +23,6 @@ public class NoteSpawnerManager : MonoBehaviour
         
         GetNoteSpawnTime();
 
-
-
-
     }
 
     private void GetNoteSpawnTime()
@@ -48,13 +45,13 @@ public class NoteSpawnerManager : MonoBehaviour
         foreach(NoteInformation note in notesToSpawn)
         {
 
-            StartCoroutine(SpawnNote(note.type, note.timeToSpawn, note.number_SpawnPoint, note.number_objective));
+            StartCoroutine(SpawnNote(note.type, note.timeToSpawn, note.trail_number));
 
         }
 
     }
 
-    private IEnumerator SpawnNote(NoteType type,float timer, int spawnPoint, int objective )
+    private IEnumerator SpawnNote(NoteType type,float timer, int trailNumber )
     {
 
         yield return new WaitForSeconds( timer );
@@ -65,21 +62,21 @@ public class NoteSpawnerManager : MonoBehaviour
             case NoteType.SingleTap:
                 {
 
-                    GameObject temp = Instantiate(singleTapNote, spawnPoints[spawnPoint].transform.position, Quaternion.identity);
-                    temp.transform.LookAt(objectives[objective].transform);
+                    GameObject temp = Instantiate(singleTapNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
+                    temp.transform.LookAt(objectives[trailNumber].transform);
                     break;
                 }
             case NoteType.HoldTap:
                 {
 
-                    GameObject temp = Instantiate(holdTapNote, spawnPoints[spawnPoint].transform.position, Quaternion.identity);
-                    temp.transform.LookAt(objectives[objective].transform);
+                    GameObject temp = Instantiate(holdTapNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
+                    temp.transform.LookAt(objectives[trailNumber].transform);
                     break;
                 }
             case NoteType.FreeStyle:
                 {
 
-                    GameObject temp = Instantiate(freeStyleNote, spawnPoints[spawnPoint].transform.position, Quaternion.identity);
+                    GameObject temp = Instantiate(freeStyleNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
                     temp.transform.LookAt(objectives[5].transform);
                     break;
                 }
@@ -96,8 +93,7 @@ public struct NoteInformation
 {
 
     public NoteType type;
-    public int number_SpawnPoint;
-    public int number_objective;
+    public int trail_number;
 
     public float timeToReachPerfect;
     public float timeToSpawn;

@@ -1143,19 +1143,44 @@ MonoBehaviour:
   notesToSpawn:
   - type: 0
     trail_number: 1
-    timeToReachPerfect: 10
+    timeToReachPerfect: 12
     timeToSpawn: 0
     hasPaw: 0
   - type: 0
     trail_number: 2
-    timeToReachPerfect: 15
+    timeToReachPerfect: 12.4
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 14
+    timeToSpawn: 0
+    hasPaw: 1
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 14.4
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 16
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 16.4
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 18
     timeToSpawn: 0
     hasPaw: 0
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 20
+    timeToReachPerfect: 18.4
     timeToSpawn: 0
-    hasPaw: 1
+    hasPaw: 0
 --- !u!1 &976473294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,7 +1394,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

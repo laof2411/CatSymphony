@@ -20,7 +20,7 @@ public class NoteSpawnerManager : MonoBehaviour
 
     private void Start()
     {
-        
+
         GetNoteSpawnTime();
 
     }
@@ -28,10 +28,27 @@ public class NoteSpawnerManager : MonoBehaviour
     private void GetNoteSpawnTime()
     {
 
-        for(int i = 0; i > notesToSpawn.Length; i++)
+        for (int i = 0; i < notesToSpawn.Length; i++)
         {
 
-            notesToSpawn[i].timeToSpawn = notesToSpawn[i].timeToReachPerfect / currentLevel.noteSpeed;
+            float distance = Vector2.Distance(spawnPoints[notesToSpawn[i].trail_number].transform.position, objectives[notesToSpawn[i].trail_number].transform.position);
+            float timeToReachObjective = distance / currentLevel.noteSpeed;
+            float time = notesToSpawn[i].timeToReachPerfect - timeToReachObjective;
+
+            
+            if (time < 0)
+            {
+
+                notesToSpawn[i].timeToSpawn = 0;
+
+            }
+            else
+            {
+
+                notesToSpawn[i].timeToSpawn = time;
+
+            }
+            
 
         }
 
@@ -45,13 +62,13 @@ public class NoteSpawnerManager : MonoBehaviour
         foreach(NoteInformation note in notesToSpawn)
         {
 
-            StartCoroutine(SpawnNote(note.type, note.timeToSpawn, note.trail_number));
+            StartCoroutine(SpawnNote(note.type, note.timeToSpawn, note.trail_number, note.hasPaw));
 
         }
 
     }
 
-    private IEnumerator SpawnNote(NoteType type,float timer, int trailNumber )
+    private IEnumerator SpawnNote(NoteType type,float timer, int trailNumber, bool hasPaw)
     {
 
         yield return new WaitForSeconds( timer );
@@ -64,6 +81,10 @@ public class NoteSpawnerManager : MonoBehaviour
 
                     GameObject temp = Instantiate(singleTapNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
                     temp.transform.LookAt(objectives[trailNumber].transform);
+                    temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[trailNumber].transform;
+                    temp.GetComponent<NoteBasicMovement>().moveSpeed = currentLevel.noteSpeed;
+                    temp.GetComponent<SingleTapNoteEvent>().transformObjective = objectives[trailNumber].transform;
+                    temp.GetComponent<BaseNoteScript>().hasPaw = hasPaw;
                     break;
                 }
             case NoteType.HoldTap:
@@ -71,6 +92,15 @@ public class NoteSpawnerManager : MonoBehaviour
 
                     GameObject temp = Instantiate(holdTapNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
                     temp.transform.LookAt(objectives[trailNumber].transform);
+                    temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[trailNumber].transform;
+                    temp.GetComponent<NoteBasicMovement>().moveSpeed = currentLevel.noteSpeed;
+
+                    temp.GetComponent<HoldTapNoteEvent>().transformObjective = objectives[trailNumber].transform;
+                    temp.GetComponent<BaseNoteScript>().hasPaw = hasPaw;
+
+                    temp.GetComponent<HoldTapNoteEvent>().otherNote.transformObjective = objectives[trailNumber].transform;
+                    // Esto no va a funcionar bien, pues en este metodo de SpawnNote solo tiene un bool de hasPaw, mientras que otherNote bien podria tener o no tener una paw, debera arreglarse despues
+                    //temp.GetComponent<HoldTapNoteEvent>().otherNote.hasPaw = hasPaw;
                     break;
                 }
             case NoteType.FreeStyle:
@@ -78,6 +108,9 @@ public class NoteSpawnerManager : MonoBehaviour
 
                     GameObject temp = Instantiate(freeStyleNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
                     temp.transform.LookAt(objectives[5].transform);
+                    temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[5].transform;
+                    temp.GetComponent<NoteBasicMovement>().moveSpeed = currentLevel.noteSpeed;
+
                     break;
                 }
 
@@ -97,6 +130,8 @@ public struct NoteInformation
 
     public float timeToReachPerfect;
     public float timeToSpawn;
+
+    public bool hasPaw;
 
 }
 

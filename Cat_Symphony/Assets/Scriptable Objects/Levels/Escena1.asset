@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8826cf967f1e24288ad36a19a248c0, type: 3}
   m_Name: Escena1
   m_EditorClassIdentifier: 
-  nombre: Nivel 1
-  dificultad: 1
-  cancion: Despacito
-  escenaNumero: 1
+  name: Voltaic Paws
+  song: Voltaic Paws
+  dificulty: 0
+  sceneNumber: 1
+  noteSpeed: 3

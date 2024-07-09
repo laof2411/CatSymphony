@@ -4,10 +4,11 @@ using UnityEngine.EventSystems;
 public class SingleTapNoteEvent : BaseNoteScript, IPointerClickHandler
 {
 
-    [SerializeField] private Transform transformObjective;
+    [SerializeField] public Transform transformObjective;
 
     public void OnPointerClick(PointerEventData eventData)
     {
+
 
         if (!hasBeenInteractedWith)
         {

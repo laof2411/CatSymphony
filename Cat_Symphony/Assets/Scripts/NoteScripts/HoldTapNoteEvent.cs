@@ -8,8 +8,8 @@ public class HoldTapNoteEvent : BaseNoteScript, IPointerDownHandler, IPointerUpH
     public bool isHoldingTouch = false;
     public bool firstTimeTouch = true;
 
-    [SerializeField] private Transform transformObjective;
-    [SerializeField] private HoldTapNoteEvent otherNote;
+    [SerializeField] public Transform transformObjective;
+    [SerializeField] public HoldTapNoteEvent otherNote;
 
     [SerializeField] private LayerMask layerMask;
 

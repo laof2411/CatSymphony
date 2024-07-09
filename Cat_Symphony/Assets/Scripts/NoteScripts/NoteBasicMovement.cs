@@ -3,8 +3,8 @@ using UnityEngine;
 public class NoteBasicMovement : MonoBehaviour
 {
 
-    [SerializeField] private Transform transformObjective;
-    [SerializeField] private float moveSpeed;
+     public Transform transformObjective;
+     public float moveSpeed;
 
     private void Start()
     {

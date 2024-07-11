@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18335676, g: 0.22897092, b: 0.3061474, a: 1}
+  m_IndirectSpecularColor: {r: 0.18335655, g: 0.22897053, b: 0.30614674, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1361,6 +1361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030228485}
   - component: {fileID: 1030228486}
+  - component: {fileID: 1030228487}
   m_Layer: 0
   m_Name: Song
   m_TagString: Untagged
@@ -1479,6 +1480,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1030228487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030228484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a2c24b5bf41041897a843b536908f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1120654453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,6 +2620,36 @@ PrefabInstance:
       propertyPath: m_Cameras.Array.data[0]
       value: 
       objectReference: {fileID: 797104352}
+    - target: {fileID: 1366383771652008511, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -231.90016
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366383771652008511, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.528442
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482327014198975004, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739394632708487081, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_Name
+      value: Pantalla R
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926550827980702380, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -167.77097
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926550827980702380, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.528442
+      objectReference: {fileID: 0}
     - target: {fileID: 5149037660864845550, guid: 40597d1178e539746aaa28edfa00feb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2657,6 +2700,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6309164780883607259, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Pantalla Mediana '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248874354806654772, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Pantalla L '
+      objectReference: {fileID: 0}
     - target: {fileID: 7376580814213660961, guid: 40597d1178e539746aaa28edfa00feb0,
         type: 3}
       propertyPath: m_Name
@@ -2667,8 +2720,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8470542619205999904, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -105.23135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470542619205999904, guid: 40597d1178e539746aaa28edfa00feb0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -37.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4737116885293019464, guid: 40597d1178e539746aaa28edfa00feb0, type: 3}
+    - {fileID: 1676851551605793187, guid: 40597d1178e539746aaa28edfa00feb0, type: 3}
+    - {fileID: 4172118217814187239, guid: 40597d1178e539746aaa28edfa00feb0, type: 3}
+    - {fileID: 2739394632708487081, guid: 40597d1178e539746aaa28edfa00feb0, type: 3}
+    - {fileID: 6309164780883607259, guid: 40597d1178e539746aaa28edfa00feb0, type: 3}
+    - {fileID: 7248874354806654772, guid: 40597d1178e539746aaa28edfa00feb0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40597d1178e539746aaa28edfa00feb0, type: 3}

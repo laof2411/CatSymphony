@@ -26,7 +26,7 @@ public class HUDManager : MonoBehaviour
 
     }
 
-    public void UpdateScoreUI(int percentageAmount)
+    public void UpdateScoreUI(float percentageAmount)
     {
 
         scoreFill.fillAmount = percentageAmount;

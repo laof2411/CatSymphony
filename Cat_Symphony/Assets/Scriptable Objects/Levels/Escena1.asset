@@ -16,7 +16,7 @@ MonoBehaviour:
   song: Voltaic Paws
   dificulty: 0
   sceneNumber: 1
-  firstStarScore: 25
-  secondStarScore: 50
-  thirdStarScore: 75
+  firstStarScore: 100
+  secondStarScore: 200
+  thirdStarScore: 300
   noteSpeed: 3

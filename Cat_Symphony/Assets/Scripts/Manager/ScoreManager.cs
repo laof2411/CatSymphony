@@ -25,32 +25,35 @@ public class ScoreManager : MonoBehaviour
             if (GameManager.Instance.levelData.firstStarScore > currentScore)
             {
 
-                percentage = GameManager.Instance.levelData.firstStarScore / currentScore;
+                percentage = currentScore/GameManager.Instance.levelData.firstStarScore;
                 percentage /= 3;
-                percentage /= 100;
-                Debug.Log(percentage);
+                Debug.Log("Primero");
 
             }
             else if(GameManager.Instance.levelData.secondStarScore > currentScore)
             {
 
-                 percentage = GameManager.Instance.levelData.secondStarScore / currentScore;
+                percentage = currentScore / GameManager.Instance.levelData.secondStarScore;
                 percentage /= 3;
-                percentage += 33;
-                percentage /= 100;
+                percentage *= 2;
+                Debug.Log("Segundo");
 
             }
             else if(GameManager.Instance.levelData.thirdStarScore > currentScore)
             {
 
-                 percentage = GameManager.Instance.levelData.thirdStarScore / currentScore;
-                percentage /= 3;
-                percentage += 66;
-                percentage /= 100;
+                percentage = currentScore / GameManager.Instance.levelData.thirdStarScore;
+                Debug.Log("Tercero");
             }
+            else
+            {
 
+                percentage = 1;
 
-            HUD.UpdateScoreUI(currentScore);
+            }
+            Debug.Log(percentage);
+
+            HUD.UpdateScoreUI(percentage);
             IncreaseCombo();
 
         }

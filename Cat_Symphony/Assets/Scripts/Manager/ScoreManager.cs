@@ -6,6 +6,8 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private HUDManager HUD;
     [SerializeField] private int currentScore = 0;
     [SerializeField] private int currentCombo = 0;
+    
+    [SerializeField] private float percentage = 0;
 
     public void UpdateScore(int addToScore)
     {
@@ -23,25 +25,28 @@ public class ScoreManager : MonoBehaviour
             if (GameManager.Instance.levelData.firstStarScore > currentScore)
             {
 
-                int percentage = GameManager.Instance.levelData.firstStarScore / currentScore;
+                percentage = GameManager.Instance.levelData.firstStarScore / currentScore;
                 percentage /= 3;
+                percentage /= 100;
                 Debug.Log(percentage);
 
             }
             else if(GameManager.Instance.levelData.secondStarScore > currentScore)
             {
 
-                int percentage = GameManager.Instance.levelData.secondStarScore / currentScore;
+                 percentage = GameManager.Instance.levelData.secondStarScore / currentScore;
                 percentage /= 3;
                 percentage += 33;
+                percentage /= 100;
 
             }
             else if(GameManager.Instance.levelData.thirdStarScore > currentScore)
             {
 
-                int percentage = GameManager.Instance.levelData.thirdStarScore / currentScore;
+                 percentage = GameManager.Instance.levelData.thirdStarScore / currentScore;
                 percentage /= 3;
                 percentage += 66;
+                percentage /= 100;
             }
 
 

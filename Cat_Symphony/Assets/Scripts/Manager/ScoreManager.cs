@@ -19,7 +19,33 @@ public class ScoreManager : MonoBehaviour
 
             }
             currentScore += addToScore;
-            HUD.UpdateScoreText(currentScore);
+
+            if (GameManager.Instance.levelData.firstStarScore > currentScore)
+            {
+
+                int percentage = GameManager.Instance.levelData.firstStarScore / currentScore;
+                percentage /= 3;
+                Debug.Log(percentage);
+
+            }
+            else if(GameManager.Instance.levelData.secondStarScore > currentScore)
+            {
+
+                int percentage = GameManager.Instance.levelData.secondStarScore / currentScore;
+                percentage /= 3;
+                percentage += 33;
+
+            }
+            else if(GameManager.Instance.levelData.thirdStarScore > currentScore)
+            {
+
+                int percentage = GameManager.Instance.levelData.thirdStarScore / currentScore;
+                percentage /= 3;
+                percentage += 66;
+            }
+
+
+            HUD.UpdateScoreUI(currentScore);
             IncreaseCombo();
 
         }

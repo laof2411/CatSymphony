@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8826cf967f1e24288ad36a19a248c0, type: 3}
   m_Name: Escena1
   m_EditorClassIdentifier: 
-  name: Voltaic Paws
+  levelName: 
   song: Voltaic Paws
   dificulty: 0
   sceneNumber: 1
+  firstStarScore: 25
+  secondStarScore: 50
+  thirdStarScore: 75
   noteSpeed: 3

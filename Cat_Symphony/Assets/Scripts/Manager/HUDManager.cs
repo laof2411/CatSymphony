@@ -1,14 +1,16 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI sucessText;
     [SerializeField] private TextMeshProUGUI comboText;
-    [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI pawsText;
+
+    [SerializeField] private Image scoreFill;
 
     public void UpdateSuccessText(string stringToUse)
     {
@@ -24,10 +26,11 @@ public class HUDManager : MonoBehaviour
 
     }
 
-    public void UpdateScoreText(int valueToUse)
+    public void UpdateScoreUI(int percentageAmount)
     {
 
-        scoreText.text = valueToUse.ToString();
+        scoreFill.fillAmount = percentageAmount;
+        //scoreText.text = valueToUse.ToString();
 
     }
 

@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
             if (GameManager.Instance.levelData.firstStarScore > currentScore)
             {
 
-                percentage = currentScore/GameManager.Instance.levelData.firstStarScore;
+                percentage = (float)currentScore / (float)GameManager.Instance.levelData.firstStarScore;
                 percentage /= 3;
                 Debug.Log("Primero");
 
@@ -33,7 +33,7 @@ public class ScoreManager : MonoBehaviour
             else if(GameManager.Instance.levelData.secondStarScore > currentScore)
             {
 
-                percentage = currentScore / GameManager.Instance.levelData.secondStarScore;
+                percentage = (float)currentScore / (float)GameManager.Instance.levelData.secondStarScore;
                 percentage /= 3;
                 percentage *= 2;
                 Debug.Log("Segundo");
@@ -42,7 +42,7 @@ public class ScoreManager : MonoBehaviour
             else if(GameManager.Instance.levelData.thirdStarScore > currentScore)
             {
 
-                percentage = currentScore / GameManager.Instance.levelData.thirdStarScore;
+                percentage = (float)currentScore / (float)GameManager.Instance.levelData.thirdStarScore;
                 Debug.Log("Tercero");
             }
             else

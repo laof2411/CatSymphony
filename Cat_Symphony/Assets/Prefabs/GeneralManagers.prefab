@@ -1,0 +1,747 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &110293835523391890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225469617414077280}
+  - component: {fileID: 8357079744730367292}
+  m_Layer: 0
+  m_Name: SpawnerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1225469617414077280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110293835523391890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3469769829344329062}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8357079744730367292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110293835523391890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c801d1558cdb7a4394c659a25215dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singleTapNote: {fileID: 6038594513151742525, guid: 03894699cc2aecb43b84d213a6e2741e,
+    type: 3}
+  holdTapNote: {fileID: 1858653171435342208, guid: 790c43b109ae93446b36514cbddc332d,
+    type: 3}
+  freeStyleNote: {fileID: 4628159068956697651, guid: 858dd3d42e1d0a64bb106dcfb3e38191,
+    type: 3}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  objectives:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentLevel: {fileID: 11400000, guid: 4776db44b965e13498f640bc1d8f5af4, type: 2}
+  notesToSpawn:
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 4.75
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 5.8
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 6
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 6.7
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 7.69
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 8.85
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 9.8
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 10.15
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 10.9
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 11.6
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 12.85
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 13.75
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 14
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 14.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 16.95
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 15.7
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 17.8
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 18.2
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 18.9
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 19.8
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 46.9
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 46.9
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 20.7
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 21.8
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 22.2
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 22.8
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 23.7
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 27.25
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 27.1
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 27.7
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 28.25
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 28.1
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 28.7
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 30.95
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 32.05
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 31.45
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 31.55
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 31.95
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 32.45
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 1
+    trail_number: 1
+    timeToReachPerfect: 34.6
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 1
+    trail_number: 3
+    timeToReachPerfect: 36
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 39.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 39.25
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 40
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 40.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 40.75
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 41
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 1
+    trail_number: 2
+    timeToReachPerfect: 41.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 43.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 43.35
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 44
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 44.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 44.4
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 45
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 1
+    trail_number: 2
+    timeToReachPerfect: 46.2
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 47.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 48.9
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 48.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 48.9
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 48.9
+    timeToSpawn: 0
+    hasPaw: 0
+--- !u!1 &397466381467896042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7307091721112978546}
+  - component: {fileID: 1093992330876676013}
+  m_Layer: 0
+  m_Name: NoteTouchManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7307091721112978546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397466381467896042}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3469769829344329062}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093992330876676013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397466381467896042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec6cf0baee9d5e4d84f598c5d1b97d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
+  scoreManager: {fileID: 7073902290550603155}
+  missDistance: 3
+  okayDistance: 0.9
+  greatDistance: 0.4
+  purrfectDistance: 0.15
+  missScore: 0
+  okayScore: 1
+  greatScore: 3
+  purrfectScore: 5
+--- !u!1 &1488918433222258275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 440122526712867073}
+  - component: {fileID: 8589989003383304335}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &440122526712867073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488918433222258275}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9145149518675883602}
+  m_Father: {fileID: 3469769829344329062}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8589989003383304335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488918433222258275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24264475cd2591f498085e301a989fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSoundMusic:
+  - name: Techno Cat
+    clip: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
+    loop: 0
+    volume: 1
+    audioSource: {fileID: 0}
+  gameSoundEffects: []
+  volumeMusic: 100
+  volumeEffect: 100
+  bongoSoundsActive: 0
+--- !u!1 &3000301855215564662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7053990903208052292}
+  - component: {fileID: 7073902290550603155}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7053990903208052292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000301855215564662}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3469769829344329062}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7073902290550603155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000301855215564662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48b0aff709cb334c80629c1433b10d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
+  currentScore: 0
+  currentCombo: 0
+  percentage: 0
+--- !u!1 &3697088420343954911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3692765284240264740}
+  - component: {fileID: 4040819185222335547}
+  m_Layer: 0
+  m_Name: PawsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3692765284240264740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3697088420343954911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3469769829344329062}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4040819185222335547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3697088420343954911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83c55f8af67e1f40bb619567bb576c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hudManager: {fileID: 0}
+--- !u!1 &5066024394208445559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3469769829344329062}
+  m_Layer: 0
+  m_Name: GeneralManagers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3469769829344329062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5066024394208445559}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7307091721112978546}
+  - {fileID: 7053990903208052292}
+  - {fileID: 3692765284240264740}
+  - {fileID: 1225469617414077280}
+  - {fileID: 440122526712867073}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8711103559324481204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9145149518675883602}
+  - component: {fileID: 7370843670852693423}
+  - component: {fileID: 436871144114160971}
+  m_Layer: 0
+  m_Name: Song
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9145149518675883602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711103559324481204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 440122526712867073}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &7370843670852693423
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711103559324481204}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &436871144114160971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711103559324481204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a2c24b5bf41041897a843b536908f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

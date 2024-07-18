@@ -19,4 +19,4 @@ MonoBehaviour:
   firstStarScore: 100
   secondStarScore: 200
   thirdStarScore: 300
-  noteSpeed: 3
+  noteSpeed: 5

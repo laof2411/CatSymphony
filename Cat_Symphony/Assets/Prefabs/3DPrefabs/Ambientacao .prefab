@@ -3325,11 +3325,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4733ca3b3cda32047b527daf2e02e1dd, type: 2}
+    - target: {fileID: -7180145751282637576, guid: 349534a2cfae15440a3e69c0994d5a19,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a679dcf87b324c4eb63a0382ad12320, type: 2}
     - target: {fileID: 919132149155446097, guid: 349534a2cfae15440a3e69c0994d5a19,
         type: 3}
       propertyPath: m_Name
       value: Gato rigg semifinal   (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1232557309031634428, guid: 349534a2cfae15440a3e69c0994d5a19,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 148ee45acee7a96409360b9aa524d850, type: 2}
+    - target: {fileID: 8257561455044140221, guid: 349534a2cfae15440a3e69c0994d5a19,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da800c7694e0ecd408be2f4812e9fcf4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -6072212143342409310, guid: 349534a2cfae15440a3e69c0994d5a19, type: 3}

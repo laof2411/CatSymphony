@@ -3502,6 +3502,11 @@ PrefabInstance:
       objectReference: {fileID: 1462500821}
     - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
+      propertyPath: notesToSpawn.Array.size
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
       propertyPath: objectives.Array.data[1]
       value: 
       objectReference: {fileID: 2010529872}
@@ -3550,6 +3555,111 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[5]
       value: 
       objectReference: {fileID: 492672845}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[55].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[56].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[54].trail_number
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[55].trail_number
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[56].trail_number
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[4].timeToReachPerfect
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[9].timeToReachPerfect
+      value: 12.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[14].timeToReachPerfect
+      value: 16.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[15].timeToReachPerfect
+      value: 17.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[16].timeToReachPerfect
+      value: 18.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[21].timeToReachPerfect
+      value: 22.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[40].timeToReachPerfect
+      value: 36.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[48].timeToReachPerfect
+      value: 44.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[49].timeToReachPerfect
+      value: 44.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[50].timeToReachPerfect
+      value: 44.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[51].timeToReachPerfect
+      value: 45.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[52].timeToReachPerfect
+      value: 45.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[53].timeToReachPerfect
+      value: 45.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[54].timeToReachPerfect
+      value: 38.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[55].timeToReachPerfect
+      value: 49.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: notesToSpawn.Array.data[56].timeToReachPerfect
+      value: 47.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

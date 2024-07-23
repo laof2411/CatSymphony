@@ -445,16 +445,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24264475cd2591f498085e301a989fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSoundMusic:
-  - name: Techno Cat
-    clip: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
-    loop: 0
-    volume: 1
-    audioSource: {fileID: 0}
-  gameSoundEffects: []
-  volumeMusic: 100
-  volumeEffect: 100
-  bongoSoundsActive: 0
+  audioClips:
+  - {fileID: 7370843670852693423}
+  hudManager: {fileID: 0}
+  spawnerManager: {fileID: 8357079744730367292}
 --- !u!1 &3000301855215564662
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +622,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

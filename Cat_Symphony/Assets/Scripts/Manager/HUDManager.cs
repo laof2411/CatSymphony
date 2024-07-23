@@ -10,6 +10,8 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI comboText;
     [SerializeField] private TextMeshProUGUI pawsText;
 
+    [SerializeField] private TextMeshProUGUI startingText;
+
     [SerializeField] private Image scoreFill;
 
     public void UpdateSuccessText(string stringToUse)
@@ -38,6 +40,20 @@ public class HUDManager : MonoBehaviour
     {
 
         pawsText.text = valueToUse.ToString() + "/3";
+
+    }
+
+    public void UpdateStartingText(string valueToUse)
+    {
+
+        startingText.text = valueToUse;
+
+        if(valueToUse == "Start")
+        {
+
+            startingText.gameObject.SetActive(false);
+
+        }
 
     }
 

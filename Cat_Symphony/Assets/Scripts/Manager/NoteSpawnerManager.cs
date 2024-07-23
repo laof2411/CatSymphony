@@ -34,7 +34,6 @@ public class NoteSpawnerManager : MonoBehaviour
             float distance = Vector2.Distance(spawnPoints[notesToSpawn[i].trail_number].transform.position, objectives[notesToSpawn[i].trail_number].transform.position);
             float timeToReachObjective = distance / currentLevel.noteSpeed;
             float time = notesToSpawn[i].timeToReachPerfect - timeToReachObjective;
-
             
             if (time < 0)
             {
@@ -52,13 +51,12 @@ public class NoteSpawnerManager : MonoBehaviour
 
         }
 
-        InitializeSpawningCoroutines();
 
     }
 
-    private void InitializeSpawningCoroutines()
+    public void InitializeSpawningCoroutines()
     {
-
+        Debug.Log("Entrar");
         foreach(NoteInformation note in notesToSpawn)
         {
 
@@ -71,6 +69,7 @@ public class NoteSpawnerManager : MonoBehaviour
     private IEnumerator SpawnNote(NoteType type,float timer, int trailNumber, bool hasPaw)
     {
 
+        Debug.Log("Hola");
         yield return new WaitForSeconds( timer );
 
         switch( type ) 

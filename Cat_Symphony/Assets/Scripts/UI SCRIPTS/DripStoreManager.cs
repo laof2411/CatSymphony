@@ -280,7 +280,7 @@ public class DripStoreManager : MonoBehaviour
         clothesStore3D[3].SetActive(false);
         clothesStore3D[4].SetActive(false);
 
-        clothesStore3D[selectionListCat].SetActive(true);
+        clothesStore3D[selectionListClothes].SetActive(true);
     }
 
     private void Update3DShownAccesory()

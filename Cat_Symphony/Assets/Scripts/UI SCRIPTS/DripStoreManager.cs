@@ -13,15 +13,22 @@ public class DripStoreManager : MonoBehaviour
     [SerializeField] private int currentItemCost;
 
     // orden cat [0], clothes [1], accesories [2], bongos [3]
+    [SerializeField] public GameObject catAvatar;
+
     [SerializeField] public StoreItem[] catStoreItem = new StoreItem[5];
+    [SerializeField] public Material[] catStore3D = new Material[5];
+
 
     //[SerializeField] private Sprite[] catCurrentID = new Sprite[10];
     [SerializeField] public StoreItem[] clothesStoreItem = new StoreItem[5];
+    [SerializeField] public GameObject[] clothesStore3D = new GameObject[5];
 
     [SerializeField] public StoreItem[] accessoriesStoreItem = new StoreItem[5];
+    [SerializeField] public GameObject[] accessoriesStore3D = new GameObject[5];
 
     [SerializeField] public StoreItem[] bongosStoreItem = new StoreItem[5];
-    
+    [SerializeField] public GameObject[] bongosStore3D = new GameObject[5];
+
 
     [SerializeField] private int currentListSelection;
 
@@ -50,6 +57,7 @@ public class DripStoreManager : MonoBehaviour
 
         currentListSelection = 0;
         CleanUp();
+        Update3DShownCat();
     }
 
     private void UpdateCurrentMoney()
@@ -124,6 +132,7 @@ public class DripStoreManager : MonoBehaviour
                     LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
                     UpdateItemName(catStoreItem[selectionListCat].itemName);
                     UpdateSelectionList(catStoreItem[selectionListCat].itemSprite);
+                    Update3DShownCat();
                     break;
                 }
             case 1:
@@ -164,6 +173,7 @@ public class DripStoreManager : MonoBehaviour
                     LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
                     UpdateItemName(clothesStoreItem[selectionListClothes].itemName);
                     UpdateSelectionList(clothesStoreItem[selectionListClothes].itemSprite);
+                    Update3DShownClothes();
                     break;
                 }
             case 2:
@@ -204,6 +214,7 @@ public class DripStoreManager : MonoBehaviour
                     LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
                     UpdateItemName(accessoriesStoreItem[selectionListAccesories].itemName);
                     UpdateSelectionList(accessoriesStoreItem[selectionListAccesories].itemSprite);
+                    Update3DShownAccesory();
                     break;
                 }
             case 3:
@@ -243,6 +254,7 @@ public class DripStoreManager : MonoBehaviour
                     LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
                     UpdateItemName(bongosStoreItem[selectionListBongo].itemName);
                     UpdateSelectionList(bongosStoreItem[selectionListBongo].itemSprite);
+                    Update3DShownBongo();
                     break;
                 }
             default:
@@ -254,6 +266,44 @@ public class DripStoreManager : MonoBehaviour
     }
     #endregion
 
+
+    private void Update3DShownCat()
+    {
+        catAvatar.GetComponent<SkinnedMeshRenderer>().material = catStore3D[selectionListCat];
+    }
+
+    private void Update3DShownClothes()
+    {
+        clothesStore3D[0].SetActive(false);
+        clothesStore3D[1].SetActive(false);
+        clothesStore3D[2].SetActive(false);
+        clothesStore3D[3].SetActive(false);
+        clothesStore3D[4].SetActive(false);
+
+        clothesStore3D[selectionListCat].SetActive(true);
+    }
+
+    private void Update3DShownAccesory()
+    {
+        accessoriesStore3D[0].SetActive(false);
+        accessoriesStore3D[1].SetActive(false);
+        accessoriesStore3D[2].SetActive(false);
+        accessoriesStore3D[3].SetActive(false);
+        accessoriesStore3D[4].SetActive(false);
+
+        accessoriesStore3D[selectionListCat].SetActive(true);
+    }
+
+    private void Update3DShownBongo()
+    {
+        bongosStore3D[0].SetActive(false);
+        bongosStore3D[1].SetActive(false);
+        bongosStore3D[2].SetActive(false);
+        bongosStore3D[3].SetActive(false);
+        bongosStore3D[4].SetActive(false);
+
+        bongosStore3D[selectionListCat].SetActive(true);
+    }
 
     private void UpdateSelectionList(Sprite newSprite)
     {

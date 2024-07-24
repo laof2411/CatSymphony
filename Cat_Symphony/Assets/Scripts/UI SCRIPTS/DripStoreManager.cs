@@ -291,7 +291,7 @@ public class DripStoreManager : MonoBehaviour
         accessoriesStore3D[3].SetActive(false);
         accessoriesStore3D[4].SetActive(false);
 
-        accessoriesStore3D[selectionListCat].SetActive(true);
+        accessoriesStore3D[selectionListAccesories].SetActive(true);
     }
 
     private void Update3DShownBongo()
@@ -505,5 +505,59 @@ public class DripStoreManager : MonoBehaviour
         lightframesAdOns[3].SetActive(false);
     }
     #endregion
+
+
+    public int[] RecompileInfo()
+    {
+        int catID;
+        int clothesID;
+        int accesoriesID;
+        int bongosID;
+
+        if (catStoreItem[selectionListCat].unlocked == true)
+        {
+            catID = selectionListCat;
+        }
+        else
+        {
+            catID = 0;
+        }
+
+        if (clothesStoreItem[selectionListClothes].unlocked == true)
+        {
+            clothesID = selectionListClothes;
+        }
+        else
+        {
+            clothesID = 0;
+        }
+
+        if (accessoriesStoreItem[selectionListAccesories].unlocked == true)
+        {
+            accesoriesID = selectionListAccesories;
+        }
+        else
+        {
+            accesoriesID = 0;
+        }
+
+        if (bongosStoreItem[selectionListBongo].unlocked == true)
+        {
+            bongosID = selectionListBongo;
+        }
+        else
+        {
+            bongosID = 0;
+        }
+
+        int[] catsLooks = new int[4];
+
+        catsLooks[0] = catID;
+        catsLooks[1] = clothesID;
+        catsLooks[2] = accesoriesID;
+        catsLooks[3] = bongosID;
+
+        return catsLooks;
+    }
 
 }

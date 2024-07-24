@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public static GameManager dripStore;
+
+    public int[] currentCatLooks = new int[4];
+
     public int[,] levelSavesStars = new int[3, 3];
     public int[,] levelSavesPoints = new int[3, 3];
     public int testInt;
@@ -90,6 +94,7 @@ public class GameManager : MonoBehaviour
     #region LoadScenes
     public void LoadLevel1()
     {
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
         Debug.Log("Load Scene level 1...");
         SceneManager.LoadScene(1);
 
@@ -98,6 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel2()
     {
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
         Debug.Log("Load Scene level 2...");
         SceneManager.LoadScene(2);
 
@@ -106,6 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel3()
     {
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
         Debug.Log("Load Scene level 3...");
         SceneManager.LoadScene(3);
 
@@ -114,6 +121,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
         Debug.Log("Load Scene Main Menu...");
         SceneManager.LoadScene(0);
 

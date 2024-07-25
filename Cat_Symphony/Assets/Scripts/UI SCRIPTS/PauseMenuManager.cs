@@ -6,6 +6,7 @@ using UnityEngine;
 public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject pauseButton;
     [SerializeField] private TextMeshProUGUI[] modifiableStats;
     [SerializeField] private int[] modifiableStatsInfo;
 
@@ -28,12 +29,13 @@ public class PauseMenuManager : MonoBehaviour
     public void ButtonResume()
     {
         Debug.Log("Resume");
+        pauseMenu.SetActive(true);
         pauseMenu.SetActive(false);
     }
 
     public void ButtonRestartLevel()
     {
-        Debug.Log("Restart level");
+        //GameManager.Instance
     }
 
     public void ButtonConfiguration()
@@ -43,6 +45,6 @@ public class PauseMenuManager : MonoBehaviour
 
     public void ButtonGoHome()
     {
-        Debug.Log("Going home");
+        GameManager.Instance.LoadMainMenu();
     }
 }

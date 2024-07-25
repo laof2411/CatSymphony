@@ -14,6 +14,8 @@ public class HUDManager : MonoBehaviour
 
     [SerializeField] private Image scoreFill;
 
+    [SerializeField] private GameObject pauseMenu;
+
     public void UpdateSuccessText(string stringToUse)
     {
 
@@ -32,7 +34,6 @@ public class HUDManager : MonoBehaviour
     {
 
         scoreFill.fillAmount = percentageAmount;
-        //scoreText.text = valueToUse.ToString();
 
     }
 
@@ -54,6 +55,14 @@ public class HUDManager : MonoBehaviour
             startingText.gameObject.SetActive(false);
 
         }
+
+    }
+
+    public void OpenPauseMenu(GameObject button)
+    {
+
+        pauseMenu.SetActive(true);
+        button.SetActive(false);
 
     }
 

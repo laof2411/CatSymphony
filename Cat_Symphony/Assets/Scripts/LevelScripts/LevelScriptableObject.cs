@@ -9,6 +9,8 @@ public class LevelScriptableObject : ScriptableObject
     public string levelName;
     public string song;
 
+    public int levelID;
+
     public int dificulty;
     public int sceneNumber;
 

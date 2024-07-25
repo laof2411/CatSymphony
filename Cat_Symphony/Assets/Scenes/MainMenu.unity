@@ -5838,9 +5838,9 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  starsInSong1: 000000000200000000000000
-  starsInSong2: 000000000300000000000000
-  starsInSong3: 000000000100000000000000
+  starsInSong1: 000000000000000000000000
+  starsInSong2: 000000000000000000000000
+  starsInSong3: 000000000000000000000000
   box: {fileID: 915794696}
   boxHeight1: 0
   boxHeight2: 0

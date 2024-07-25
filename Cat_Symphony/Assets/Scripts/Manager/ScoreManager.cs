@@ -9,6 +9,8 @@ public class ScoreManager : MonoBehaviour
     
     [SerializeField] private float percentage = 0;
 
+    [SerializeField] private int highestCombo = 0;
+
     public void UpdateScore(int addToScore)
     {
         // If the score to add is bigger than 0 - if the note was not a miss

@@ -58,6 +58,8 @@ public class SongSelectionManager : MonoBehaviour
 
         topSideCoordinates = topSide.transform.localPosition;
 
+        CurrentStars();
+
     }
     public float newLocation1;
     public float newLocation2;
@@ -167,6 +169,25 @@ public class SongSelectionManager : MonoBehaviour
                 }
         }
 
+        CurrentStars();
+    }
+
+    public void CurrentStars()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel1DificultyMedium[i].SetActive(false);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel2DificultyMedium[i].SetActive(false);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel3DificultyMedium[i].SetActive(false);
+        }
+
+
         for (int i = 0; i < starsInSong1[1]; i++)
         {
             starsLevel1DificultyMedium[i].SetActive(true);
@@ -182,7 +203,6 @@ public class SongSelectionManager : MonoBehaviour
             starsLevel3DificultyMedium[i].SetActive(true);
         }
     }
-
     public void PlaySelectedSong()
     {
         switch (selectedSong)

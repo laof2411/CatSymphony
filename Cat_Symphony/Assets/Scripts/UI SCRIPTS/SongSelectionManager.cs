@@ -36,6 +36,10 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private GameObject[] locationsSelection2 = new GameObject[3];
     [SerializeField] private GameObject[] locationsSelection3 = new GameObject[3];
 
+    [SerializeField] private GameObject[] starsLevel1DificultyMedium = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel2DificultyMedium = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel3DificultyMedium = new GameObject[3];
+
     private void Start()
     {
         originalPosition[0] = songSelection1[0].transform.position;
@@ -139,6 +143,44 @@ public class SongSelectionManager : MonoBehaviour
         newPosition[0] = songSelection1[0].transform.position;
         newPosition[1] = songSelection2[0].transform.position;
         newPosition[2] = songSelection3[0].transform.position;
+    }
+
+
+    public void UpdateStars(int levelStars, int level)
+    {
+        switch (level)
+        {
+            case 0:
+                {
+                    starsInSong1[1] = levelStars;
+                    break;
+                }
+            case 1:
+                {
+                    starsInSong2[1] = levelStars;
+                    break;
+                }
+            case 2:
+                {
+                    starsInSong3[1] = levelStars;
+                    break;
+                }
+        }
+
+        for (int i = 0; i < starsInSong1[1]; i++)
+        {
+            starsLevel1DificultyMedium[i].SetActive(true);
+        }
+
+        for (int i = 0; i < starsInSong2[1]; i++)
+        {
+            starsLevel2DificultyMedium[i].SetActive(true);
+        }
+
+        for (int i = 0; i < starsInSong3[1]; i++)
+        {
+            starsLevel3DificultyMedium[i].SetActive(true);
+        }
     }
 
     public void PlaySelectedSong()

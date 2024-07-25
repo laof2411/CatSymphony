@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public static GameManager dripStore;
+    public GameObject dripStore;
 
     public int[] currentCatLooks = new int[4];
 
@@ -94,8 +94,10 @@ public class GameManager : MonoBehaviour
     #region LoadScenes
     public void LoadLevel1()
     {
-        //currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+
         Debug.Log("Load Scene level 1...");
+        DebuggingCatsLooks();
         SceneManager.LoadScene(1);
 
         Debug.Log("Scene level 1 loaded!!");
@@ -103,8 +105,10 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel2()
     {
-        //currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+
         Debug.Log("Load Scene level 2...");
+        DebuggingCatsLooks();
         SceneManager.LoadScene(2);
 
         Debug.Log("Scene level 2 loaded!!");
@@ -112,8 +116,10 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel3()
     {
-        //currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+
         Debug.Log("Load Scene level 3...");
+        DebuggingCatsLooks();
         SceneManager.LoadScene(3);
 
         Debug.Log("Scene level 3 loaded!!");
@@ -121,11 +127,15 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        //currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
         Debug.Log("Load Scene Main Menu...");
         SceneManager.LoadScene(0);
 
         Debug.Log("Scene Main Menu loaded!!");
+    }
+
+    private void DebuggingCatsLooks()
+    {
+        Debug.Log("currentCatLooks: " + currentCatLooks[0] + ", " + currentCatLooks[1] + ", " + currentCatLooks[2] + ", " + currentCatLooks[3]);
     }
 
     #endregion

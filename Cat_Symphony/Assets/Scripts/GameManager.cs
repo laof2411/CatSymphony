@@ -91,6 +91,20 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void UpdateLevelScoresAndStars(int ID, int dificulty, int newStars, int newScore)
+    {
+        if (levelSavesStars[ID, dificulty] < newStars)
+        {
+            levelSavesStars[ID, dificulty] = newStars;
+        }
+
+        if (levelSavesPoints[ID, dificulty] < newScore)
+        {
+            levelSavesPoints[ID, dificulty] = newScore;
+        }
+    }
+
+
     #region LoadScenes
     public void LoadLevel1()
     {

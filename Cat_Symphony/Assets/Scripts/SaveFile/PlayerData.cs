@@ -11,6 +11,7 @@ public class PlayerData
     public int[,] levelSavesStars = new int[3, 3];
     public int[,] levelSavesPoints = new int[3, 3];
     public int testInt;
+    public int[] currentLooks = new int[4];
 
     // table form:
     //
@@ -53,6 +54,8 @@ public class PlayerData
 
         levelSavesStars[2, 2] = GameManager.Instance.levelSavesStars[2, 2];
         levelSavesPoints[2, 2] = GameManager.Instance.levelSavesPoints[2, 2];
+
+        currentLooks = GameManager.Instance.currentCatLooks;
     }
 
     public void UpdateLevelData()

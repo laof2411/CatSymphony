@@ -14,6 +14,7 @@ public class DripStoreManager : MonoBehaviour
 
     // orden cat [0], clothes [1], accesories [2], bongos [3]
     [SerializeField] public GameObject catAvatar;
+    [SerializeField] public GameObject bongoAvatar;
 
     [SerializeField] public StoreItem[] catStoreItem = new StoreItem[5];
     [SerializeField] public Material[] catStore3D = new Material[5];
@@ -27,7 +28,7 @@ public class DripStoreManager : MonoBehaviour
     [SerializeField] public GameObject[] accessoriesStore3D = new GameObject[5];
 
     [SerializeField] public StoreItem[] bongosStoreItem = new StoreItem[5];
-    [SerializeField] public GameObject[] bongosStore3D = new GameObject[5];
+    [SerializeField] public Material[] bongosStore3D = new Material[5];
 
 
     [SerializeField] private int currentListSelection;
@@ -57,7 +58,11 @@ public class DripStoreManager : MonoBehaviour
 
         currentListSelection = 0;
         CleanUp();
+
         Update3DShownCat();
+        Update3DShownClothes();
+        Update3DShownAccesory();
+        Update3DShownBongo();
     }
 
     private void UpdateCurrentMoney()
@@ -296,13 +301,9 @@ public class DripStoreManager : MonoBehaviour
 
     private void Update3DShownBongo()
     {
-        bongosStore3D[0].SetActive(false);
-        bongosStore3D[1].SetActive(false);
-        bongosStore3D[2].SetActive(false);
-        bongosStore3D[3].SetActive(false);
-        bongosStore3D[4].SetActive(false);
-
-        bongosStore3D[selectionListCat].SetActive(true);
+        bongoAvatar.GetComponent<MeshRenderer>().material = bongosStore3D[selectionListBongo];
+        bongoAvatar.GetComponent<MeshRenderer>().materials[0] = bongosStore3D[selectionListBongo];
+        bongoAvatar.GetComponent<MeshRenderer>().materials[1] = bongosStore3D[selectionListBongo];
     }
 
     private void UpdateSelectionList(Sprite newSprite)

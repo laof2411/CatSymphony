@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -11,12 +10,28 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private HUDManager hudManager;
     [SerializeField] private NoteSpawnerManager spawnerManager;
 
+    [SerializeField] private float currentSongSecond;
+
+    private bool isPaused = true;
     private bool firstTimeStarting = true;
 
     private void Start()
     {
-        
+
         StartSongTimer();
+
+    }
+
+    private void Update()
+    {
+
+        //if (!isPaused)
+        //{
+
+        //    currentSongSecond += Time.deltaTime;
+        //    audioClips[0].time = currentSongSecond;
+
+        //}
 
     }
 

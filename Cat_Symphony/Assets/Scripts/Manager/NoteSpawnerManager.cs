@@ -16,11 +16,13 @@ public class NoteSpawnerManager : MonoBehaviour
 
     [SerializeField] private LevelScriptableObject currentLevel;
 
+    public NoteLevelData noteLevel;
     public NoteInformation[] notesToSpawn;
 
     private void Start()
     {
 
+        notesToSpawn = noteLevel.noteInformation;
         GetNoteSpawnTime();
 
     }

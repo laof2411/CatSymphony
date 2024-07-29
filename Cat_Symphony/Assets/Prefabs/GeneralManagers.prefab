@@ -64,7 +64,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  currentLevel: {fileID: 11400000, guid: 4776db44b965e13498f640bc1d8f5af4, type: 2}
+  currentLevel: {fileID: 11400000, guid: 920f2dff7ebe69a4daafffde6ca21dfb, type: 2}
+  noteLevel: {fileID: 11400000, guid: b52e88bbb6b373443ad994a0fb8c4a34, type: 2}
   notesToSpawn:
   - type: 0
     trail_number: 2
@@ -346,6 +347,26 @@ MonoBehaviour:
     timeToReachPerfect: 49.35
     timeToSpawn: 0
     hasPaw: 0
+  - type: 1
+    trail_number: 4
+    timeToReachPerfect: 44.2
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 1
+    trail_number: 4
+    timeToReachPerfect: 40.5
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 1
+    trail_number: 4
+    timeToReachPerfect: 28.15
+    timeToSpawn: 0
+    hasPaw: 0
+  - type: 1
+    trail_number: 2
+    timeToReachPerfect: 31.95
+    timeToSpawn: 0
+    hasPaw: 0
 --- !u!1 &397466381467896042
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +470,7 @@ MonoBehaviour:
   - {fileID: 7370843670852693423}
   hudManager: {fileID: 0}
   spawnerManager: {fileID: 8357079744730367292}
+  currentSongSecond: 0
 --- !u!1 &3000301855215564662
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +519,7 @@ MonoBehaviour:
   currentScore: 0
   currentCombo: 0
   percentage: 0
+  currentStars: 0
 --- !u!1 &3697088420343954911
 GameObject:
   m_ObjectHideFlags: 0

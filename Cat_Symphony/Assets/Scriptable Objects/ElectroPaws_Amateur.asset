@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd90c89c925e334bac98fd79edd517f, type: 3}
+  m_Name: ElectroPaws_Amateur
+  m_EditorClassIdentifier: 
+  noteInformation:
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 5.65
+    timeToSpawn: 1.3037639
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 6.7
+    timeToSpawn: 3.2180262
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 7.65
+    timeToSpawn: 3.3092365
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 8.5
+    timeToSpawn: 4.9921794
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 9.7
+    timeToSpawn: 5.3537636
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 10.65
+    timeToSpawn: 7.168026
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 11.65
+    timeToSpawn: 7.309236
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 12.55
+    timeToSpawn: 9.042179
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 13.8
+    timeToSpawn: 9.453764
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 14.7
+    timeToSpawn: 11.218026
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 15.65
+    timeToSpawn: 11.309237
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 16.4
+    timeToSpawn: 12.8921795
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 17.8
+    timeToSpawn: 13.459236
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 18.55
+    timeToSpawn: 15.042179
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 19.65
+    timeToSpawn: 15.303763
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 20.65
+    timeToSpawn: 17.168026
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 21.6
+    timeToSpawn: 17.259237
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 22.55
+    timeToSpawn: 19.04218
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 23.7
+    timeToSpawn: 19.353764
+    hasPaw: 0
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 24.65
+    timeToSpawn: 21.168026
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 25.7
+    timeToSpawn: 21.359238
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 26.6
+    timeToSpawn: 23.09218
+    hasPaw: 0
+  - type: 1
+    trail_number: 1
+    timeToReachPerfect: 35.4
+    timeToSpawn: 31.918028
+    hasPaw: 0
+  - type: 1
+    trail_number: 3
+    timeToReachPerfect: 36.4
+    timeToSpawn: 32.05924
+    hasPaw: 0
+  - type: 1
+    trail_number: 2
+    timeToReachPerfect: 42.05
+    timeToSpawn: 37.703762
+    hasPaw: 0
+  - type: 1
+    trail_number: 4
+    timeToReachPerfect: 38.1
+    timeToSpawn: 34.59218
+    hasPaw: 0
+  - type: 2
+    trail_number: 5
+    timeToReachPerfect: 49.35
+    timeToSpawn: 43.493786
+    hasPaw: 0
+  - type: 1
+    trail_number: 4
+    timeToReachPerfect: 44.2
+    timeToSpawn: 40.69218
+    hasPaw: 0
+  - type: 1
+    trail_number: 4
+    timeToReachPerfect: 40.5
+    timeToSpawn: 36.99218
+    hasPaw: 0
+  - type: 1
+    trail_number: 4
+    timeToReachPerfect: 28.15
+    timeToSpawn: 24.64218
+    hasPaw: 0
+  - type: 1
+    trail_number: 2
+    timeToReachPerfect: 31.95
+    timeToSpawn: 27.603764
+    hasPaw: 0

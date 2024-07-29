@@ -2737,7 +2737,13 @@ PrefabInstance:
         type: 3}
       propertyPath: noteLevel
       value: 
-      objectReference: {fileID: 11400000, guid: f7ef5e37e9b6d324c819f967e4e197bc,
+      objectReference: {fileID: 11400000, guid: 8024e62732be11044b29f8b03ff55d49,
+        type: 2}
+    - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: currentLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a319e44d5b1da0468f8a06f53722c38,
         type: 2}
     - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}

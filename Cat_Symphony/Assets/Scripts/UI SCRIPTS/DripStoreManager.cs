@@ -50,6 +50,8 @@ public class DripStoreManager : MonoBehaviour
 
     [SerializeField] private bool movementRight = true;
 
+    [SerializeField] private GameObject buyButton;
+    [SerializeField] private GameObject buyButtonFont;
 
     void Start()
     {
@@ -63,6 +65,8 @@ public class DripStoreManager : MonoBehaviour
         Update3DShownClothes();
         Update3DShownAccesory();
         Update3DShownBongo();
+
+        ChangeSelectionCat();
     }
 
     private void UpdateCurrentMoney()
@@ -316,10 +320,14 @@ public class DripStoreManager : MonoBehaviour
         if (unlocked)
         {
             locks[currentListSelection].SetActive(false);
+            buyButton.GetComponent<Image>().color = Color.grey;
+            buyButtonFont.SetActive(false);
         }
         else if (!unlocked)
         {
             locks[currentListSelection].SetActive(true);
+            buyButton.GetComponent<Image>().color = Color.white;
+            buyButtonFont.SetActive(true);
         }
         Debug.Log(unlocked);
     }
@@ -464,6 +472,7 @@ public class DripStoreManager : MonoBehaviour
         UpdateItemName(catStoreItem[selectionListCat].name);
 
         lightframesAdOns[0].SetActive(true);
+        LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
     }
 
     public void ChangeSelectionClothes()
@@ -475,6 +484,7 @@ public class DripStoreManager : MonoBehaviour
         UpdateItemName(clothesStoreItem[selectionListClothes].name);
 
         lightframesAdOns[1].SetActive(true);
+        LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
     }
 
     public void ChangeSelectionAccesories()
@@ -486,6 +496,7 @@ public class DripStoreManager : MonoBehaviour
         UpdateItemName(accessoriesStoreItem[selectionListAccesories].name);
 
         lightframesAdOns[2].SetActive(true);
+        LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
     }
 
     public void ChangeSelectionBongo()
@@ -496,6 +507,7 @@ public class DripStoreManager : MonoBehaviour
         UpdateItemName(bongosStoreItem[selectionListBongo].name);
 
         lightframesAdOns[3].SetActive(true);
+        LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
     }
 
     public void ShutdownLightFrame()

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NoteSpawnerManager : MonoBehaviour
@@ -14,16 +15,32 @@ public class NoteSpawnerManager : MonoBehaviour
     [SerializeField] private GameObject[] spawnPoints;
     [SerializeField] private GameObject[] objectives;
 
-    [SerializeField] private LevelScriptableObject currentLevel;
-
     public NoteLevelData noteLevel;
     public NoteInformation[] notesToSpawn;
+    
+    [SerializeField] private AudioManager audioManager;
 
     private void Start()
     {
 
+        noteLevel = GameManager.Instance.levelData.noteData;
         notesToSpawn = noteLevel.noteInformation;
+
         GetNoteSpawnTime();
+        RestoreAllNotes();
+
+    }
+
+    private void RestoreAllNotes()
+    {
+
+
+        for (int i = 0; i < notesToSpawn.Length; i++)
+        {
+
+            notesToSpawn[i].hasSpawned = false;
+
+        }
 
     }
 
@@ -34,9 +51,9 @@ public class NoteSpawnerManager : MonoBehaviour
         {
 
             float distance = Vector2.Distance(spawnPoints[notesToSpawn[i].trail_number].transform.position, objectives[notesToSpawn[i].trail_number].transform.position);
-            float timeToReachObjective = distance / currentLevel.noteSpeed;
+            float timeToReachObjective = distance / GameManager.Instance.levelData.noteSpeed;
             float time = notesToSpawn[i].timeToReachPerfect - timeToReachObjective;
-            
+
             if (time < 0)
             {
 
@@ -49,17 +66,85 @@ public class NoteSpawnerManager : MonoBehaviour
                 notesToSpawn[i].timeToSpawn = time;
 
             }
-            
+
 
         }
 
+
+
+    }
+
+    private void Update()
+    {
+        
+        if(!GameManager.Instance.isPaused)
+        {
+
+            for(int i = 0; i < notesToSpawn.Length; i++)
+            {
+
+                if (notesToSpawn[i].timeToSpawn <= audioManager.currentSongSecond && !notesToSpawn[i].hasSpawned)
+                {
+
+                    switch (notesToSpawn[i].type)
+                    {
+
+                        case NoteType.SingleTap:
+                            {
+
+                                GameObject temp = Instantiate(singleTapNote, spawnPoints[notesToSpawn[i].trail_number].transform.position, Quaternion.identity);
+                                temp.transform.LookAt(objectives[notesToSpawn[i].trail_number].transform);
+                                temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[notesToSpawn[i].trail_number].transform;
+                                temp.GetComponent<SingleTapNoteEvent>().transformObjective = objectives[notesToSpawn[i].trail_number].transform;
+                                temp.GetComponent<BaseNoteScript>().hasPaw = notesToSpawn[i].hasPaw;
+                                notesToSpawn[i].hasSpawned = true;
+                                break;
+                            }
+                        case NoteType.HoldTap:
+                            {
+
+                                GameObject temp = Instantiate(holdTapNote, spawnPoints[notesToSpawn[i].trail_number].transform.position, Quaternion.identity);
+                                temp.transform.LookAt(objectives[notesToSpawn[i].trail_number].transform);
+                                temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[notesToSpawn[i].trail_number].transform;
+
+                                temp.GetComponent<HoldTapNoteEvent>().transformObjective = objectives[notesToSpawn[i].trail_number].transform;
+                                temp.GetComponent<BaseNoteScript>().hasPaw = notesToSpawn[i].hasPaw;
+
+
+                                temp.GetComponent<HoldTapNoteEvent>().otherNote.transformObjective = objectives[notesToSpawn[i].trail_number].transform;
+                                notesToSpawn[i].hasSpawned = true;
+
+                                // Esto no va a funcionar bien, pues en este metodo de SpawnNote solo tiene un bool de hasPaw, mientras que otherNote bien podria tener o no tener una paw, debera arreglarse despues
+                                //temp.GetComponent<HoldTapNoteEvent>().otherNote.hasPaw = hasPaw;
+                                break;
+                            }
+                        case NoteType.FreeStyle:
+                            {
+
+                                GameObject temp = Instantiate(freeStyleNote, spawnPoints[notesToSpawn[i].trail_number].transform.position, Quaternion.identity);
+                                temp.transform.LookAt(objectives[5].transform);
+                                temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[5].transform;
+                                notesToSpawn[i].hasSpawned = true;
+
+                                break;
+                            }
+
+                    }
+
+
+                    
+                }
+
+            }
+
+        }
 
     }
 
     public void InitializeSpawningCoroutines()
     {
-        
-        foreach(NoteInformation note in notesToSpawn)
+
+        foreach (NoteInformation note in notesToSpawn)
         {
 
             StartCoroutine(SpawnNote(note.type, note.timeToSpawn, note.trail_number, note.hasPaw));
@@ -68,13 +153,12 @@ public class NoteSpawnerManager : MonoBehaviour
 
     }
 
-    private IEnumerator SpawnNote(NoteType type,float timer, int trailNumber, bool hasPaw)
+    private IEnumerator SpawnNote(NoteType type, float timer, int trailNumber, bool hasPaw)
     {
 
-        Debug.Log("Hola");
-        yield return new WaitForSeconds( timer );
 
-        switch( type ) 
+
+        switch (type)
         {
 
             case NoteType.SingleTap:
@@ -83,7 +167,6 @@ public class NoteSpawnerManager : MonoBehaviour
                     GameObject temp = Instantiate(singleTapNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
                     temp.transform.LookAt(objectives[trailNumber].transform);
                     temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[trailNumber].transform;
-                    temp.GetComponent<NoteBasicMovement>().moveSpeed = currentLevel.noteSpeed;
                     temp.GetComponent<SingleTapNoteEvent>().transformObjective = objectives[trailNumber].transform;
                     temp.GetComponent<BaseNoteScript>().hasPaw = hasPaw;
                     break;
@@ -94,7 +177,6 @@ public class NoteSpawnerManager : MonoBehaviour
                     GameObject temp = Instantiate(holdTapNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
                     temp.transform.LookAt(objectives[trailNumber].transform);
                     temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[trailNumber].transform;
-                    temp.GetComponent<NoteBasicMovement>().moveSpeed = currentLevel.noteSpeed;
 
                     temp.GetComponent<HoldTapNoteEvent>().transformObjective = objectives[trailNumber].transform;
                     temp.GetComponent<BaseNoteScript>().hasPaw = hasPaw;
@@ -112,7 +194,6 @@ public class NoteSpawnerManager : MonoBehaviour
                     GameObject temp = Instantiate(freeStyleNote, spawnPoints[trailNumber].transform.position, Quaternion.identity);
                     temp.transform.LookAt(objectives[5].transform);
                     temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[5].transform;
-                    temp.GetComponent<NoteBasicMovement>().moveSpeed = currentLevel.noteSpeed;
 
                     break;
                 }
@@ -120,6 +201,7 @@ public class NoteSpawnerManager : MonoBehaviour
         }
 
 
+        yield return null;
 
     }
 
@@ -137,6 +219,7 @@ public struct NoteInformation
     public float timeToSpawn;
 
     public bool hasPaw;
+    public bool hasSpawned;
 
 }
 
@@ -144,6 +227,6 @@ public struct NoteInformation
 public enum NoteType
 {
 
-    SingleTap,HoldTap,FreeStyle
+    SingleTap, HoldTap, FreeStyle
 
 }

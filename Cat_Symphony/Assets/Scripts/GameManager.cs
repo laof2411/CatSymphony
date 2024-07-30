@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int testInt;
 
     public LevelScriptableObject levelData;
-    public bool isPaused = false;
+    public bool isPaused = true;
 
     void Awake()
     {
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
 
         isPaused = true;
+        GameObject.FindFirstObjectByType<AudioManager>().PauseSong();
 
     }
 
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
     {
 
         isPaused = false;
+        GameObject.FindFirstObjectByType<AudioManager>().UnPauseSong();
 
     }
 

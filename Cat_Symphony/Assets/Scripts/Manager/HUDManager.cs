@@ -15,8 +15,10 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private Image scoreFill;
 
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject pauseButton;
 
     [SerializeField] private GameObject[] fillStars;
+    [SerializeField] private PauseMenuManager pauseManager;
 
     public void UpdateSuccessText(string stringToUse)
     {
@@ -49,22 +51,25 @@ public class HUDManager : MonoBehaviour
     public void UpdateStartingText(string valueToUse)
     {
 
+        startingText.gameObject.SetActive(true);
         startingText.text = valueToUse;
 
         if(valueToUse == "Start")
         {
 
+            pauseButton.SetActive(true);
             startingText.gameObject.SetActive(false);
 
         }
 
     }
 
-    public void OpenPauseMenu(GameObject button)
+    public void OpenPauseMenu()
     {
 
         pauseMenu.SetActive(true);
-        button.SetActive(false);
+        pauseManager.UpdatePauseData();
+        pauseButton.SetActive(false);
         GameManager.Instance.PauseGame();
 
     }

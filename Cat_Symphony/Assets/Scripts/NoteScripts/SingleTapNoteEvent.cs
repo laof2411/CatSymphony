@@ -10,21 +10,20 @@ public class SingleTapNoteEvent : BaseNoteScript, IPointerClickHandler
     {
 
 
-        if (!hasBeenInteractedWith)
+        if (!hasBeenInteractedWith && !GameManager.Instance.isPaused)
         {
 
-            SingleTap();
-            hasBeenInteractedWith = true;
+            SingleTap(); hasBeenInteractedWith = true;
 
         }
 
 
-    }    
+    }
 
     private void SingleTap()
     {
 
-        FindFirstObjectByType<NoteTouchManager>().ProcessTap(transform,transformObjective);
+        FindFirstObjectByType<NoteTouchManager>().ProcessTap(transform, transformObjective);
 
     }
 

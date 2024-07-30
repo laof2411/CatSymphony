@@ -10,27 +10,21 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] modifiableStats;
     [SerializeField] private int[] modifiableStatsInfo;
 
-    private void Start()
+    public void UpdatePauseData()
     {
-        PauseMenuActive();
-    }
 
-    public void PauseMenuActive()
-    {
-        Debug.Log("Pause menu");
+        //modifiableStats[0].text = "Score: " + modifiableStatsInfo[0];
+        //modifiableStats[1].text = modifiableStatsInfo[1] + " / 3";
+        //modifiableStats[2].text = "Other: " + modifiableStatsInfo[2];
 
-        modifiableStats[0].text = "Score: " + modifiableStatsInfo[0];
-        modifiableStats[1].text = modifiableStatsInfo[1] + " / 3";
-        modifiableStats[2].text = "Other: " + modifiableStatsInfo[2];
-
-        pauseMenu.SetActive(true);
     }
 
     public void ButtonResume()
     {
-        Debug.Log("Resume");
-        pauseMenu.SetActive(true);
+
+        GameObject.FindFirstObjectByType<AudioManager>().StartSongTimer();
         pauseMenu.SetActive(false);
+
     }
 
     public void ButtonRestartLevel()

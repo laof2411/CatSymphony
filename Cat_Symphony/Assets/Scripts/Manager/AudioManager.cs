@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private HUDManager hudManager;
     [SerializeField] private NoteSpawnerManager spawnerManager;
 
-    [SerializeField] private float currentSongSecond;
+    [SerializeField] public float currentSongSecond;
 
     private bool firstTimeStarting = true;
 
@@ -28,9 +28,24 @@ public class AudioManager : MonoBehaviour
         {
 
             currentSongSecond += Time.deltaTime;
-            //audioClips[0].time = currentSongSecond;
+
+            //if(currentSongSecond)
 
         }
+
+    }
+
+    public void PauseSong()
+    {
+
+        audioClips[0].Pause();
+
+    }
+
+    public void UnPauseSong()
+    {
+
+        audioClips[0].UnPause();
 
     }
 
@@ -43,7 +58,6 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator StartTimer()
     {
-        audioClips[0].Pause();
 
         hudManager.UpdateStartingText("3");
         yield return new WaitForSecondsRealtime(1f);
@@ -56,15 +70,16 @@ public class AudioManager : MonoBehaviour
         if (firstTimeStarting)
         {
 
+            GameManager.Instance.UnPauseGame();
             audioClips[0].Play();
-            spawnerManager.InitializeSpawningCoroutines();
+            //spawnerManager.InitializeSpawningCoroutines();
             firstTimeStarting = false;
 
         }
         else
         {
 
-            audioClips[0].UnPause();
+            GameManager.Instance.UnPauseGame();
 
         }
 

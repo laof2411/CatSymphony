@@ -16,7 +16,7 @@ public class HoldTapNoteEvent : BaseNoteScript, IPointerDownHandler, IPointerUpH
     public void OnPointerDown(PointerEventData eventData)
     {
 
-        if (isFirstNote && firstTimeTouch && !hasBeenInteractedWith)
+        if (isFirstNote && firstTimeTouch && !hasBeenInteractedWith && !GameManager.Instance.isPaused)
         {
 
             FindFirstObjectByType<NoteTouchManager>().ProcessTap(this.transform, transformObjective);
@@ -35,9 +35,9 @@ public class HoldTapNoteEvent : BaseNoteScript, IPointerDownHandler, IPointerUpH
 
         if (!firstTimeTouch)
         {
-            if(Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
             {
-                if(hit.transform.gameObject == otherNote.gameObject && otherNote.hasBeenInteractedWith == false)
+                if (hit.transform.gameObject == otherNote.gameObject && otherNote.hasBeenInteractedWith == false && !GameManager.Instance.isPaused)
                 {
 
                     FindFirstObjectByType<NoteTouchManager>().ProcessTap(otherNote.transform, transformObjective);

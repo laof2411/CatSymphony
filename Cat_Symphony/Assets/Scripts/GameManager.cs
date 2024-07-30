@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int testInt;
 
     public LevelScriptableObject levelData;
+    public bool isPaused = false;
 
     void Awake()
     {
@@ -36,6 +37,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         AttemptLoadSave();
+    }
+
+    public void PauseGame()
+    {
+
+        Time.timeScale = 0;
+        isPaused = true;
+
     }
 
     private void AttemptLoadSave()

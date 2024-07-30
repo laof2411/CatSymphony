@@ -16,6 +16,8 @@ public class HUDManager : MonoBehaviour
 
     [SerializeField] private GameObject pauseMenu;
 
+    [SerializeField] private GameObject[] fillStars;
+
     public void UpdateSuccessText(string stringToUse)
     {
 
@@ -63,13 +65,41 @@ public class HUDManager : MonoBehaviour
 
         pauseMenu.SetActive(true);
         button.SetActive(false);
+        GameManager.Instance.PauseGame();
+
+    }
+
+    public void TurnOnStar(int starToFill)
+    {
+
+        switch(starToFill)
+        {
+
+            case 1:
+                fillStars[0].SetActive(true);
+                break;
+            case 2:
+                fillStars[1].SetActive(true);
+                break;
+            case 3:
+                fillStars[2].SetActive(true);
+                break;
+
+        }
 
     }
 
     private IEnumerator FadeSuccessText()
     {
+        float alphaValue = 1f;
 
-        return null;
+        while(true)
+        {
+            alphaValue -= Time.deltaTime;
+            sucessText.color = new Color(sucessText.color.r, sucessText.color.g, sucessText.color.b,alphaValue);
+            return null;
+        }
+
 
     }
 

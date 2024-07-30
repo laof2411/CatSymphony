@@ -2645,11 +2645,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas song
       objectReference: {fileID: 0}
-    - target: {fileID: 4876405974317972675, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2810,7 +2805,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1595353722}
-  - {fileID: 5330012302803439057}
   - {fileID: 6941470922369402956}
   - {fileID: 1972080210}
   - {fileID: 2078553593}
@@ -2820,3 +2814,4 @@ SceneRoots:
   - {fileID: 1395459644}
   - {fileID: 264613707}
   - {fileID: 449122661}
+  - {fileID: 5330012302803439057}

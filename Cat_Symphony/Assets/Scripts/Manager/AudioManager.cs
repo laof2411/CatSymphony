@@ -12,7 +12,6 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private float currentSongSecond;
 
-    private bool isPaused = true;
     private bool firstTimeStarting = true;
 
     private void Start()
@@ -25,13 +24,13 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
 
-        //if (!isPaused)
-        //{
+        if (!GameManager.Instance.isPaused)
+        {
 
-        //    currentSongSecond += Time.deltaTime;
-        //    audioClips[0].time = currentSongSecond;
+            currentSongSecond += Time.deltaTime;
+            audioClips[0].time = currentSongSecond;
 
-        //}
+        }
 
     }
 
@@ -46,11 +45,11 @@ public class AudioManager : MonoBehaviour
     {
 
         hudManager.UpdateStartingText("3");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(1f);
         hudManager.UpdateStartingText("2");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(1f);
         hudManager.UpdateStartingText("1");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(1f);
         hudManager.UpdateStartingText("Start");
 
         if (firstTimeStarting)

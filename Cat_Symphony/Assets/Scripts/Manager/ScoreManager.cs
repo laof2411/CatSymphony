@@ -30,8 +30,8 @@ public class ScoreManager : MonoBehaviour
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.firstStarScore;
                 percentage /= 3;
 
-                Debug.Log("Primero");
                 currentStars = 1;
+
             }
             else if(GameManager.Instance.levelData.secondStarScore > currentScore)
             {
@@ -40,14 +40,12 @@ public class ScoreManager : MonoBehaviour
                 percentage /= 3;
                 percentage *= 2;
 
-                Debug.Log("Segundo");
                 currentStars = 2;
             }
             else if(GameManager.Instance.levelData.thirdStarScore > currentScore)
             {
 
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.thirdStarScore;
-                Debug.Log("Tercero");
                 currentStars = 3;
             }
             else
@@ -56,9 +54,9 @@ public class ScoreManager : MonoBehaviour
                 percentage = 1;
 
             }
-            Debug.Log(percentage);
 
             HUD.UpdateScoreUI(percentage);
+            HUD.TurnOnStar(currentStars);
             IncreaseCombo();
 
         }

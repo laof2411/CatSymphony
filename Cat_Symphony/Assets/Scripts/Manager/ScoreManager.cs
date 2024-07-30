@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.firstStarScore;
                 percentage /= 3;
 
-                currentStars = 1;
+                currentStars = 0;
 
             }
             else if(GameManager.Instance.levelData.secondStarScore > currentScore)
@@ -40,18 +40,19 @@ public class ScoreManager : MonoBehaviour
                 percentage /= 3;
                 percentage *= 2;
 
-                currentStars = 2;
+                currentStars = 1;
             }
             else if(GameManager.Instance.levelData.thirdStarScore > currentScore)
             {
 
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.thirdStarScore;
-                currentStars = 3;
+                currentStars = 2;
             }
             else
             {
 
                 percentage = 1;
+                currentStars = 3;
 
             }
 
@@ -69,10 +70,6 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    private void EndingScores()
-    {
-        GameManager.Instance.UpdateLevelScoresAndStars(GameManager.Instance.levelData.levelID, GameManager.Instance.levelData.dificulty, currentStars, currentScore);
-    }
 
     private void IncreaseCombo()
     {
@@ -88,6 +85,11 @@ public class ScoreManager : MonoBehaviour
         currentCombo = 0;
         HUD.UpdateComboText(currentCombo);
 
+    }
+    private void EndingScores()
+    {
+        //Commented this as variables from levelData have been changed.
+        //GameManager.Instance.UpdateLevelScoresAndStars(GameManager.Instance.levelData.levelID, GameManager.Instance.levelData.dificulty, currentStars, currentScore);
     }
     
 }

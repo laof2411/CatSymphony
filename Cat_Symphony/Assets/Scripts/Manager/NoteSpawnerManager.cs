@@ -58,7 +58,7 @@ public class NoteSpawnerManager : MonoBehaviour
 
     public void InitializeSpawningCoroutines()
     {
-        Debug.Log("Entrar");
+        
         foreach(NoteInformation note in notesToSpawn)
         {
 
@@ -99,7 +99,8 @@ public class NoteSpawnerManager : MonoBehaviour
                     temp.GetComponent<HoldTapNoteEvent>().transformObjective = objectives[trailNumber].transform;
                     temp.GetComponent<BaseNoteScript>().hasPaw = hasPaw;
 
-                    //temp.GetComponent<HoldTapNoteEvent>().otherNote.transformObjective = objectives[trailNumber].transform;
+
+                    temp.GetComponent<HoldTapNoteEvent>().otherNote.transformObjective = objectives[trailNumber].transform;
 
                     // Esto no va a funcionar bien, pues en este metodo de SpawnNote solo tiene un bool de hasPaw, mientras que otherNote bien podria tener o no tener una paw, debera arreglarse despues
                     //temp.GetComponent<HoldTapNoteEvent>().otherNote.hasPaw = hasPaw;

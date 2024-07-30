@@ -10,6 +10,7 @@ public class NoteBasicMovement : MonoBehaviour
     {
         
         transform.LookAt(transformObjective);
+        moveSpeed = GameManager.Instance.levelData.noteSpeed;
 
     }
 

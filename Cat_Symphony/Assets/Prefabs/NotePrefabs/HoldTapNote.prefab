@@ -117,13 +117,12 @@ MonoBehaviour:
   hasPaw: 0
   hasBeenInteractedWith: 0
   isFirstNote: 1
-  isHoldingTouch: 0
   firstTimeTouch: 1
   transformObjective: {fileID: 0}
-  otherNote: {fileID: 0}
+  otherNote: {fileID: 3920033986006784033}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!135 &3403994197023902408
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -327,14 +326,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPaw: 0
   hasBeenInteractedWith: 0
-  isFirstNote: 1
-  isHoldingTouch: 0
+  isFirstNote: 0
   firstTimeTouch: 1
   transformObjective: {fileID: 0}
-  otherNote: {fileID: 0}
+  otherNote: {fileID: -7515740101029700595}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!135 &2557624131926736930
 SphereCollider:
   m_ObjectHideFlags: 0

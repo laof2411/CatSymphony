@@ -89,6 +89,8 @@ public class HUDManager : MonoBehaviour
 
     }
 
+    //The sucess text should fade away after a few seconds of not touching the screen, will finish later.
+
     private IEnumerator FadeSuccessText()
     {
         float alphaValue = 1f;

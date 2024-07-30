@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
         {
 
             currentSongSecond += Time.deltaTime;
-            audioClips[0].time = currentSongSecond;
+            //audioClips[0].time = currentSongSecond;
 
         }
 
@@ -43,6 +43,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator StartTimer()
     {
+        audioClips[0].Pause();
 
         hudManager.UpdateStartingText("3");
         yield return new WaitForSecondsRealtime(1f);

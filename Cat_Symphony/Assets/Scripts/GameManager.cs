@@ -42,8 +42,14 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
 
-        Time.timeScale = 0;
         isPaused = true;
+
+    }
+
+    public void UnPauseGame()
+    {
+
+        isPaused = false;
 
     }
 

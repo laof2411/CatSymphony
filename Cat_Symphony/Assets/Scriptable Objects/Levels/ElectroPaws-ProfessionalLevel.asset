@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e8826cf967f1e24288ad36a19a248c0, type: 3}
-  m_Name: Escena1
+  m_Name: ElectroPaws-ProfessionalLevel
   m_EditorClassIdentifier: 
-  levelName: 
-  song: Voltaic Paws
-  levelID: 0
-  dificulty: 1
-  sceneNumber: 1
-  firstStarScore: 100
-  secondStarScore: 200
-  thirdStarScore: 300
+  songName: Electro Paws
+  dififculty: 1
+  songAudio: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
+  sceneID: 1
+  levelID: 1
+  noteData: {fileID: 11400000, guid: ff6d034a52d3a234893369a2d5b2dc2c, type: 2}
+  firstStarScore: 300
+  secondStarScore: 800
+  thirdStarScore: 1500
   noteSpeed: 5

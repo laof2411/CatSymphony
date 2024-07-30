@@ -5,7 +5,6 @@ public class HoldTapNoteEvent : BaseNoteScript, IPointerDownHandler, IPointerUpH
 {
 
     public bool isFirstNote = true;
-    public bool isHoldingTouch = false;
     public bool firstTimeTouch = true;
 
     [SerializeField] public Transform transformObjective;

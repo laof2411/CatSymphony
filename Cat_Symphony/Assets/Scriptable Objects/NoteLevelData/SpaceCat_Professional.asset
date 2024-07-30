@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd90c89c925e334bac98fd79edd517f, type: 3}
+  m_Name: SpaceCat_Professional
+  m_EditorClassIdentifier: 
+  noteInformation:
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 2.5
+    timeToSpawn: 1.413441
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 3.1
+    timeToSpawn: 2.0148091
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 4.35
+    timeToSpawn: 3.4730449
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 4.5
+    timeToSpawn: 3.623045
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 5.15
+    timeToSpawn: 4.273045
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 4.4
+    timeToSpawn: 3.313441
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 5
+    timeToSpawn: 3.9148092
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 6.25
+    timeToSpawn: 5.373045
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 6.4
+    timeToSpawn: 5.523045
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 6.95
+    timeToSpawn: 6.073045
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 6.3
+    timeToSpawn: 5.213441
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 6.8
+    timeToSpawn: 5.7148094
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 8.05
+    timeToSpawn: 7.173045
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 8.2
+    timeToSpawn: 7.323045
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 8.75
+    timeToSpawn: 7.873045
+    hasPaw: 0
+  - type: 0
+    trail_number: 2
+    timeToReachPerfect: 8.2
+    timeToSpawn: 7.1134405
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 8.7
+    timeToSpawn: 7.614809
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 9.95
+    timeToSpawn: 9.073045
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 10.15
+    timeToSpawn: 9.273045
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 10.7
+    timeToSpawn: 9.823045
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 10.4
+    timeToSpawn: 10.314809
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 11.4
+    timeToSpawn: 9.523045
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 11
+    timeToSpawn: 10.914809
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 12
+    timeToSpawn: 10.123045
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 11.6
+    timeToSpawn: 11.51481
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 12.6
+    timeToSpawn: 10.723045
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 12.2
+    timeToSpawn: 12.114809
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 13.2
+    timeToSpawn: 11.323045
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 12.8
+    timeToSpawn: 12.714809
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 13.8
+    timeToSpawn: 11.923045
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 13.4
+    timeToSpawn: 13.314809
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 14.4
+    timeToSpawn: 12.523045
+    hasPaw: 0
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 14
+    timeToSpawn: 13.914809
+    hasPaw: 0
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 15
+    timeToSpawn: 13.123045
+    hasPaw: 0

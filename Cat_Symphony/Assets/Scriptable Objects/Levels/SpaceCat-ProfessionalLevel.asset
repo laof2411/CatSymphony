@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8826cf967f1e24288ad36a19a248c0, type: 3}
+  m_Name: SpaceCat-ProfessionalLevel
+  m_EditorClassIdentifier: 
+  songName: SpaceCat
+  dififculty: 1
+  songAudio: {fileID: 8300000, guid: 5cf6991c309d75d4bb1cc9076c183338, type: 3}
+  sceneID: 1
+  levelID: 3
+  noteData: {fileID: 11400000, guid: a608e43285a8ffe41a7dba3f7cf37da6, type: 2}
+  firstStarScore: 300
+  secondStarScore: 800
+  thirdStarScore: 1500
+  noteSpeed: 20

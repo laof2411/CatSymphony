@@ -2768,18 +2768,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
+      objectReference: {fileID: 8300000, guid: 5cf6991c309d75d4bb1cc9076c183338, type: 3}
     - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: noteLevel
       value: 
-      objectReference: {fileID: 11400000, guid: 8024e62732be11044b29f8b03ff55d49,
+      objectReference: {fileID: 11400000, guid: a608e43285a8ffe41a7dba3f7cf37da6,
         type: 2}
     - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: currentLevel
       value: 
-      objectReference: {fileID: 11400000, guid: 9a319e44d5b1da0468f8a06f53722c38,
+      objectReference: {fileID: 11400000, guid: c05efb1e30fb9eb458a36520ce3fa158,
         type: 2}
     - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}

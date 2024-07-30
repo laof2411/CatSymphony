@@ -16,6 +16,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private bool menuScreenHasBeenEntered;
 
     [SerializeField] private GameObject mainBackgroundObj;
+    [SerializeField] private GameObject starterBackgroundObj;
     [SerializeField] private Sprite[] backgroundSprites = new Sprite[5];
 
 
@@ -30,6 +31,7 @@ public class MainMenuManager : MonoBehaviour
         }
         else
         {
+
             OpenSongSelectionScreen();
         }
     }
@@ -42,7 +44,8 @@ public class MainMenuManager : MonoBehaviour
             mainMenuScreen[i].SetActive(true);
         }
 
-        mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[0];
+        mainBackgroundObj.SetActive(false);
+        starterBackgroundObj.SetActive(true);
         menusButtonHolderObj.SetActive(false);
 
         menuScreenHasBeenEntered = true;
@@ -55,9 +58,12 @@ public class MainMenuManager : MonoBehaviour
         {
             songSelectionScreen[i].SetActive(true);
         }
+        mainBackgroundObj.SetActive(true);
+        starterBackgroundObj.SetActive(false);
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[1];
         menusButtonHolderObj.SetActive(true);
+
     }
 
     public void OpenDripStoreScreen()

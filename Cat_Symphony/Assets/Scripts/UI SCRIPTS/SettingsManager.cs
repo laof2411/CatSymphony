@@ -47,4 +47,5 @@ public class SettingsManager : MonoBehaviour
         Debug.Log(volumeEffect);
     }
 
+
 }

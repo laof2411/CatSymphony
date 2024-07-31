@@ -7,6 +7,7 @@ public abstract class BaseNoteScript : MonoBehaviour
 
     public bool hasPaw = false;
     public bool hasBeenInteractedWith = false;
+    public int trailNumber;
 
     public virtual void CheckForPaw() 
     {

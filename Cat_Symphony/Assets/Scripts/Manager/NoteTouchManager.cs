@@ -4,6 +4,7 @@ public class NoteTouchManager : MonoBehaviour
 {
     [SerializeField] private HUDManager HUD;
     [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private AnimationsManager animationsManager;
 
     [SerializeField] private float missDistance;
     [SerializeField] private float okayDistance;
@@ -24,7 +25,8 @@ public class NoteTouchManager : MonoBehaviour
             HUD.UpdateSuccessText("Purrfect!");
             scoreManager.UpdateScore(purrfectScore);
             noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
-            //Destroy(noteTransform.gameObject);
+            animationsManager.TapBongo(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
+
 
         }
         else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= greatDistance)
@@ -33,7 +35,7 @@ public class NoteTouchManager : MonoBehaviour
             HUD.UpdateSuccessText("Great");
             scoreManager.UpdateScore(greatScore);
             noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
-            //Destroy(noteTransform.gameObject);
+            animationsManager.TapBongo(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
 
         }
         else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= okayDistance)
@@ -42,7 +44,7 @@ public class NoteTouchManager : MonoBehaviour
             HUD.UpdateSuccessText("Okay");
             scoreManager.UpdateScore(okayScore);
             noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
-            //Destroy(noteTransform.gameObject);
+            animationsManager.TapBongo(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
 
         }
         else
@@ -50,7 +52,7 @@ public class NoteTouchManager : MonoBehaviour
 
             HUD.UpdateSuccessText("Miss");
             scoreManager.UpdateScore(missScore);
-            //Destroy(noteTransform.gameObject);
+
 
         }
 

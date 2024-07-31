@@ -292,6 +292,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019fc52fc2069e64d9f40a7a66b855b2, type: 3}
+--- !u!95 &327250161 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6512998139418254192, guid: 21a1a46a3a7851b4bbf145c7e1c4f3f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 449122661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &349663199
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +957,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -129.24, y: 0, z: -180}
+--- !u!114 &945905235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8108224115824739814, guid: 7999fc97d3b18284c82409b347236007,
+    type: 3}
+  m_PrefabInstance: {fileID: 6941470922369402956}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23930ebd478a83e44a8e99961ee7cfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &946729968 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8301179827433691931, guid: 21a1a46a3a7851b4bbf145c7e1c4f3f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 449122661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &976473294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1039,12 @@ Transform:
   - {fileID: 514263504}
   m_Father: {fileID: 1597659590}
   m_LocalEulerAnglesHint: {x: -20.725, y: 0.076, z: -15.627}
+--- !u!95 &1156843177 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1521193602969845952, guid: 21a1a46a3a7851b4bbf145c7e1c4f3f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 449122661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1184954985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,6 +2528,12 @@ Transform:
   - {fileID: 349663200}
   m_Father: {fileID: 2078553593}
   m_LocalEulerAnglesHint: {x: -20, y: 3.519, z: -16.82}
+--- !u!95 &2040628979 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8871518601785488813, guid: 21a1a46a3a7851b4bbf145c7e1c4f3f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 449122661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2064602811
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,6 +2846,11 @@ PrefabInstance:
       objectReference: {fileID: 412042561}
     - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
+      propertyPath: waitingTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 5330012302803439060}
@@ -2823,21 +2864,16 @@ PrefabInstance:
       propertyPath: blockContinueImage
       value: 
       objectReference: {fileID: 672515517}
-    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
-        type: 3}
-      propertyPath: BlockContinueButton
-      value: 
-      objectReference: {fileID: 672515517}
-    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
-        type: 3}
-      propertyPath: blockContinueButton
-      value: 
-      objectReference: {fileID: 672515517}
     - target: {fileID: 1093992330876676013, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1462500821}
+    - target: {fileID: 1093992330876676013, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: animationsManager
+      value: 
+      objectReference: {fileID: 945905235}
     - target: {fileID: 3469769829344329062, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2903,6 +2939,26 @@ PrefabInstance:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1462500821}
+    - target: {fileID: 8108224115824739814, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: bongosAnimators.Array.data[0]
+      value: 
+      objectReference: {fileID: 1156843177}
+    - target: {fileID: 8108224115824739814, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: bongosAnimators.Array.data[1]
+      value: 
+      objectReference: {fileID: 327250161}
+    - target: {fileID: 8108224115824739814, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: bongosAnimators.Array.data[2]
+      value: 
+      objectReference: {fileID: 2040628979}
+    - target: {fileID: 8108224115824739814, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: bongosAnimators.Array.data[3]
+      value: 
+      objectReference: {fileID: 946729968}
     - target: {fileID: 8357079744730367292, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: objectives.Array.data[1]

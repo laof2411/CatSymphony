@@ -95,6 +95,7 @@ public class NoteSpawnerManager : MonoBehaviour
                                 temp.GetComponent<NoteBasicMovement>().transformObjective = objectives[notesToSpawn[i].trail_number].transform;
                                 temp.GetComponent<SingleTapNoteEvent>().transformObjective = objectives[notesToSpawn[i].trail_number].transform;
                                 temp.GetComponent<BaseNoteScript>().hasPaw = notesToSpawn[i].hasPaw;
+                                temp.GetComponent<BaseNoteScript>().trailNumber = notesToSpawn[i].trail_number;
                                 notesToSpawn[i].hasSpawned = true;
                                 break;
                             }
@@ -107,9 +108,12 @@ public class NoteSpawnerManager : MonoBehaviour
 
                                 temp.GetComponent<HoldTapNoteEvent>().transformObjective = objectives[notesToSpawn[i].trail_number].transform;
                                 temp.GetComponent<BaseNoteScript>().hasPaw = notesToSpawn[i].hasPaw;
+                                temp.GetComponent<BaseNoteScript>().trailNumber = notesToSpawn[i].trail_number;
 
 
                                 temp.GetComponent<HoldTapNoteEvent>().otherNote.transformObjective = objectives[notesToSpawn[i].trail_number].transform;
+                                temp.GetComponent<HoldTapNoteEvent>().otherNote.trailNumber = notesToSpawn[i].trail_number;
+
                                 notesToSpawn[i].hasSpawned = true;
 
                                 // Esto no va a funcionar bien, pues en este metodo de SpawnNote solo tiene un bool de hasPaw, mientras que otherNote bien podria tener o no tener una paw, debera arreglarse despues

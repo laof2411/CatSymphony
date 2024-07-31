@@ -2672,20 +2672,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 170395299754210963, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
       propertyPath: m_Name
       value: 'Gato rigg semifinal  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971930502759243236, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5233112405309087440, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5476515112796712964, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45310deda9c406047b012e557e981d20, type: 2}
     - target: {fileID: 6770363318936390970, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9059,6 +9074,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelDataHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 7273872283505616847, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: levels.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: c05efb1e30fb9eb458a36520ce3fa158,
+        type: 2}
+    - target: {fileID: 7273872283505616847, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: levels.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: c05efb1e30fb9eb458a36520ce3fa158,
+        type: 2}
     - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
         type: 3}
       propertyPath: m_LocalPosition.x

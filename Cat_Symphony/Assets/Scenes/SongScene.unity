@@ -633,6 +633,12 @@ Transform:
   - {fileID: 1352975093}
   m_Father: {fileID: 2078553593}
   m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
+--- !u!1 &672515517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5613383873464121825, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+    type: 3}
+  m_PrefabInstance: {fileID: 5330012302803439057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &693806783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,6 +2574,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1607195188176890360, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956277544664219727, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2383662626017908849, guid: ce6a42c64e309cd4db8c7ff6f9356459,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2673,11 +2689,107 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas song
       objectReference: {fileID: 0}
+    - target: {fileID: 4876405974317972675, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613383873464121825, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce6a42c64e309cd4db8c7ff6f9356459, type: 3}
+--- !u!1 &5330012302803439059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4328674362810546181, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+    type: 3}
+  m_PrefabInstance: {fileID: 5330012302803439057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5330012302803439060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8983647083128254765, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+    type: 3}
+  m_PrefabInstance: {fileID: 5330012302803439057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &5858542336312020876
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4125676312524498168, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelDataHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d405fb8c47fcc241ae2194f9508d106, type: 3}
 --- !u!1001 &6941470922369402956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2688,14 +2800,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
+      propertyPath: songCanvas
+      value: 
+      objectReference: {fileID: 5330012302803439059}
+    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 412042561}
     - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 5330012302803439060}
+    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
       propertyPath: pauseMenuManager
       value: 
       objectReference: {fileID: 63697143}
+    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: blockContinueImage
+      value: 
+      objectReference: {fileID: 672515517}
+    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: BlockContinueButton
+      value: 
+      objectReference: {fileID: 672515517}
+    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
+        type: 3}
+      propertyPath: blockContinueButton
+      value: 
+      objectReference: {fileID: 672515517}
     - target: {fileID: 1093992330876676013, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: HUD
@@ -2841,3 +2978,4 @@ SceneRoots:
   - {fileID: 264613707}
   - {fileID: 449122661}
   - {fileID: 5330012302803439057}
+  - {fileID: 5858542336312020876}

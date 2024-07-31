@@ -17,7 +17,7 @@ public class PauseMenuManager : MonoBehaviour
         scoreText.text = "Score: " + GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentScore().ToString();
         pawsText.text = GameObject.FindAnyObjectByType<PawsManager>().ReturnCurrentPaws().ToString() + " / " + GameObject.FindAnyObjectByType<PawsManager>().maxNumberOfPaws.ToString();
 
-        switch (GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStarts())
+        switch (GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStars())
         {
 
             case 1:

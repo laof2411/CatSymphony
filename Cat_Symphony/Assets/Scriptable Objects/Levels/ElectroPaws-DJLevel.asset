@@ -15,10 +15,11 @@ MonoBehaviour:
   songName: Electro Paws
   dififculty: 2
   songAudio: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
-  sceneID: 2
-  levelID: 1
+  sceneID: 1
+  levelID: 2
   noteData: {fileID: 11400000, guid: 8024e62732be11044b29f8b03ff55d49, type: 2}
-  firstStarScore: 100
-  secondStarScore: 200
-  thirdStarScore: 300
+  firstStarScore: 500
+  secondStarScore: 1000
+  thirdStarScore: 2000
   noteSpeed: 5
+  maxPaws: 0

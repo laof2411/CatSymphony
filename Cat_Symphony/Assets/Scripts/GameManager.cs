@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +28,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+
+        if (GameObject.FindAnyObjectByType<DripStoreManager>() == null) return;
+        dripStore = GameObject.FindAnyObjectByType<DripStoreManager>().gameObject;
 
     }
 
@@ -73,16 +75,22 @@ public class GameManager : MonoBehaviour
     public void LoadLevel(int levelID)
     {
 
+        if(dripStore != null)
+        {
+
         currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
 
-        DebuggingCatsLooks();
+        }
+
+        levelData = GameObject.FindAnyObjectByType<LevelDataHandler>().ReturnAskedLevel(levelID);
+
         SceneManager.LoadScene(1);
 
     }
 
     public void LoadMainMenu()
     {
-        
+
         SceneManager.LoadScene(0);
 
     }

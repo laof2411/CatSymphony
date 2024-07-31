@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9969a94249b991d4bbd1e1309e2e2f48
   - enabled: 1
-    path: Assets/Scenes/TouchTestScene.unity
+    path: Assets/Scenes/SongScene.unity
     guid: 42a5187411801164288ee0c47d2474b1
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,

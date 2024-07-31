@@ -116,7 +116,7 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    public int ReturnCurrentStarts()
+    public int ReturnCurrentStars()
     {
 
         return currentStars;

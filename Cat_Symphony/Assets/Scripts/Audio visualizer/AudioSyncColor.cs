@@ -51,11 +51,11 @@ public class AudioSyncColor : AudioSyncer
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
+        restSmoothTime = 2.0f;
     }
 
     public Color[] beatColors;
     public Color restColor;
-    public float restSmoothTime = 2.0f;
 
     private int m_randomIndx;
     private Renderer objectRenderer;

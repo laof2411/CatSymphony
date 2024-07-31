@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public LevelScriptableObject levelData;
     public bool isPaused = true;
 
+    public SettingsData settings;
+
     void Awake()
     {
         if (Instance == null)

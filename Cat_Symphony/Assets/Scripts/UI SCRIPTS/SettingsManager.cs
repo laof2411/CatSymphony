@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +13,27 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private float volumeMusic = 100;
     [SerializeField] private float volumeEffect = 100;
 
+    [SerializeField] public SettingsData settings;
+
+    public void Awake()
+    {
+
+        settings = GameManager.Instance.settings;
+        if (settings.bongoSoundsActive)
+        {
+
+            bongoSoundsCheckMark.SetActive(true);
+
+        }
+        else
+        {
+
+            bongoSoundsCheckMark.SetActive(false);
+
+        }
+
+    }
+
     public void TurnOnOffBongoSounds()
     {
         if (bongoSoundsActive)
@@ -21,31 +41,51 @@ public class SettingsManager : MonoBehaviour
             bongoSoundsActive = false;
 
             bongoSoundsCheckMark.SetActive(false);
-            Debug.Log("BongoSounds OFF");
+            settings.bongoSoundsActive = false;
+
         }
         else if (!bongoSoundsActive)
         {
             bongoSoundsActive = true;
 
             bongoSoundsCheckMark.SetActive(true);
+            settings.bongoSoundsActive = true;
 
-            Debug.Log("BongoSounds ON");
+
         }
+        GameManager.Instance.settings = settings;
+
     }
 
     public void ChangeVolumeMusic()
     {
-        volumeMusic = _sliderMusic.value;
 
-        Debug.Log(volumeMusic);
+        volumeMusic = _sliderMusic.value;
+        settings.musicVolume = volumeMusic;
+
+        GameManager.Instance.settings = settings;
     }
 
     public void ChangeVolumeEffects()
     {
-        volumeEffect = _sliderEffect.value;
 
-        Debug.Log(volumeEffect);
+        volumeEffect = _sliderEffect.value;
+        settings.effectsVolume = volumeEffect;
+
+
+        GameManager.Instance.settings = settings;
     }
 
+
+}
+
+[Serializable]
+public struct SettingsData
+{
+
+    public float musicVolume;
+    public float effectsVolume;
+
+    public bool bongoSoundsActive;
 
 }

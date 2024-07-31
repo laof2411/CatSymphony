@@ -19,6 +19,8 @@ public class SettingsManager : MonoBehaviour
     {
 
         settings = GameManager.Instance.settings;
+
+
         if (settings.bongoSoundsActive)
         {
 

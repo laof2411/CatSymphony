@@ -15,9 +15,9 @@ public class LevelEndManager : MonoBehaviour
     [SerializeField] private float waitingTime = 3;
 
 
-    [SerializeField] private int finalScore;
-    [SerializeField] private int finalStars;
-    [SerializeField] private int finalPaws;
+    [SerializeField] public int finalScore;
+    [SerializeField] public int finalStars;
+    [SerializeField] public int finalPaws;
 
     public void EndLevelPublicMethod()
     {

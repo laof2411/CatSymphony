@@ -44,5 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971dde21baa446949ab33474ef802ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dripStore: {fileID: 0}
+  currentCatLooks: 00000000000000000000000000000000
   testInt: 0
   levelData: {fileID: 11400000, guid: 4776db44b965e13498f640bc1d8f5af4, type: 2}
+  isPaused: 0
+  settings:
+    musicVolume: 100
+    effectsVolume: 100
+    bongoSoundsActive: 1

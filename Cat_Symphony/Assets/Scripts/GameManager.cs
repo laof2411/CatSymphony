@@ -84,10 +84,9 @@ public class GameManager : MonoBehaviour
 
         }
 
-        levelData = GameObject.FindAnyObjectByType<LevelDataHandler>().ReturnAskedLevel(levelID);
+        levelData = FindAnyObjectByType<LevelDataHandler>().ReturnAskedLevel(levelID);
 
         SceneManager.LoadScene(1);
-
     }
 
     public void LoadMainMenu()

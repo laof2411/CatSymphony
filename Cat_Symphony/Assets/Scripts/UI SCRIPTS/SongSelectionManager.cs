@@ -12,6 +12,7 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private GameObject menuTitle;
 
     [SerializeField] private int selectedSong;
+    [SerializeField] private int selectedDificulty = 0;
 
     [Header ("Changes when selected")]
     [SerializeField] public Vector3 newSize;
@@ -36,9 +37,19 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private GameObject[] locationsSelection2 = new GameObject[3];
     [SerializeField] private GameObject[] locationsSelection3 = new GameObject[3];
 
-    [SerializeField] private GameObject[] starsLevel1DificultyMedium = new GameObject[3];
-    [SerializeField] private GameObject[] starsLevel2DificultyMedium = new GameObject[3];
-    [SerializeField] private GameObject[] starsLevel3DificultyMedium = new GameObject[3];
+
+    [SerializeField] private GameObject[] starsLevel1DificultyStudent = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel1DificultyProfessional = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel1DificultyDJ = new GameObject[3];
+
+    [SerializeField] private GameObject[] starsLevel2DificultyStudent = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel2DificultyProfessional = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel2DificultyDJ = new GameObject[3];
+
+    [SerializeField] private GameObject[] starsLevel3DificultyStudent = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel3DificultyProfessional = new GameObject[3];
+    [SerializeField] private GameObject[] starsLevel3DificultyDJ = new GameObject[3];
+
 
     private void Start()
     {
@@ -176,66 +187,99 @@ public class SongSelectionManager : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            starsLevel1DificultyMedium[i].SetActive(false);
+            starsLevel1DificultyStudent[i].SetActive(false);
         }
         for (int i = 0; i < 3; i++)
         {
-            starsLevel2DificultyMedium[i].SetActive(false);
+            starsLevel1DificultyProfessional[i].SetActive(false);
         }
         for (int i = 0; i < 3; i++)
         {
-            starsLevel3DificultyMedium[i].SetActive(false);
+            starsLevel1DificultyDJ[i].SetActive(false);
         }
 
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel2DificultyStudent[i].SetActive(false);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel2DificultyProfessional[i].SetActive(false);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel2DificultyDJ[i].SetActive(false);
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel3DificultyStudent[i].SetActive(false);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel3DificultyProfessional[i].SetActive(false);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            starsLevel3DificultyDJ[i].SetActive(false);
+        }
+
+
+
+        for (int i = 0; i < starsInSong1[0]; i++)
+        {
+            starsLevel1DificultyStudent[i].SetActive(true);
+        }
 
         for (int i = 0; i < starsInSong1[1]; i++)
         {
-            starsLevel1DificultyMedium[i].SetActive(true);
+            starsLevel1DificultyProfessional[i].SetActive(true);
+        }
+
+        for (int i = 0; i < starsInSong1[2]; i++)
+        {
+            starsLevel1DificultyDJ[i].SetActive(true);
+        }
+
+
+        for (int i = 0; i < starsInSong2[0]; i++)
+        {
+            starsLevel2DificultyStudent[i].SetActive(true);
         }
 
         for (int i = 0; i < starsInSong2[1]; i++)
         {
-            starsLevel2DificultyMedium[i].SetActive(true);
+            starsLevel2DificultyProfessional[i].SetActive(true);
+        }
+
+        for (int i = 0; i < starsInSong2[2]; i++)
+        {
+            starsLevel2DificultyDJ[i].SetActive(true);
+        }
+
+
+        for (int i = 0; i < starsInSong3[0]; i++)
+        {
+            starsLevel3DificultyStudent[i].SetActive(true);
         }
 
         for (int i = 0; i < starsInSong3[1]; i++)
         {
-            starsLevel3DificultyMedium[i].SetActive(true);
+            starsLevel3DificultyProfessional[i].SetActive(true);
+        }
+
+        for (int i = 0; i < starsInSong3[2]; i++)
+        {
+            starsLevel3DificultyDJ[i].SetActive(true);
         }
     }
+
     public void PlaySelectedSong()
     {
-        switch (selectedSong)
-        {
-            case 0:
-                {
-                    Debug.Log("No song is being selected");
-                    break;
-                }
-            case 1:
-                {
-                    GameManager.Instance.LoadLevel(1);
-                    Debug.Log("Song " + selectedSong + " selected");
-                    break;
-                }
-            case 2:
-                {
-                    GameManager.Instance.LoadLevel(2);
-                    Debug.Log("Song " + selectedSong + " selected");
-                    break;
-                }
-            case 3:
-                {
-                    GameManager.Instance.LoadLevel(3);
-                    Debug.Log("Song " + selectedSong + " selected");
-                    break;
-                }
-            default:
-                {
-                    Debug.Log("ERROR: Selected song is not available");
-                    break;
-                }
-        }
+        int selectedLevel = selectedDificulty + ((selectedSong -1) * 3);
+
+        Debug.Log("Level: " + selectedSong + ", Dificulty: " + selectedDificulty + "; selected ID: " + selectedLevel);
+        GameManager.Instance.LoadLevel(selectedLevel);
     }
 
     public void ResetSeletionToDefault()
@@ -265,4 +309,26 @@ public class SongSelectionManager : MonoBehaviour
         songSelection2[2].SetActive(false);
         songSelection3[2].SetActive(false);
     }
+
+
+    #region buttons
+    public void DificultyStudentSelected()
+    { 
+        selectedDificulty = 0;
+        Debug.Log("DificultyStudentSelected");
+    }
+
+    public void DificultyProfessionaSelected()
+    {
+        selectedDificulty = 1;
+        Debug.Log("DificultyProfessionaSelected");
+    }
+
+    public void DificultyDJSelected()
+    {
+        selectedDificulty = 2;
+        Debug.Log("DificultyDJSelected");
+    }
+
+    #endregion
 }

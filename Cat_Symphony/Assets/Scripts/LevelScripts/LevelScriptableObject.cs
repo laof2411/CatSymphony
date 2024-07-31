@@ -21,6 +21,9 @@ public class LevelScriptableObject : ScriptableObject
     public int thirdStarScore;
 
     public float noteSpeed;
+
+    public int maxPaws;
+    
 }
 
 public enum LevelDifficulty

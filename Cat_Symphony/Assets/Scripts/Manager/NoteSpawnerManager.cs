@@ -15,18 +15,14 @@ public class NoteSpawnerManager : MonoBehaviour
     [SerializeField] private GameObject[] spawnPoints;
     [SerializeField] private GameObject[] objectives;
 
-    public NoteLevelData noteLevel;
     public NoteInformation[] notesToSpawn;
     
     [SerializeField] private AudioManager audioManager;
 
-    private void Start()
+    public void GetCurrentNoteData()
     {
 
-        noteLevel = GameManager.Instance.levelData.noteData;
-        notesToSpawn = noteLevel.noteInformation;
-
-        GetNoteSpawnTime();
+        notesToSpawn = GameManager.Instance.levelData.noteData.noteInformation;
         RestoreAllNotes();
 
     }
@@ -41,6 +37,8 @@ public class NoteSpawnerManager : MonoBehaviour
             notesToSpawn[i].hasSpawned = false;
 
         }
+
+        GetNoteSpawnTime();
 
     }
 

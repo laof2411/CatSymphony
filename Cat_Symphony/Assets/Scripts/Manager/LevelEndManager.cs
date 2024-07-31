@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class LevelEndManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject songCanvas;
+    [SerializeField] private PauseMenuManager pauseMenuManager;
+
+    [SerializeField] private float waitingTime = 3;
+
+    public void EndLevelPublicMethod()
     {
-        
+
+        Invoke(nameof(EndLevel), waitingTime);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EndLevel()
     {
-        
+
+        GameManager.Instance.PauseGame();
+        pauseScreen.SetActive(true);
+        pauseMenuManager.UpdatePauseData();
+        songCanvas.SetActive(false);
+
     }
+
+
 }

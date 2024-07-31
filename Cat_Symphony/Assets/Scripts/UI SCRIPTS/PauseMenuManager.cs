@@ -7,15 +7,42 @@ public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject pauseButton;
-    [SerializeField] private TextMeshProUGUI[] modifiableStats;
-    [SerializeField] private int[] modifiableStatsInfo;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI pawsText;
+    [SerializeField] private GameObject[] fillStars;
 
     public void UpdatePauseData()
     {
 
-        //modifiableStats[0].text = "Score: " + modifiableStatsInfo[0];
-        //modifiableStats[1].text = modifiableStatsInfo[1] + " / 3";
-        //modifiableStats[2].text = "Other: " + modifiableStatsInfo[2];
+        scoreText.text = "Score: " + GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentScore().ToString();
+        pawsText.text = GameObject.FindAnyObjectByType<PawsManager>().ReturnCurrentPaws().ToString() + " / " + GameObject.FindAnyObjectByType<PawsManager>().maxNumberOfPaws.ToString();
+
+        switch (GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStarts())
+        {
+
+            case 1:
+                {
+
+                    fillStars[0].SetActive(true);
+
+                break;
+                }
+            case 2:
+                {
+
+                    fillStars[1].SetActive(true);
+
+                    break;
+                }
+            case 3:
+                {
+
+                    fillStars[2].SetActive(true);
+
+                    break;
+                }
+
+        }
 
     }
 
@@ -29,12 +56,14 @@ public class PauseMenuManager : MonoBehaviour
 
     public void ButtonRestartLevel()
     {
-        //GameManager.Instance
+        GameManager.Instance.LoadLevel(GameManager.Instance.levelData.levelID);
     }
 
     public void ButtonConfiguration()
     {
-        Debug.Log("Configuration");
+        
+
+
     }
 
     public void ButtonGoHome()

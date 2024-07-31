@@ -4,7 +4,7 @@ public class ScoreManager : MonoBehaviour
 {
 
     [SerializeField] private HUDManager HUD;
-    [SerializeField] private int currentScore = 0;
+    [SerializeField] public int currentScore = 0;
     [SerializeField] private int currentCombo = 0;
     
     [SerializeField] private float percentage = 0;
@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.firstStarScore;
                 percentage /= 3;
 
-                currentStars = 0;
+                //currentStars = 0;
 
             }
             else if(GameManager.Instance.levelData.secondStarScore > currentScore)
@@ -40,24 +40,24 @@ public class ScoreManager : MonoBehaviour
                 percentage /= 3;
                 percentage *= 2;
 
-                currentStars = 1;
+                //currentStars = 1;
             }
             else if(GameManager.Instance.levelData.thirdStarScore > currentScore)
             {
 
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.thirdStarScore;
-                currentStars = 2;
+               // currentStars = 2;
             }
             else
             {
 
                 percentage = 1;
-                currentStars = 3;
+                //currentStars = 3;
 
             }
 
             HUD.UpdateScoreUI(percentage);
-            HUD.TurnOnStar(currentStars);
+
             IncreaseCombo();
 
         }
@@ -67,6 +67,28 @@ public class ScoreManager : MonoBehaviour
             BreakCombo();
 
         }
+
+
+        if(GameManager.Instance.levelData.thirdStarScore < currentScore)
+        {
+
+            currentStars = 3;
+
+        }
+        else if(GameManager.Instance.levelData.secondStarScore  < currentScore)
+        {
+
+            currentStars = 2;
+
+        }
+        else if(GameManager.Instance.levelData.firstStarScore < currentScore)
+        {
+
+            currentStars = 1;
+
+        }
+
+        HUD.TurnOnStar(currentStars);
 
     }
 
@@ -86,10 +108,19 @@ public class ScoreManager : MonoBehaviour
         HUD.UpdateComboText(currentCombo);
 
     }
-    private void EndingScores()
+
+    public int ReturnCurrentScore()
     {
-        //Commented this as variables from levelData have been changed.
-        //GameManager.Instance.UpdateLevelScoresAndStars(GameManager.Instance.levelData.levelID, GameManager.Instance.levelData.dificulty, currentStars, currentScore);
+
+        return currentScore;
+
+    }
+
+    public int ReturnCurrentStarts()
+    {
+
+        return currentStars;
+
     }
     
 }

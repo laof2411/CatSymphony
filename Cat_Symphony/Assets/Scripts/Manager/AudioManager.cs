@@ -9,17 +9,11 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private HUDManager hudManager;
     [SerializeField] private NoteSpawnerManager spawnerManager;
+    [SerializeField] private LevelEndManager levelEndManager;
 
     [SerializeField] public float currentSongSecond;
 
     private bool firstTimeStarting = true;
-
-    private void Start()
-    {
-
-        StartSongTimer();
-
-    }
 
     private void Update()
     {
@@ -29,9 +23,21 @@ public class AudioManager : MonoBehaviour
 
             currentSongSecond += Time.deltaTime;
 
-            //if(currentSongSecond)
+            if(currentSongSecond >= audioClips[0].clip.length)
+            {
+
+                levelEndManager.EndLevelPublicMethod();
+
+            }
 
         }
+
+    }
+
+    public void GetCurrentSong()
+    {
+
+        audioClips[0].clip = GameManager.Instance.levelData.songAudio;
 
     }
 

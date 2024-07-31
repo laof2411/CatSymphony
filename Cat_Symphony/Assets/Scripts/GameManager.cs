@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int[,] levelSavesStars = new int[3, 3];
     public int[,] levelSavesPoints = new int[3, 3];
     public int testInt;
+    //No use for this int being public?
 
     public LevelScriptableObject levelData;
     public bool isPaused = true;
@@ -29,8 +30,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-
 
     }
 
@@ -54,6 +53,46 @@ public class GameManager : MonoBehaviour
         GameObject.FindFirstObjectByType<AudioManager>().UnPauseSong();
 
     }
+
+
+    public void UpdateLevelScoresAndStars(int ID, int dificulty, int newStars, int newScore)
+    {
+        if (levelSavesStars[ID, dificulty] < newStars)
+        {
+            levelSavesStars[ID, dificulty] = newStars;
+        }
+
+        if (levelSavesPoints[ID, dificulty] < newScore)
+        {
+            levelSavesPoints[ID, dificulty] = newScore;
+        }
+    }
+
+
+    #region LoadScenes
+    public void LoadLevel(int levelID)
+    {
+
+        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+
+        DebuggingCatsLooks();
+        SceneManager.LoadScene(1);
+
+    }
+
+    public void LoadMainMenu()
+    {
+        
+        SceneManager.LoadScene(0);
+
+    }
+
+    private void DebuggingCatsLooks()
+    {
+        Debug.Log("currentCatLooks: " + currentCatLooks[0] + ", " + currentCatLooks[1] + ", " + currentCatLooks[2] + ", " + currentCatLooks[3]);
+    }
+
+    #endregion
 
     private void AttemptLoadSave()
     {
@@ -106,68 +145,4 @@ public class GameManager : MonoBehaviour
             Debug.Log("Save File NO encontrado");
         }
     }
-
-
-    public void UpdateLevelScoresAndStars(int ID, int dificulty, int newStars, int newScore)
-    {
-        if (levelSavesStars[ID, dificulty] < newStars)
-        {
-            levelSavesStars[ID, dificulty] = newStars;
-        }
-
-        if (levelSavesPoints[ID, dificulty] < newScore)
-        {
-            levelSavesPoints[ID, dificulty] = newScore;
-        }
-    }
-
-
-    #region LoadScenes
-    public void LoadLevel1()
-    {
-        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
-
-        Debug.Log("Load Scene level 1...");
-        DebuggingCatsLooks();
-        SceneManager.LoadScene(1);
-
-        Debug.Log("Scene level 1 loaded!!");
-    }
-
-    public void LoadLevel2()
-    {
-        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
-
-        Debug.Log("Load Scene level 2...");
-        DebuggingCatsLooks();
-        SceneManager.LoadScene(2);
-
-        Debug.Log("Scene level 2 loaded!!");
-    }
-
-    public void LoadLevel3()
-    {
-        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
-
-        Debug.Log("Load Scene level 3...");
-        DebuggingCatsLooks();
-        SceneManager.LoadScene(3);
-
-        Debug.Log("Scene level 3 loaded!!");
-    }
-
-    public void LoadMainMenu()
-    {
-        Debug.Log("Load Scene Main Menu...");
-        SceneManager.LoadScene(0);
-
-        Debug.Log("Scene Main Menu loaded!!");
-    }
-
-    private void DebuggingCatsLooks()
-    {
-        Debug.Log("currentCatLooks: " + currentCatLooks[0] + ", " + currentCatLooks[1] + ", " + currentCatLooks[2] + ", " + currentCatLooks[3]);
-    }
-
-    #endregion
 }

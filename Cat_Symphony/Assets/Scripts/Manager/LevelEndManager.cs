@@ -36,7 +36,9 @@ public class LevelEndManager : MonoBehaviour
         songCanvas.SetActive(false);
         blockContinueImage.SetActive(true);
         continueButton.interactable = false;
-        
+
+        GameManager.Instance.UpdateLevelScoresAndStars(finalScore, finalStars, finalPaws);
+
     }
 
     private void GetFinalData()

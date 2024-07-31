@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int testInt;
     //No use for this int being public?
 
+    public bool menuScreenHasBeenEntered;
+
     public LevelScriptableObject levelData;
     public bool isPaused = true;
 
@@ -58,9 +60,32 @@ public class GameManager : MonoBehaviour
 
     }
 
-
-    public void UpdateLevelScoresAndStars(int ID, int dificulty, int newStars, int newScore)
+    public void UpdateLevelScoresAndStars(int newStars, int newScore, int newPaws)
     {
+        int ID = levelData.levelID;
+        int dificulty = 0;
+
+        LevelDifficulty levelDifficulty = levelData.dififculty;
+
+        switch (levelDifficulty)
+        {
+            case LevelDifficulty.Student:
+                {
+                    dificulty = 0;
+                    break;
+                }
+            case LevelDifficulty.Professional:
+                {
+                    dificulty = 1;
+                    break;
+                }
+            case LevelDifficulty.DJ:
+                {
+                    dificulty = 2;
+                    break;
+                }
+        }
+
         if (levelSavesStars[ID, dificulty] < newStars)
         {
             levelSavesStars[ID, dificulty] = newStars;
@@ -87,6 +112,8 @@ public class GameManager : MonoBehaviour
         levelData = FindAnyObjectByType<LevelDataHandler>().ReturnAskedLevel(levelID);
 
         SceneManager.LoadScene(1);
+
+        DebuggingCatsLooks();
     }
 
     public void LoadMainMenu()

@@ -13,7 +13,6 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private GameObject[] sides;
 
-    [SerializeField] private bool menuScreenHasBeenEntered;
 
     [SerializeField] private GameObject mainBackgroundObj;
     [SerializeField] private GameObject starterBackgroundObj;
@@ -25,7 +24,7 @@ public class MainMenuManager : MonoBehaviour
     //Start is called before the first frame update
     void Start()
     {
-        if (menuScreenHasBeenEntered == false)
+        if (GameManager.Instance.menuScreenHasBeenEntered == false)
         {
             OpenMainMenuScreen();
         }
@@ -48,7 +47,7 @@ public class MainMenuManager : MonoBehaviour
         starterBackgroundObj.SetActive(true);
         menusButtonHolderObj.SetActive(false);
 
-        menuScreenHasBeenEntered = true;
+        GameManager.Instance.menuScreenHasBeenEntered = true;
     }
 
     public void OpenSongSelectionScreen()

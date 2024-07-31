@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5350119bf1d6246babe488aa0197f0, type: 3}
   m_Name: Clothes3
   m_EditorClassIdentifier: 
-  itemName: Clothes3
+  itemName: Long sleeve shirt
   itemSprite: {fileID: 21300000, guid: 9cbc7d309b650874da33c53c11baf7e3, type: 3}
   itemID: 2
   itemCost: 30

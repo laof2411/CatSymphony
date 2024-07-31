@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5350119bf1d6246babe488aa0197f0, type: 3}
   m_Name: Accessories1
   m_EditorClassIdentifier: 
-  itemName: Acc1
+  itemName: Circle
   itemSprite: {fileID: 21300000, guid: 9fe0266f62e0cca43b8783f8cc37320c, type: 3}
   itemID: 0
   itemCost: 0

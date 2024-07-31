@@ -32,6 +32,12 @@ public class SettingsManager : MonoBehaviour
 
         }
 
+        volumeMusic = settings.musicVolume;
+        _sliderMusic.value = volumeMusic;
+
+        volumeEffect = settings.effectsVolume;
+        _sliderEffect.value = volumeEffect;
+
     }
 
     public void TurnOnOffBongoSounds()

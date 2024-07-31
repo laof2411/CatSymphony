@@ -957,18 +957,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -129.24, y: 0, z: -180}
---- !u!114 &945905235 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8108224115824739814, guid: 7999fc97d3b18284c82409b347236007,
-    type: 3}
-  m_PrefabInstance: {fileID: 6941470922369402956}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23930ebd478a83e44a8e99961ee7cfe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &946729968 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8301179827433691931, guid: 21a1a46a3a7851b4bbf145c7e1c4f3f5,
@@ -2846,11 +2834,6 @@ PrefabInstance:
       objectReference: {fileID: 412042561}
     - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
-      propertyPath: waitingTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 649964964769305892, guid: 7999fc97d3b18284c82409b347236007,
-        type: 3}
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 5330012302803439060}
@@ -2869,11 +2852,6 @@ PrefabInstance:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1462500821}
-    - target: {fileID: 1093992330876676013, guid: 7999fc97d3b18284c82409b347236007,
-        type: 3}
-      propertyPath: animationsManager
-      value: 
-      objectReference: {fileID: 945905235}
     - target: {fileID: 3469769829344329062, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: m_LocalPosition.x

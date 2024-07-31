@@ -472,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUD: {fileID: 0}
   scoreManager: {fileID: 7073902290550603155}
+  animationsManager: {fileID: 8108224115824739814}
   missDistance: 3
   okayDistance: 0.9
   greatDistance: 0.4
@@ -721,7 +722,7 @@ MonoBehaviour:
   pauseMenuManager: {fileID: 0}
   blockContinueImage: {fileID: 0}
   continueButton: {fileID: 0}
-  waitingTime: 3
+  waitingTime: 1.5
   finalScore: 0
   finalStars: 0
   finalPaws: 0

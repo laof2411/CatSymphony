@@ -108,10 +108,24 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void PlayStarSound()
+    {
+
+        audioClips[2].Play();
+
+    }
+
+    public void PlayFailComboSound()
+    {
+
+        audioClips[4].Play();
+
+    }
+
     public void UpdateAudioSettings()
     {
 
-        Debug.Log("Hola");
+        
         audioClips[0].volume = GameManager.Instance.settings.musicVolume /100;
         audioClips[1].volume = GameManager.Instance.settings.effectsVolume / 100;
         audioClips[2].volume = GameManager.Instance.settings.effectsVolume / 100;

@@ -3092,27 +3092,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 418437501693978388, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+    - target: {fileID: 759409733068390418, guid: ce6a42c64e309cd4db8c7ff6f9356459,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1246882709936242132}
-    - target: {fileID: 418437501693978388, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnToPauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 418437501693978388, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SettingsManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1607195188176890360, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 793a4ef5df7b8b34f825472b3d53868d,
-        type: 3}
+      objectReference: {fileID: 1846472916}
     - target: {fileID: 2383662626017908849, guid: ce6a42c64e309cd4db8c7ff6f9356459,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3222,26 +3206,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas song
-      objectReference: {fileID: 0}
-    - target: {fileID: 5990444936509676136, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1246882709936242132}
-    - target: {fileID: 5990444936509676136, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeVolumeEffects
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036588693216734430, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1246882709936242132}
-    - target: {fileID: 7036588693216734430, guid: ce6a42c64e309cd4db8c7ff6f9356459,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeVolumeMusic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3367,11 +3331,6 @@ PrefabInstance:
       propertyPath: blockContinueImage
       value: 
       objectReference: {fileID: 672515517}
-    - target: {fileID: 782017957266385440, guid: 7999fc97d3b18284c82409b347236007,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1093992330876676013, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: HUD
@@ -3447,11 +3406,11 @@ PrefabInstance:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1462500821}
-    - target: {fileID: 7263289568963857429, guid: 7999fc97d3b18284c82409b347236007,
+    - target: {fileID: 7073902290550603155, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1846472916}
     - target: {fileID: 8108224115824739814, guid: 7999fc97d3b18284c82409b347236007,
         type: 3}
       propertyPath: bongosAnimators.Array.data[0]
@@ -3527,11 +3486,6 @@ PrefabInstance:
       propertyPath: hudManager
       value: 
       objectReference: {fileID: 1462500821}
-    - target: {fileID: 8892359789897526290, guid: 7999fc97d3b18284c82409b347236007,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

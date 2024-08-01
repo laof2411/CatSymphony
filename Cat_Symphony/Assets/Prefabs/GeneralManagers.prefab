@@ -473,6 +473,7 @@ MonoBehaviour:
   HUD: {fileID: 0}
   scoreManager: {fileID: 7073902290550603155}
   animationsManager: {fileID: 8108224115824739814}
+  audioManager: {fileID: 8589989003383304335}
   missDistance: 3
   okayDistance: 0.9
   greatDistance: 0.4
@@ -524,7 +525,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -655,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManager: {fileID: 8589989003383304335}
   noteSpawner: {fileID: 8357079744730367292}
+  settings: {fileID: 0}
 --- !u!1 &1488918433222258275
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +907,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 15b490c3b67482a43ba91e0c5dd38846, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1250,7 +1252,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4ac11c6cd35287d47b33a7f2863bb5cc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

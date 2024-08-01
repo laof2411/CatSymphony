@@ -19,6 +19,7 @@ public class HUDManager : MonoBehaviour
 
     [SerializeField] private GameObject[] fillStars;
     [SerializeField] private PauseMenuManager pauseManager;
+    [SerializeField] private AudioManager audioManager;
 
     public void UpdateSuccessText(string stringToUse)
     {
@@ -81,13 +82,31 @@ public class HUDManager : MonoBehaviour
         {
 
             case 1:
-                fillStars[0].SetActive(true);
+                if (!fillStars[0].activeSelf)
+                {
+
+                    fillStars[0].SetActive(true);
+                    audioManager.PlayStarSound();
+
+                }
                 break;
             case 2:
-                fillStars[1].SetActive(true);
+                if (!fillStars[1].activeSelf)
+                {
+
+                    fillStars[1].SetActive(true);
+                    audioManager.PlayStarSound();
+
+                }
                 break;
             case 3:
-                fillStars[2].SetActive(true);
+                if (!fillStars[2].activeSelf)
+                {
+
+                    fillStars[2].SetActive(true);
+                    audioManager.PlayStarSound();
+
+                }
                 break;
 
         }

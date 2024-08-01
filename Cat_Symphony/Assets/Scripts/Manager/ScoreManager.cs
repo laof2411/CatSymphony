@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private float percentage = 0;
 
     [SerializeField] private int currentStars = 0;
+    [SerializeField] private AudioManager audioManager;
 
     public void UpdateScore(int addToScore)
     {
@@ -65,6 +66,7 @@ public class ScoreManager : MonoBehaviour
         {
 
             BreakCombo();
+            audioManager.PlayFailComboSound();
 
         }
 
@@ -106,6 +108,7 @@ public class ScoreManager : MonoBehaviour
 
         currentCombo = 0;
         HUD.UpdateComboText(currentCombo);
+
 
     }
 

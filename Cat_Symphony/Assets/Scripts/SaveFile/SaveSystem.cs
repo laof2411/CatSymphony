@@ -39,6 +39,7 @@ public class SaveSytem
 
             //string path1 = Application.persistentDataPath + "/FUN";
             string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
+            //string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.) + "/fun.rtf";
 
             Debug.Log(path);
 

@@ -167,7 +167,7 @@ MonoBehaviour:
     trail_number: 3
     timeToReachPerfect: 14.4
     timeToSpawn: 10.059237
-    hasPaw: 0
+    hasPaw: 1
     hasSpawned: 0
   - type: 0
     trail_number: 2
@@ -245,7 +245,7 @@ MonoBehaviour:
     trail_number: 2
     timeToReachPerfect: 19.4
     timeToSpawn: 15.053763
-    hasPaw: 0
+    hasPaw: 1
     hasSpawned: 0
   - type: 1
     trail_number: 1
@@ -365,7 +365,7 @@ MonoBehaviour:
     trail_number: 4
     timeToReachPerfect: 35.5
     timeToSpawn: 31.99218
-    hasPaw: 0
+    hasPaw: 1
     hasSpawned: 0
   - type: 2
     trail_number: 5

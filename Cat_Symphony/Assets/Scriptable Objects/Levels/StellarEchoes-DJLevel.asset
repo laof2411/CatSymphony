@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e8826cf967f1e24288ad36a19a248c0, type: 3}
-  m_Name: ElectroPaws-StudentLevel
+  m_Name: StellarEchoes-DJLevel
   m_EditorClassIdentifier: 
-  songName: Electro Paws
-  dififculty: 0
-  songAudio: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
+  songName: StellarEchos
+  dififculty: 2
+  songAudio: {fileID: 8300000, guid: 5cf6991c309d75d4bb1cc9076c183338, type: 3}
   sceneID: 1
-  levelID: 0
-  level: 1
-  noteData: {fileID: 11400000, guid: b52e88bbb6b373443ad994a0fb8c4a34, type: 2}
-  firstStarScore: 200
-  secondStarScore: 300
-  thirdStarScore: 400
-  noteSpeed: 5
+  levelID: 8
+  level: 3
+  noteData: {fileID: 11400000, guid: a608e43285a8ffe41a7dba3f7cf37da6, type: 2}
+  firstStarScore: 500
+  secondStarScore: 1000
+  thirdStarScore: 2000
+  noteSpeed: 20
   maxPaws: 0

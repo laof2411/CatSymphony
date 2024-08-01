@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e8826cf967f1e24288ad36a19a248c0, type: 3}
-  m_Name: ElectroPaws-StudentLevel
+  m_Name: RePhantazie-StudentLevel
   m_EditorClassIdentifier: 
-  songName: Electro Paws
+  songName: RePhantazie
   dififculty: 0
-  songAudio: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
+  songAudio: {fileID: 8300000, guid: 8b4b83a2d8cf13341b4f812f554876be, type: 3}
   sceneID: 1
-  levelID: 0
-  level: 1
-  noteData: {fileID: 11400000, guid: b52e88bbb6b373443ad994a0fb8c4a34, type: 2}
+  levelID: 3
+  level: 2
+  noteData: {fileID: 11400000, guid: 3f5e40175db5f1546a269676a0d9dab2, type: 2}
   firstStarScore: 200
   secondStarScore: 300
   thirdStarScore: 400

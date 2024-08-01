@@ -9280,15 +9280,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7273872283505616847, guid: 2d405fb8c47fcc241ae2194f9508d106,
         type: 3}
+      propertyPath: levels.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 69dd71d0705e34e4896ad9ef617de7c1,
+        type: 2}
+    - target: {fileID: 7273872283505616847, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: levels.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 14169d5fce30d82419b511971eb9b43d,
+        type: 2}
+    - target: {fileID: 7273872283505616847, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
+      propertyPath: levels.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d3cdcc7eda926945992c2fd19d2f31f,
+        type: 2}
+    - target: {fileID: 7273872283505616847, guid: 2d405fb8c47fcc241ae2194f9508d106,
+        type: 3}
       propertyPath: levels.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: c05efb1e30fb9eb458a36520ce3fa158,
+      objectReference: {fileID: 11400000, guid: 2222c48a8dc02c74e9b15214d908d0f8,
         type: 2}
     - target: {fileID: 7273872283505616847, guid: 2d405fb8c47fcc241ae2194f9508d106,
         type: 3}
       propertyPath: levels.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: c05efb1e30fb9eb458a36520ce3fa158,
+      objectReference: {fileID: 11400000, guid: e7ebaf9ba8eb6a44d8c18343ada1787f,
         type: 2}
     - target: {fileID: 7384964982955758250, guid: 2d405fb8c47fcc241ae2194f9508d106,
         type: 3}
@@ -12949,16 +12967,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93941bba5a75393499d3a7af71eac101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bongoSoundsActive: 1
   bongoSoundsCheckMark: {fileID: 849321207}
   _sliderMusic: {fileID: 451859829}
   _sliderEffect: {fileID: 1289134773}
-  volumeMusic: 100
-  volumeEffect: 100
-  settings:
-    musicVolume: 0
-    effectsVolume: 0
-    bongoSoundsActive: 0
+  pauseObject: {fileID: 0}
+  settingsObject: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!224 &2049894417 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 153153210396544286, guid: 8a24ea05e9f09964eb3758332ea6f478,

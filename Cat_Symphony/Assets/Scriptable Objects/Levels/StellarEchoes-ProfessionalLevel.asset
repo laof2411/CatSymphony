@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8826cf967f1e24288ad36a19a248c0, type: 3}
   m_Name: StellarEchoes-ProfessionalLevel
   m_EditorClassIdentifier: 
-  songName: SpaceCat
+  songName: StellarEchos
   dififculty: 1
   songAudio: {fileID: 8300000, guid: 5cf6991c309d75d4bb1cc9076c183338, type: 3}
   sceneID: 1

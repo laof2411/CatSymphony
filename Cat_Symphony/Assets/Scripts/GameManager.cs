@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,11 +7,13 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public GameObject dripStore;
+    public GameObject songSelectionManager;
 
     public int[] currentCatLooks = new int[4];
 
     public int[,] levelSavesStars = new int[3, 3];
     public int[,] levelSavesPoints = new int[3, 3];
+    public int[,] levelSavesPaws = new int[3, 3];
     public int testInt;
     //No use for this int being public?
 
@@ -36,13 +39,17 @@ public class GameManager : MonoBehaviour
 
         if (GameObject.FindAnyObjectByType<DripStoreManager>() == null) return;
         dripStore = GameObject.FindAnyObjectByType<DripStoreManager>().gameObject;
-
+        songSelectionManager = GameObject.FindAnyObjectByType<SongSelectionManager>().gameObject;
     }
 
     void Start()
     {
         AttemptLoadSave();
+
+        //ResetData();
     }
+
+
 
     public void PauseGame()
     {
@@ -60,8 +67,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void UpdateLevelScoresAndStars(int newStars, int newScore, int newPaws)
+    public void UpdateLevelScoresAndStars(int newScore, int newStars, int newPaws)
     {
+        Debug.Log("Gamemanger: updating scores...");
         int ID = levelData.levelID;
         int dificulty = 0;
 
@@ -95,7 +103,18 @@ public class GameManager : MonoBehaviour
         {
             levelSavesPoints[ID, dificulty] = newScore;
         }
+
+        if (levelSavesPaws[ID, dificulty] < newPaws)
+        {
+            levelSavesPaws[ID, dificulty] = newPaws;
+        }
+
+        Debug.Log("Gamemanger: score updated; stars: " + levelSavesStars[ID, dificulty] + "; scores: " + levelSavesPoints[ID, dificulty] + "; paws: " + levelSavesPaws[ID, dificulty]);
+
+        SaveSytem.SavePlayer();
+
     }
+
 
 
     #region LoadScenes
@@ -118,9 +137,9 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-
         SceneManager.LoadScene(0);
 
+        songSelectionManager.GetComponent<SongSelectionManager>().UpdateStars();
     }
 
     private void DebuggingCatsLooks()
@@ -129,6 +148,52 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+
+    private void ResetData()
+    {
+        levelSavesStars[0, 0] = 0;
+        levelSavesPoints[0, 0] = 0; ;
+        levelSavesPaws[0, 0] = 0; ;
+
+        levelSavesStars[0, 1] = 0; ;
+        levelSavesPoints[0, 1] = 0; ;
+        levelSavesPaws[0, 1] = 0; ;
+
+        levelSavesStars[0, 2] = 0;
+        levelSavesPoints[0, 2] = 0;
+        levelSavesPaws[0, 2] = 0;
+
+
+        levelSavesStars[1, 0] = 0;
+        levelSavesPoints[1, 0] = 0;
+        levelSavesPaws[1, 0] = 0;
+
+        levelSavesStars[1, 1] = 0;
+        levelSavesPoints[1, 1] = 0;
+        levelSavesPaws[1, 1] = 0;
+
+        levelSavesStars[1, 2] = 0;
+        levelSavesPoints[1, 2] = 0;
+        levelSavesPaws[1, 2] = 0;
+
+
+        levelSavesStars[2, 0] = 0;
+        levelSavesPoints[2, 0] = 0;
+        levelSavesPaws[2, 0] = 0;
+
+        levelSavesStars[2, 1] = 0;
+        levelSavesPoints[2, 1] = 0;
+        levelSavesPaws[2, 1] = 0;
+
+        levelSavesStars[2, 2] = 0;
+        levelSavesPoints[2, 2] = 0;
+        levelSavesPaws[2, 2] = 0;
+
+        SaveSytem.SavePlayer();
+
+        Debug.Log("Reset Data");
+
+    }
 
     private void AttemptLoadSave()
     {
@@ -142,38 +207,46 @@ public class GameManager : MonoBehaviour
 
             levelSavesStars[0, 0] = data.levelSavesStars[0, 0];
             levelSavesPoints[0, 0] = data.levelSavesPoints[0, 0];
+            levelSavesPaws[0, 0] = data.levelSavesPaws[0, 0];
 
             levelSavesStars[0, 1] = data.levelSavesStars[0, 1];
             levelSavesPoints[0, 1] = data.levelSavesPoints[0, 1];
+            levelSavesPaws[0, 1] = data.levelSavesPaws[0, 1];
 
             levelSavesStars[0, 2] = data.levelSavesStars[0, 2];
             levelSavesPoints[0, 2] = data.levelSavesPoints[0, 2];
+            levelSavesPaws[0, 2] = data.levelSavesPaws[0, 2];
 
 
             levelSavesStars[1, 0] = data.levelSavesStars[1, 0];
             levelSavesPoints[1, 0] = data.levelSavesPoints[1, 0];
+            levelSavesPaws[1, 0] = data.levelSavesPaws[1, 0];
 
             levelSavesStars[1, 1] = data.levelSavesStars[1, 1];
             levelSavesPoints[1, 1] = data.levelSavesPoints[1, 1];
+            levelSavesPaws[1, 1] = data.levelSavesPaws[1, 1];
 
             levelSavesStars[1, 2] = data.levelSavesStars[1, 2];
             levelSavesPoints[1, 2] = data.levelSavesPoints[1, 2];
+            levelSavesPaws[1, 2] = data.levelSavesPaws[1, 2];
 
 
             levelSavesStars[2, 0] = data.levelSavesStars[2, 0];
             levelSavesPoints[2, 0] = data.levelSavesPoints[2, 0];
+            levelSavesPaws[2, 0] = data.levelSavesPaws[2, 0];
 
             levelSavesStars[2, 1] = data.levelSavesStars[2, 1];
             levelSavesPoints[2, 1] = data.levelSavesPoints[2, 1];
+            levelSavesPaws[2, 1] = data.levelSavesPaws[2, 1];
 
             levelSavesStars[2, 2] = data.levelSavesStars[2, 2];
             levelSavesPoints[2, 2] = data.levelSavesPoints[2, 2];
-
+            levelSavesPaws[2, 2] = data.levelSavesPaws[2, 2];
             //SceneManager.LoadScene(1);
 
-            Debug.Log("Level 1: " + levelSavesPoints[0, 0] + "/" + levelSavesStars[0, 0] + "; " + levelSavesPoints[0, 1] + "/" + levelSavesStars[0, 1] + "; " + levelSavesPoints[0, 2] + "/" + levelSavesStars[0, 2] + "; ");
-            Debug.Log("Level 2: " + levelSavesPoints[1, 0] + "/" + levelSavesStars[1, 0] + "; " + levelSavesPoints[1, 1] + "/" + levelSavesStars[1, 1] + "; " + levelSavesPoints[1, 2] + "/" + levelSavesStars[2, 2] + "; ");
-            Debug.Log("Level 3: " + levelSavesPoints[2, 0] + "/" + levelSavesStars[2, 0] + "; " + levelSavesPoints[2, 1] + "/" + levelSavesStars[2, 1] + "; " + levelSavesPoints[2, 2] + "/" + levelSavesStars[2, 2] + "; ");
+            Debug.Log("Level 1: " + levelSavesPoints[0, 0] + "/" + levelSavesStars[0, 0] + "/" + levelSavesPaws[0, 0]  + "; " + levelSavesPoints[0, 1] + "/" + levelSavesStars[0, 1] + "/" + levelSavesPaws[0, 1] + "; " + levelSavesPoints[0, 2] + "/" + levelSavesStars[0, 2] + "/" + levelSavesPaws[0, 2] + "; ");
+            Debug.Log("Level 2: " + levelSavesPoints[1, 0] + "/" + levelSavesStars[1, 0] + "/" + levelSavesPaws[1, 0] + "; " + levelSavesPoints[1, 1] + "/" + levelSavesStars[1, 1] + "/" + levelSavesPaws[1, 1] + "; " + levelSavesPoints[1, 2] + "/" + levelSavesStars[1, 2] + "/" + levelSavesPaws[1, 2] + "; ");
+            Debug.Log("Level 3: " + levelSavesPoints[2, 0] + "/" + levelSavesStars[2, 0] + "/" + levelSavesPaws[2, 0] + "; " + levelSavesPoints[2, 1] + "/" + levelSavesStars[2, 1] + "/" + levelSavesPaws[2, 1] + "; " + levelSavesPoints[2, 2] + "/" + levelSavesStars[2, 2] + "/" + levelSavesPaws[2, 2] + "; ");
         }
         else
         {

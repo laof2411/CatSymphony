@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SongSelectionManager : MonoBehaviour
 {
@@ -51,6 +52,15 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private GameObject[] starsLevel3DificultyDJ = new GameObject[3];
 
 
+    [SerializeField] public int[] scoreInSong1 = new int[3];
+    [SerializeField] public int[] scoreInSong2 = new int[3];
+    [SerializeField] public int[] scoreInSong3 = new int[3];
+
+    [SerializeField] private TextMeshProUGUI[] scoreLevel1Dificulty = new TextMeshProUGUI[3];
+    [SerializeField] private TextMeshProUGUI[] scoreLevel2Dificulty = new TextMeshProUGUI[3];
+    [SerializeField] private TextMeshProUGUI[] scoreLevel3Dificulty = new TextMeshProUGUI[3];
+
+
     private void Start()
     {
         originalPosition[0] = songSelection1[0].transform.position;
@@ -69,12 +79,58 @@ public class SongSelectionManager : MonoBehaviour
 
         topSideCoordinates = topSide.transform.localPosition;
 
-        CurrentStars();
-
+        UpdateLevelInfo();
     }
     public float newLocation1;
     public float newLocation2;
     public float newLocation3;
+
+
+    public void UpdateLevelInfo()
+    {
+        UpdateScore();
+        UpdateStars();
+    }
+
+    public void UpdateStars()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            starsInSong1[i] = GameManager.Instance.levelSavesStars[0, i];
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            starsInSong2[i] = GameManager.Instance.levelSavesStars[1, i];
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            starsInSong3[i] = GameManager.Instance.levelSavesStars[2, i];
+        }
+
+        CurrentStars();
+    }
+
+    public void UpdateScore()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            scoreInSong1[i] = GameManager.Instance.levelSavesPoints[0, i];
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            scoreInSong2[i] = GameManager.Instance.levelSavesPoints[1, i];
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            scoreInSong3[i] = GameManager.Instance.levelSavesPoints[2, i];
+        }
+
+        CurrentScore();
+    }
 
     public void Selection1Selected()
     {
@@ -158,29 +214,22 @@ public class SongSelectionManager : MonoBehaviour
         newPosition[2] = songSelection3[0].transform.position;
     }
 
-
-    public void UpdateStars(int levelStars, int level)
+    public void CurrentScore()
     {
-        switch (level)
+        for (int i = 0; i < 3; i++)
         {
-            case 0:
-                {
-                    starsInSong1[1] = levelStars;
-                    break;
-                }
-            case 1:
-                {
-                    starsInSong2[1] = levelStars;
-                    break;
-                }
-            case 2:
-                {
-                    starsInSong3[1] = levelStars;
-                    break;
-                }
+            scoreLevel1Dificulty[i].text = "" + scoreInSong1[i];
         }
 
-        CurrentStars();
+        for (int i = 0; i < 3; i++)
+        {
+            scoreLevel2Dificulty[i].text = "" + scoreInSong2[i];
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            scoreLevel3Dificulty[i].text = "" + scoreInSong3[i];
+        }
     }
 
     public void CurrentStars()

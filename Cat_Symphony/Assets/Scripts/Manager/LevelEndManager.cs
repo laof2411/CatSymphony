@@ -28,6 +28,7 @@ public class LevelEndManager : MonoBehaviour
 
     private void EndLevel()
     {
+        Debug.Log("Level end!!");
 
         GameManager.Instance.PauseGame();
         GetFinalData();
@@ -38,12 +39,10 @@ public class LevelEndManager : MonoBehaviour
         continueButton.interactable = false;
 
         GameManager.Instance.UpdateLevelScoresAndStars(finalScore, finalStars, finalPaws);
-
     }
 
     private void GetFinalData()
     {
-
         finalScore = GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentScore();
         finalStars = GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStars();
         finalPaws = GameObject.FindAnyObjectByType<PawsManager>().ReturnCurrentPaws();

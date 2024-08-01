@@ -17,7 +17,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject pauseButton;
 
-    [SerializeField] private GameObject[] fillStars;
+    [SerializeField] private Animator[] fillStars;
     [SerializeField] private PauseMenuManager pauseManager;
     [SerializeField] private AudioManager audioManager;
 
@@ -82,28 +82,28 @@ public class HUDManager : MonoBehaviour
         {
 
             case 1:
-                if (!fillStars[0].activeSelf)
+                if (!fillStars[0].transform.GetChild(0).gameObject.activeSelf)
                 {
 
-                    fillStars[0].SetActive(true);
+                    fillStars[0].Play("StarCollect");
                     audioManager.PlayStarSound();
 
                 }
                 break;
             case 2:
-                if (!fillStars[1].activeSelf)
+                if (!fillStars[1].transform.GetChild(0).gameObject.activeSelf)
                 {
 
-                    fillStars[1].SetActive(true);
+                    fillStars[1].Play("StarCollect");
                     audioManager.PlayStarSound();
 
                 }
                 break;
             case 3:
-                if (!fillStars[2].activeSelf)
+                if (!fillStars[2].transform.GetChild(0).gameObject.activeSelf)
                 {
 
-                    fillStars[2].SetActive(true);
+                    fillStars[2].Play("StarCollect");   
                     audioManager.PlayStarSound();
 
                 }

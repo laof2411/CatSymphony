@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class DripStoreManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textShowCurrentMoney;
-    [SerializeField] private int currentMoney;
-
 
     [SerializeField] private int currentItemCost;
 
@@ -55,6 +53,7 @@ public class DripStoreManager : MonoBehaviour
 
     void Start()
     {
+
         UpdateCurrentMoney();
         ShutdownLightFrame();
 
@@ -77,7 +76,7 @@ public class DripStoreManager : MonoBehaviour
 
     private void UpdateCurrentMoney()
     {
-        textShowCurrentMoney.text = "" + currentMoney;
+        textShowCurrentMoney.text = "" + GameManager.Instance.nekoins;
     }
 
 
@@ -368,9 +367,9 @@ public class DripStoreManager : MonoBehaviour
                 {
                     if (catStoreItem[selectionListCat].unlocked == false)
                     {
-                        if (currentMoney >= catStoreItem[selectionListCat].itemCost)
+                        if (GameManager.Instance.nekoins >= catStoreItem[selectionListCat].itemCost)
                         {
-                            currentMoney -= catStoreItem[selectionListCat].itemCost;
+                            GameManager.Instance.nekoins -= catStoreItem[selectionListCat].itemCost;
 
                             catStoreItem[selectionListCat].unlocked = true;
                             LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
@@ -392,9 +391,9 @@ public class DripStoreManager : MonoBehaviour
                 {
                     if (clothesStoreItem[selectionListClothes].unlocked == false)
                     {
-                        if (currentMoney >= clothesStoreItem[selectionListClothes].itemCost)
+                        if (GameManager.Instance.nekoins >= clothesStoreItem[selectionListClothes].itemCost)
                         {
-                            currentMoney -= clothesStoreItem[selectionListClothes].itemCost;
+                            GameManager.Instance.nekoins -= clothesStoreItem[selectionListClothes].itemCost;
 
                             clothesStoreItem[selectionListClothes].unlocked = true;
                             LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
@@ -417,9 +416,9 @@ public class DripStoreManager : MonoBehaviour
                 {
                     if (accessoriesStoreItem[selectionListAccesories].unlocked == false)
                     {
-                        if (currentMoney >= accessoriesStoreItem[selectionListAccesories].itemCost)
+                        if (GameManager.Instance.nekoins >= accessoriesStoreItem[selectionListAccesories].itemCost)
                         {
-                            currentMoney -= accessoriesStoreItem[selectionListAccesories].itemCost;
+                            GameManager.Instance.nekoins -= accessoriesStoreItem[selectionListAccesories].itemCost;
 
                             accessoriesStoreItem[selectionListAccesories].unlocked = true;
                             LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
@@ -441,9 +440,9 @@ public class DripStoreManager : MonoBehaviour
                 {
                     if (bongosStoreItem[selectionListBongo].unlocked == false)
                     {
-                        if (currentMoney >= bongosStoreItem[selectionListBongo].itemCost)
+                        if (GameManager.Instance.nekoins >= bongosStoreItem[selectionListBongo].itemCost)
                         {
-                            currentMoney -= bongosStoreItem[selectionListBongo].itemCost;
+                            GameManager.Instance.nekoins -= bongosStoreItem[selectionListBongo].itemCost;
                             bongosStoreItem[selectionListBongo].unlocked = true;
                             LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
                             UpdateItemPrice(bongosStoreItem[selectionListBongo].itemCost, bongosStoreItem[selectionListBongo].unlocked);

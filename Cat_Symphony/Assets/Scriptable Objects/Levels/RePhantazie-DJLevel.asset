@@ -24,3 +24,6 @@ MonoBehaviour:
   thirdStarScore: 2000
   noteSpeed: 5
   maxPaws: 0
+  nekoinsFirstStar: 15
+  nekoinsSecondStar: 20
+  nekoinsThirdStar: 35

@@ -80,6 +80,8 @@ public class SongSelectionManager : MonoBehaviour
         topSideCoordinates = topSide.transform.localPosition;
 
         UpdateLevelInfo();
+
+        GameManager.Instance.songSelectionManager = this.gameObject;
     }
     public float newLocation1;
     public float newLocation2;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,6 +44,29 @@ public class LevelEndManager : MonoBehaviour
         finalScore = GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentScore();
         finalStars = GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStars();
         finalPaws = GameObject.FindAnyObjectByType<PawsManager>().ReturnCurrentPaws();
+
+    }
+
+    private void AddNekoinsToGameManager()
+    {
+
+        switch (finalStars)
+        {
+
+            case 1:
+                GameManager.Instance.nekoins += GameManager.Instance.levelData.nekoinsFirstStar;
+                break;
+            case 2:
+                GameManager.Instance.nekoins += GameManager.Instance.levelData.nekoinsFirstStar;
+                GameManager.Instance.nekoins += GameManager.Instance.levelData.nekoinsSecondStar;
+                break;
+            case 3:
+                GameManager.Instance.nekoins += GameManager.Instance.levelData.nekoinsFirstStar;
+                GameManager.Instance.nekoins += GameManager.Instance.levelData.nekoinsSecondStar;
+                GameManager.Instance.nekoins += GameManager.Instance.levelData.nekoinsThirdStar;
+                break;
+
+        }
 
     }
 }

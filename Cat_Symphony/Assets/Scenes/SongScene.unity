@@ -154,6 +154,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6671047094748062973, guid: 50dc1a517a5224b4591a342d4278fe1d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6718812368768198269, guid: 50dc1a517a5224b4591a342d4278fe1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -366,6 +371,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019fc52fc2069e64d9f40a7a66b855b2, type: 3}
+--- !u!95 &306094413 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6577109496858341806, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+    type: 3}
+  m_PrefabInstance: {fileID: 5330012302803439057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &321271978 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1984347243978682791, guid: 40597d1178e539746aaa28edfa00feb0,
@@ -891,6 +902,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702076458}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &818714953 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2396860501179692420, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+    type: 3}
+  m_PrefabInstance: {fileID: 5330012302803439057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &850739910
 GameObject:
   m_ObjectHideFlags: 0
@@ -3188,6 +3205,16 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1846472916}
+    - target: {fileID: 759409733068390418, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+        type: 3}
+      propertyPath: fillStars.Array.data[1]
+      value: 
+      objectReference: {fileID: 306094413}
+    - target: {fileID: 759409733068390418, guid: ce6a42c64e309cd4db8c7ff6f9356459,
+        type: 3}
+      propertyPath: fillStars.Array.data[2]
+      value: 
+      objectReference: {fileID: 818714953}
     - target: {fileID: 2383662626017908849, guid: ce6a42c64e309cd4db8c7ff6f9356459,
         type: 3}
       propertyPath: m_Pivot.x

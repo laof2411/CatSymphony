@@ -141,7 +141,12 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
 
+        if(songSelectionManager != null)
+        {
+
         songSelectionManager.GetComponent<SongSelectionManager>().UpdateStars();
+
+        }
     }
 
     private void DebuggingCatsLooks()

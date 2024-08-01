@@ -6134,6 +6134,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1475614723580631873, guid: 019fc52fc2069e64d9f40a7a66b855b2,
         type: 3}
+      propertyPath: nekoins
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475614723580631873, guid: 019fc52fc2069e64d9f40a7a66b855b2,
+        type: 3}
       propertyPath: dripStore
       value: 
       objectReference: {fileID: 0}
@@ -11935,7 +11940,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textShowCurrentMoney: {fileID: 583754960}
-  currentMoney: 1000
   currentItemCost: 0
   catAvatar: {fileID: 415337142}
   bongoAvatar: {fileID: 1125307393}

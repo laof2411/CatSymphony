@@ -765,6 +765,7 @@ MonoBehaviour:
   currentCombo: 0
   percentage: 0
   currentStars: 0
+  audioManager: {fileID: 8589989003383304335}
 --- !u!1 &3697088420343954911
 GameObject:
   m_ObjectHideFlags: 0

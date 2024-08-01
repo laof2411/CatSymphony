@@ -13,6 +13,7 @@ public class LevelScriptableObject : ScriptableObject
 
     public int sceneID;
     public int levelID;
+    public int level;
 
     public NoteLevelData noteData;
 

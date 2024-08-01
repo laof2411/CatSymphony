@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     public void UpdateLevelScoresAndStars(int newScore, int newStars, int newPaws)
     {
         Debug.Log("Gamemanger: updating scores...");
-        int ID = levelData.levelID;
+        int level = levelData.level -1;
         int dificulty = 0;
 
         LevelDifficulty levelDifficulty = levelData.dififculty;
@@ -94,22 +94,22 @@ public class GameManager : MonoBehaviour
                 }
         }
 
-        if (levelSavesStars[ID, dificulty] < newStars)
+        if (levelSavesStars[level, dificulty] < newStars)
         {
-            levelSavesStars[ID, dificulty] = newStars;
+            levelSavesStars[level, dificulty] = newStars;
         }
 
-        if (levelSavesPoints[ID, dificulty] < newScore)
+        if (levelSavesPoints[level, dificulty] < newScore)
         {
-            levelSavesPoints[ID, dificulty] = newScore;
+            levelSavesPoints[level, dificulty] = newScore;
         }
 
-        if (levelSavesPaws[ID, dificulty] < newPaws)
+        if (levelSavesPaws[level, dificulty] < newPaws)
         {
-            levelSavesPaws[ID, dificulty] = newPaws;
+            levelSavesPaws[level, dificulty] = newPaws;
         }
 
-        Debug.Log("Gamemanger: score updated; stars: " + levelSavesStars[ID, dificulty] + "; scores: " + levelSavesPoints[ID, dificulty] + "; paws: " + levelSavesPaws[ID, dificulty]);
+        Debug.Log("Gamemanger: score updated; stars: " + levelSavesStars[level, dificulty] + "; scores: " + levelSavesPoints[level, dificulty] + "; paws: " + levelSavesPaws[level, dificulty]);
 
         SaveSytem.SavePlayer();
 

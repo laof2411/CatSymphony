@@ -17,6 +17,7 @@ MonoBehaviour:
   songAudio: {fileID: 8300000, guid: faaeb344a4c3db343b73e003fdba2df4, type: 3}
   sceneID: 1
   levelID: 1
+  level: 1
   noteData: {fileID: 11400000, guid: ff6d034a52d3a234893369a2d5b2dc2c, type: 2}
   firstStarScore: 300
   secondStarScore: 800

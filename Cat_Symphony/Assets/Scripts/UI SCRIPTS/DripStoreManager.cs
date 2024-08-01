@@ -61,6 +61,12 @@ public class DripStoreManager : MonoBehaviour
         currentListSelection = 0;
         CleanUp();
 
+
+        selectionListCat = GameManager.Instance.currentCatLooks[0];
+        selectionListClothes = GameManager.Instance.currentCatLooks[1];
+        selectionListAccesories = GameManager.Instance.currentCatLooks[2];
+        selectionListBongo = GameManager.Instance.currentCatLooks[3];
+
         Update3DShownCat();
         Update3DShownClothes();
         Update3DShownAccesory();

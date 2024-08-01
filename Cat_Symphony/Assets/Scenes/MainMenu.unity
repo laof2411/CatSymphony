@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2672,20 +2672,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7180145751282637576, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21c7e4b8f7c8a374b9f8928494f0293d, type: 2}
+    - target: {fileID: -5360244900083916120, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a134944f05b6dd44aa342321266f75f, type: 2}
+    - target: {fileID: -5326730688104404983, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6aab23cdf86e10b439c45dd254029f62, type: 2}
+    - target: {fileID: -1807288639136415813, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e12fcac9b75442144a51777e87d5e06a, type: 2}
     - target: {fileID: 170395299754210963, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
       propertyPath: m_Name
       value: 'Gato rigg semifinal  '
       objectReference: {fileID: 0}
+    - target: {fileID: 1193782280241998473, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc0465b52df5595478ea74dc62597aeb, type: 2}
+    - target: {fileID: 2413315338589401918, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5334bc2b256ff6e40bc839a8799d00bc, type: 2}
     - target: {fileID: 4971930502759243236, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5233112405309087440, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
@@ -2696,12 +2726,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 45310deda9c406047b012e557e981d20, type: 2}
+      objectReference: {fileID: 2100000, guid: 3bd1a50a4ee66a1458118a82962510f6, type: 2}
     - target: {fileID: 6770363318936390970, guid: 7551621b1c99ad54db05054a03d265a2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8257561455044140221, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 148a293b02cdb2c41ba18ffa8bf128bf, type: 2}
+    - target: {fileID: 9081555272721125757, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da800c7694e0ecd408be2f4812e9fcf4, type: 2}
+    - target: {fileID: 9201801076444977808, guid: 7551621b1c99ad54db05054a03d265a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc0465b52df5595478ea74dc62597aeb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

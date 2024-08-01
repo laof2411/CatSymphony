@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int[,] levelSavesPoints = new int[3, 3];
     public int[,] levelSavesPaws = new int[3, 3];
     public int testInt;
+
+    public int nekoins;
     //No use for this int being public?
 
     public bool menuScreenHasBeenEntered;

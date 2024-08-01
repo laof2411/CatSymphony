@@ -24,6 +24,10 @@ public class LevelScriptableObject : ScriptableObject
     public float noteSpeed;
 
     public int maxPaws;
+
+    public int nekoinsFirstStar;
+    public int nekoinsSecondStar;
+    public int nekoinsThirdStar;
     
 }
 

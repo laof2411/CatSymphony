@@ -131,6 +131,7 @@ public class AudioManager : MonoBehaviour
         audioClips[2].volume = GameManager.Instance.settings.effectsVolume / 100;
         audioClips[3].volume = GameManager.Instance.settings.effectsVolume / 100;
         audioClips[4].volume = GameManager.Instance.settings.effectsVolume / 100;
+        audioClips[5].volume = GameManager.Instance.settings.effectsVolume / 100;
 
     }
 

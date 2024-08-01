@@ -66,7 +66,7 @@ public class ScoreManager : MonoBehaviour
         {
 
             BreakCombo();
-            audioManager.PlayFailComboSound();
+
 
         }
 
@@ -108,7 +108,7 @@ public class ScoreManager : MonoBehaviour
 
         currentCombo = 0;
         HUD.UpdateComboText(currentCombo);
-
+        audioManager.PlayFailComboSound();
 
     }
 

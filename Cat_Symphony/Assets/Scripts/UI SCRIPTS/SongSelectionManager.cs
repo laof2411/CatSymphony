@@ -60,6 +60,10 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] scoreLevel2Dificulty = new TextMeshProUGUI[3];
     [SerializeField] private TextMeshProUGUI[] scoreLevel3Dificulty = new TextMeshProUGUI[3];
 
+    [SerializeField] private GameObject[] dificultySelectionLevel1 = new GameObject[3];
+    [SerializeField] private GameObject[] dificultySelectionLevel2 = new GameObject[3];
+    [SerializeField] private GameObject[] dificultySelectionLevel3 = new GameObject[3];
+
 
     private void Start()
     {
@@ -82,6 +86,8 @@ public class SongSelectionManager : MonoBehaviour
         UpdateLevelInfo();
 
         GameManager.Instance.songSelectionManager = this.gameObject;
+
+        DificultyStudentSelected();
     }
     public float newLocation1;
     public float newLocation2;
@@ -362,23 +368,67 @@ public class SongSelectionManager : MonoBehaviour
     }
 
 
+    public void LevelDificultySelection()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            dificultySelectionLevel1[i].SetActive(false);
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            dificultySelectionLevel2[i].SetActive(false);
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            dificultySelectionLevel3[i].SetActive(false);
+        }
+
+        switch (selectedSong)
+        {
+            case 1:
+                {
+                    dificultySelectionLevel1[selectedDificulty].SetActive(true);
+                    break;
+                }
+            case 2:
+                {
+                    dificultySelectionLevel2[selectedDificulty].SetActive(true);
+                    break;
+                }
+            case 3:
+                {
+                    dificultySelectionLevel3[selectedDificulty].SetActive(true);
+                    break;
+                }
+        }
+
+    }
+
     #region buttons
     public void DificultyStudentSelected()
     { 
         selectedDificulty = 0;
         Debug.Log("DificultyStudentSelected");
+
+        //LevelDificultySelection();
     }
 
     public void DificultyProfessionaSelected()
     {
         selectedDificulty = 1;
         Debug.Log("DificultyProfessionaSelected");
+
+        //LevelDificultySelection();
     }
 
     public void DificultyDJSelected()
     {
         selectedDificulty = 2;
         Debug.Log("DificultyDJSelected");
+
+        //LevelDificultySelection();
     }
 
     #endregion

@@ -8,28 +8,79 @@ using System.IO;
 [System.Serializable]
 public class SaveSytem
 {
+    public static DeviceType deviceType;
 
     public static void SavePlayer()
     {
-        BinaryFormatter formatter = new BinaryFormatter();
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+        {
+            Debug.Log("DeviceType: Handheld");
 
-        //string path1 = Application.persistentDataPath + "/FUN";
-        string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            //string path1 = Application.persistentDataPath + "/FUN";
+            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
+
+            Debug.Log(path);
+
+            FileStream stream = new FileStream(path, FileMode.Create);
+
+            PlayerData playerData = new PlayerData();
+
+            formatter.Serialize(stream, playerData);
+
+            stream.Close();
+        }
+        else if (SystemInfo.deviceType == DeviceType.Desktop)
+        {
+            Debug.Log("DeviceType: Desktop");
+
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            //string path1 = Application.persistentDataPath + "/FUN";
+            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
+
+            Debug.Log(path);
+
+            FileStream stream = new FileStream(path, FileMode.Create);
+
+            PlayerData playerData = new PlayerData();
+
+            formatter.Serialize(stream, playerData);
+
+            stream.Close();
+        }
+
+        //BinaryFormatter formatter = new BinaryFormatter();
+
+        ////string path1 = Application.persistentDataPath + "/FUN";
+        //string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
         
-        Debug.Log(path);
+        //Debug.Log(path);
 
-        FileStream stream = new FileStream(path, FileMode.Create);
+        //FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData playerData = new PlayerData();
+        //PlayerData playerData = new PlayerData();
 
-        formatter.Serialize(stream, playerData);
+        //formatter.Serialize(stream, playerData);
 
-        stream.Close();
+        //stream.Close();
     }
 
     public static PlayerData LoadPlayer()
     {
         string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
+
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+        {
+            path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
+            Debug.Log("DeviceType: Handheld");
+        }
+        else if (SystemInfo.deviceType == DeviceType.Desktop)
+        {
+            path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + "/fun.rtf";
+            Debug.Log("DeviceType: Desktop");
+        }
 
         if (File.Exists(path))
         {
@@ -44,7 +95,7 @@ public class SaveSytem
         }
         else
         {
-            Debug.Log("SaveFilr not existant!!");
+            Debug.Log("SaveFile not existant!");
             return null;
         }
     }

@@ -22,5 +22,5 @@ MonoBehaviour:
   firstStarScore: 300
   secondStarScore: 800
   thirdStarScore: 1500
-  noteSpeed: 20
+  noteSpeed: 10
   maxPaws: 0

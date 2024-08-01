@@ -5,23 +5,20 @@ using UnityEngine.UI;
 public class SettingsManager : MonoBehaviour
 {
 
-    [SerializeField] private bool bongoSoundsActive = true;
     [SerializeField] private GameObject bongoSoundsCheckMark;
     [SerializeField] private Slider _sliderMusic;
     [SerializeField] private Slider _sliderEffect;
 
-    [SerializeField] private float volumeMusic = 100;
-    [SerializeField] private float volumeEffect = 100;
+    [SerializeField] private GameObject pauseObject;
+    [SerializeField] private GameObject settingsObject;
+    [SerializeField] private AudioManager audioManager;
 
-    [SerializeField] public SettingsData settings;
 
-    public void Awake()
+    public void GetSettingsValues()
     {
 
-        settings = GameManager.Instance.settings;
 
-
-        if (settings.bongoSoundsActive)
+        if (GameManager.Instance.settings.bongoSoundsActive)
         {
 
             bongoSoundsCheckMark.SetActive(true);
@@ -34,54 +31,73 @@ public class SettingsManager : MonoBehaviour
 
         }
 
-        volumeMusic = settings.musicVolume;
-        _sliderMusic.value = volumeMusic;
+        _sliderMusic.value = GameManager.Instance.settings.musicVolume;
 
-        volumeEffect = settings.effectsVolume;
-        _sliderEffect.value = volumeEffect;
+        _sliderEffect.value = GameManager.Instance.settings.effectsVolume;
 
     }
 
     public void TurnOnOffBongoSounds()
     {
-        if (bongoSoundsActive)
+        if (GameManager.Instance.settings.bongoSoundsActive)
         {
-            bongoSoundsActive = false;
+            GameManager.Instance.settings.bongoSoundsActive = false;
 
             bongoSoundsCheckMark.SetActive(false);
-            settings.bongoSoundsActive = false;
 
         }
-        else if (!bongoSoundsActive)
+        else if (!GameManager.Instance.settings.bongoSoundsActive)
         {
-            bongoSoundsActive = true;
+            GameManager.Instance.settings.bongoSoundsActive = true;
 
             bongoSoundsCheckMark.SetActive(true);
-            settings.bongoSoundsActive = true;
 
 
         }
-        GameManager.Instance.settings = settings;
+
+        if (audioManager != null)
+        {
+
+            audioManager.UpdateAudioSettings();
+
+
+        }
 
     }
 
     public void ChangeVolumeMusic()
     {
 
-        volumeMusic = _sliderMusic.value;
-        settings.musicVolume = volumeMusic;
+        GameManager.Instance.settings.musicVolume = _sliderMusic.value;
+        if (audioManager != null)
+        {
 
-        GameManager.Instance.settings = settings;
+            audioManager.UpdateAudioSettings();
+
+
+        }
     }
 
     public void ChangeVolumeEffects()
     {
 
-        volumeEffect = _sliderEffect.value;
-        settings.effectsVolume = volumeEffect;
+        GameManager.Instance.settings.effectsVolume = _sliderEffect.value;
+        if(audioManager != null)
+        {
+
+        audioManager.UpdateAudioSettings();
 
 
-        GameManager.Instance.settings = settings;
+        }
+
+    }
+
+    public void ReturnToPauseMenu()
+    {
+
+        pauseObject.SetActive(true);
+        settingsObject.SetActive(false);
+
     }
 
 

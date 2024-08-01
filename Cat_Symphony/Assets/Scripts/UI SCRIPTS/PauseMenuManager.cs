@@ -11,6 +11,8 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pawsText;
     [SerializeField] private GameObject[] fillStars;
 
+    [SerializeField] private GameObject settingsObject;
+
     public void UpdatePauseData()
     {
 
@@ -62,7 +64,8 @@ public class PauseMenuManager : MonoBehaviour
     public void ButtonConfiguration()
     {
         
-
+        settingsObject.SetActive(true);
+        pauseMenu.SetActive(false);
 
     }
 

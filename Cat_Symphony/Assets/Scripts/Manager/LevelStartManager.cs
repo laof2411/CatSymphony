@@ -7,6 +7,7 @@ public class LevelStartManager : MonoBehaviour
 
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private NoteSpawnerManager noteSpawner;
+    [SerializeField] private SettingsManager settings;
 
     private void Start()
     {
@@ -14,7 +15,10 @@ public class LevelStartManager : MonoBehaviour
         GameManager.Instance.PauseGame();
         audioManager.GetCurrentSong();
         audioManager.StartSongTimer();
+
         noteSpawner.GetCurrentNoteData();
+        settings.GetSettingsValues();
+        audioManager.UpdateAudioSettings();
 
     }
 

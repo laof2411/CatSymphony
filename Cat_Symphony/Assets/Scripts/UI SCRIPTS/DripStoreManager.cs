@@ -31,6 +31,8 @@ public class DripStoreManager : MonoBehaviour
 
     [SerializeField] private int currentListSelection;
 
+    [SerializeField] public GameObject[] itemSelectedUI = new GameObject[4];
+
     [SerializeField] private int selectionListCat = 0;
     [SerializeField] private int selectionListClothes = 0;
     [SerializeField] private int selectionListAccesories = 0;
@@ -478,7 +480,7 @@ public class DripStoreManager : MonoBehaviour
         currentListSelection = 0;
         ShutdownLightFrame();
 
-        UpdateItemName(catStoreItem[selectionListCat].name);
+        UpdateItemName(catStoreItem[selectionListCat].itemName);
 
         lightframesAdOns[0].SetActive(true);
         LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
@@ -490,7 +492,7 @@ public class DripStoreManager : MonoBehaviour
         ShutdownLightFrame();
 
 
-        UpdateItemName(clothesStoreItem[selectionListClothes].name);
+        UpdateItemName(clothesStoreItem[selectionListClothes].itemName);
 
         lightframesAdOns[1].SetActive(true);
         LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
@@ -502,7 +504,7 @@ public class DripStoreManager : MonoBehaviour
         ShutdownLightFrame();
 
 
-        UpdateItemName(accessoriesStoreItem[selectionListAccesories].name);
+        UpdateItemName(accessoriesStoreItem[selectionListAccesories].itemName);
 
         lightframesAdOns[2].SetActive(true);
         LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
@@ -513,11 +515,13 @@ public class DripStoreManager : MonoBehaviour
         currentListSelection = 3;
         ShutdownLightFrame();
 
-        UpdateItemName(bongosStoreItem[selectionListBongo].name);
+        UpdateItemName(bongosStoreItem[selectionListBongo].itemName);
 
         lightframesAdOns[3].SetActive(true);
         LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
     }
+
+
 
     public void ShutdownLightFrame()
     {

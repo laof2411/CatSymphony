@@ -21,6 +21,8 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private GameObject menusButtonHolderObj;
 
+    [SerializeField] private GameObject[] moveThroughMainMenu = new GameObject[3];
+
     //Start is called before the first frame update
     void Start()
     {
@@ -47,18 +49,22 @@ public class MainMenuManager : MonoBehaviour
         starterBackgroundObj.SetActive(true);
         menusButtonHolderObj.SetActive(false);
 
+
         GameManager.Instance.menuScreenHasBeenEntered = true;
     }
 
     public void OpenSongSelectionScreen()
     {
         HideAllScreens();
+        HideButtonsHighlights();
         for (int i = 0; i < songSelectionScreen.Length; i++)
         {
             songSelectionScreen[i].SetActive(true);
         }
         mainBackgroundObj.SetActive(true);
         starterBackgroundObj.SetActive(false);
+
+        moveThroughMainMenu[0].SetActive(true);
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[1];
         menusButtonHolderObj.SetActive(true);
@@ -68,10 +74,13 @@ public class MainMenuManager : MonoBehaviour
     public void OpenDripStoreScreen()
     {
         HideAllScreens();
+        HideButtonsHighlights();
         for (int i = 0; i < dripStoreScreen.Length; i++)
         {
             dripStoreScreen[i].SetActive(true);
         }
+
+        moveThroughMainMenu[1].SetActive(true);
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[2];
         menusButtonHolderObj.SetActive(true);
@@ -80,10 +89,13 @@ public class MainMenuManager : MonoBehaviour
     public void OpenSettingsScreen()
     {
         HideAllScreens();
+        HideButtonsHighlights();
         for (int i = 0; i < settingsScreen.Length; i++)
         {
             settingsScreen[i].SetActive(true);
         }
+
+        moveThroughMainMenu[2].SetActive(true);
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[3];
         menusButtonHolderObj.SetActive(true);
@@ -99,6 +111,14 @@ public class MainMenuManager : MonoBehaviour
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[4];
         menusButtonHolderObj.SetActive(false);
+    }
+
+    public void HideButtonsHighlights()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            moveThroughMainMenu[i].SetActive(false);
+        }
     }
 
     public void HideAllScreens()

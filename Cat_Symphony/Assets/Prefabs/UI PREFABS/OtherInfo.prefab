@@ -460,13 +460,14 @@ GameObject:
   - component: {fileID: 2210806773720728821}
   - component: {fileID: 7338224422782817172}
   - component: {fileID: 5673054382662572201}
+  - component: {fileID: 8770167463166979114}
   m_Layer: 5
   m_Name: SelectDificultyStudent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2210806773720728821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -524,6 +525,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &8770167463166979114
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697154243835194055}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7d1e32b164ebf2541b13a258408e523a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7d1e32b164ebf2541b13a258408e523a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2068323081616652679
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7508852072348751217}
+  - component: {fileID: 7645993425445588343}
   m_Layer: 5
   m_Name: OtherInfo
   m_TagString: Untagged
@@ -705,6 +723,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -122}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!111 &7645993425445588343
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982637832763863001}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1470a363a3ffe1e4cb9f78ab88467313, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 1470a363a3ffe1e4cb9f78ab88467313, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3996143211547319837
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +750,7 @@ GameObject:
   - component: {fileID: 584066097657008831}
   - component: {fileID: 7701743232546377949}
   - component: {fileID: 5138901928722270828}
+  - component: {fileID: 2429105187543996209}
   m_Layer: 5
   m_Name: SelectDificultyProfessional
   m_TagString: Untagged
@@ -780,6 +815,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &2429105187543996209
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996143211547319837}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7d1e32b164ebf2541b13a258408e523a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7d1e32b164ebf2541b13a258408e523a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4058889297910531310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,8 +1397,9 @@ GameObject:
   - component: {fileID: 1112236713107964430}
   - component: {fileID: 2117426804699042145}
   - component: {fileID: 2831236011956164211}
+  - component: {fileID: 4057441402341702063}
   m_Layer: 5
-  m_Name: SelectDificultyDj
+  m_Name: SelectDificultyDJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1410,6 +1462,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &4057441402341702063
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5161842199512598768}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7d1e32b164ebf2541b13a258408e523a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7d1e32b164ebf2541b13a258408e523a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5199339662411009524
 GameObject:
   m_ObjectHideFlags: 0

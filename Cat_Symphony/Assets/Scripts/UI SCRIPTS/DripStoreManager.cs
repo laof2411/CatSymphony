@@ -49,17 +49,17 @@ public class DripStoreManager : MonoBehaviour
     [SerializeField] private bool movementRight = true;
 
     [SerializeField] private GameObject buyButton;
-    [SerializeField] private GameObject buyButtonFont;
+    [SerializeField] private TextMeshProUGUI buyButtonFont;
 
     void Start()
     {
+        buyButtonFont = buyButton.GetComponentInChildren<TextMeshProUGUI>();
 
         UpdateCurrentMoney();
         ShutdownLightFrame();
 
         currentListSelection = 0;
         CleanUp();
-
 
         selectionListCat = GameManager.Instance.currentCatLooks[0];
         selectionListClothes = GameManager.Instance.currentCatLooks[1];
@@ -326,13 +326,17 @@ public class DripStoreManager : MonoBehaviour
         {
             locks[currentListSelection].SetActive(false);
             buyButton.GetComponent<Image>().color = Color.grey;
-            buyButtonFont.SetActive(false);
+
+            buyButtonFont.text = "Sold";
+            buyButtonFont.color = Color.white;
         }
         else if (!unlocked)
         {
             locks[currentListSelection].SetActive(true);
             buyButton.GetComponent<Image>().color = Color.white;
-            buyButtonFont.SetActive(true);
+
+            buyButtonFont.text = "Buy";
+            buyButtonFont.color = Color.magenta;
         }
         Debug.Log(unlocked);
     }

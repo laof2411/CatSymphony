@@ -412,7 +412,7 @@ public class SongSelectionManager : MonoBehaviour
         selectedDificulty = 0;
         Debug.Log("DificultyStudentSelected");
 
-        //LevelDificultySelection();
+        LevelDificultySelection();
     }
 
     public void DificultyProfessionaSelected()
@@ -420,7 +420,7 @@ public class SongSelectionManager : MonoBehaviour
         selectedDificulty = 1;
         Debug.Log("DificultyProfessionaSelected");
 
-        //LevelDificultySelection();
+        LevelDificultySelection();
     }
 
     public void DificultyDJSelected()
@@ -428,7 +428,7 @@ public class SongSelectionManager : MonoBehaviour
         selectedDificulty = 2;
         Debug.Log("DificultyDJSelected");
 
-        //LevelDificultySelection();
+        LevelDificultySelection();
     }
 
     #endregion

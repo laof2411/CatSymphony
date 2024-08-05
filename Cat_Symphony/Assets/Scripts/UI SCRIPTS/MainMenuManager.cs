@@ -21,7 +21,11 @@ public class MainMenuManager : MonoBehaviour
 
     [SerializeField] private GameObject menusButtonHolderObj;
 
-    [SerializeField] private GameObject[] moveThroughMainMenu = new GameObject[3];
+    [SerializeField] private Sprite[] selectedSprites = new Sprite[3];
+    [SerializeField] private Sprite[] unSelectedSprites = new Sprite[3];
+
+    [SerializeField] private GameObject[] moveThroughHighlight = new GameObject[3];
+    [SerializeField] private GameObject[] moveThroughMainMenuNormal = new GameObject[3];
 
     //Start is called before the first frame update
     void Start()
@@ -64,7 +68,10 @@ public class MainMenuManager : MonoBehaviour
         mainBackgroundObj.SetActive(true);
         starterBackgroundObj.SetActive(false);
 
-        moveThroughMainMenu[0].SetActive(true);
+        moveThroughHighlight[0].SetActive(true);
+        moveThroughMainMenuNormal[0].GetComponent<Image>().sprite = selectedSprites[0];
+        moveThroughMainMenuNormal[1].GetComponent<Image>().sprite = unSelectedSprites[1];
+        moveThroughMainMenuNormal[2].GetComponent<Image>().sprite = unSelectedSprites[2];
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[1];
         menusButtonHolderObj.SetActive(true);
@@ -80,7 +87,10 @@ public class MainMenuManager : MonoBehaviour
             dripStoreScreen[i].SetActive(true);
         }
 
-        moveThroughMainMenu[1].SetActive(true);
+        moveThroughHighlight[1].SetActive(true);
+        moveThroughMainMenuNormal[0].GetComponent<Image>().sprite = unSelectedSprites[0];
+        moveThroughMainMenuNormal[1].GetComponent<Image>().sprite = selectedSprites[1];
+        moveThroughMainMenuNormal[2].GetComponent<Image>().sprite = unSelectedSprites[2];
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[2];
         menusButtonHolderObj.SetActive(true);
@@ -95,7 +105,10 @@ public class MainMenuManager : MonoBehaviour
             settingsScreen[i].SetActive(true);
         }
 
-        moveThroughMainMenu[2].SetActive(true);
+        moveThroughHighlight[2].SetActive(true);
+        moveThroughMainMenuNormal[0].GetComponent<Image>().sprite = unSelectedSprites[0];
+        moveThroughMainMenuNormal[1].GetComponent<Image>().sprite = unSelectedSprites[1];
+        moveThroughMainMenuNormal[2].GetComponent<Image>().sprite = selectedSprites[2];
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[3];
         menusButtonHolderObj.SetActive(true);
@@ -117,7 +130,7 @@ public class MainMenuManager : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            moveThroughMainMenu[i].SetActive(false);
+            moveThroughHighlight[i].SetActive(false);
         }
     }
 

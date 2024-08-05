@@ -329,7 +329,7 @@ public class DripStoreManager : MonoBehaviour
             locks[currentListSelection].SetActive(false);
             buyButton.GetComponent<Image>().color = Color.grey;
 
-            buyButtonFont.text = "Sold";
+            buyButtonFont.text = "Equip";
             buyButtonFont.color = Color.white;
         }
         else if (!unlocked)

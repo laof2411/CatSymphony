@@ -170,6 +170,10 @@ public class SongSelectionManager : MonoBehaviour
         newPosition[0] = songSelection1[0].transform.position;
         newPosition[1] = songSelection2[0].transform.position;
         newPosition[2] = songSelection3[0].transform.position;
+
+
+        songSelection2[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+        songSelection3[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
     }
 
     private float PercentageOgPosition1(int percentage, int whichSelection)
@@ -198,6 +202,9 @@ public class SongSelectionManager : MonoBehaviour
         newPosition[0] = songSelection1[0].transform.position;
         newPosition[1] = songSelection2[0].transform.position;
         newPosition[2] = songSelection3[0].transform.position;
+
+        songSelection1[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+        songSelection3[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
     }
 
     public void Selection3Selected()
@@ -220,6 +227,9 @@ public class SongSelectionManager : MonoBehaviour
         newPosition[0] = songSelection1[0].transform.position;
         newPosition[1] = songSelection2[0].transform.position;
         newPosition[2] = songSelection3[0].transform.position;
+
+        songSelection1[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+        songSelection2[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
     }
 
     public void CurrentScore()

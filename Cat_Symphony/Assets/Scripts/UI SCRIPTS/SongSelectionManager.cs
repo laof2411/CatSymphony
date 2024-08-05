@@ -64,6 +64,8 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private GameObject[] dificultySelectionLevel2 = new GameObject[3];
     [SerializeField] private GameObject[] dificultySelectionLevel3 = new GameObject[3];
 
+    [SerializeField] private GameObject pawsGO;
+    [SerializeField] private TextMeshProUGUI pawsShower;
 
     private void Start()
     {
@@ -74,7 +76,7 @@ public class SongSelectionManager : MonoBehaviour
         ResetSeletionToDefault();
         menuTitle.SetActive(true);
 
-        selectedSong = 0;
+        selectedSong = 1;
 
         boxHeight1 = box.GetComponent<RectTransform>().transform.position.y;
         boxHeight2 = box.GetComponent<RectTransform>().rect.size.y;
@@ -88,6 +90,8 @@ public class SongSelectionManager : MonoBehaviour
         GameManager.Instance.songSelectionManager = this.gameObject;
 
         DificultyStudentSelected();
+
+        pawsGO.SetActive(false);
     }
     public float newLocation1;
     public float newLocation2;
@@ -98,6 +102,22 @@ public class SongSelectionManager : MonoBehaviour
     {
         UpdateScore();
         UpdateStars();
+
+    }
+
+    public void UpdatePaws()
+    {
+        pawsGO.SetActive(true);
+        
+
+        pawsShower.text = "" + GameManager.Instance.levelSavesPaws[selectedSong -1, selectedDificulty] + "/3";
+
+        Debug.Log(selectedSong + "; " + selectedDificulty);
+    }
+
+    public void NoPaws()
+    {
+        pawsShower.text = "-/-";
     }
 
     public void UpdateStars()
@@ -140,6 +160,7 @@ public class SongSelectionManager : MonoBehaviour
         CurrentScore();
     }
 
+    #region
     public void Selection1Selected()
     {
         ResetSeletionToDefault();
@@ -174,6 +195,8 @@ public class SongSelectionManager : MonoBehaviour
 
         songSelection2[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         songSelection3[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+
+        LevelDificultySelection();
     }
 
     private float PercentageOgPosition1(int percentage, int whichSelection)
@@ -205,6 +228,8 @@ public class SongSelectionManager : MonoBehaviour
 
         songSelection1[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         songSelection3[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+
+        LevelDificultySelection();
     }
 
     public void Selection3Selected()
@@ -230,8 +255,11 @@ public class SongSelectionManager : MonoBehaviour
 
         songSelection1[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         songSelection2[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+
+        LevelDificultySelection();
     }
 
+    #endregion
     public void CurrentScore()
     {
         for (int i = 0; i < 3; i++)
@@ -375,6 +403,8 @@ public class SongSelectionManager : MonoBehaviour
         songSelection1[2].SetActive(false);
         songSelection2[2].SetActive(false);
         songSelection3[2].SetActive(false);
+
+        NoPaws();
     }
 
 
@@ -395,6 +425,9 @@ public class SongSelectionManager : MonoBehaviour
             dificultySelectionLevel3[i].SetActive(false);
         }
 
+
+        UpdatePaws();
+
         switch (selectedSong)
         {
             case 1:
@@ -413,7 +446,6 @@ public class SongSelectionManager : MonoBehaviour
                     break;
                 }
         }
-
     }
 
     #region buttons

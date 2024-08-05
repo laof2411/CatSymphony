@@ -15,406 +15,553 @@ MonoBehaviour:
   noteInformation:
   - type: 0
     trail_number: 2
-    timeToReachPerfect: 2.5
-    timeToSpawn: 1.413441
+    timeToReachPerfect: 3.1
+    timeToSpawn: 0.9268818
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 3.1
-    timeToSpawn: 2.0148091
+    timeToReachPerfect: 3.5
+    timeToSpawn: 1.3296182
     hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 4.2
+    timeToSpawn: 2.4460895
+    hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
     timeToReachPerfect: 4.35
-    timeToSpawn: 3.4730449
+    timeToSpawn: 2.5960896
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
-    timeToReachPerfect: 4.5
-    timeToSpawn: 3.623045
+    timeToReachPerfect: 4.8
+    timeToSpawn: 3.04609
     hasPaw: 0
-  - type: 0
-    trail_number: 4
-    timeToReachPerfect: 5.15
-    timeToSpawn: 4.273045
-    hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
-    timeToReachPerfect: 4.4
-    timeToSpawn: 3.313441
+    timeToReachPerfect: 5.1
+    timeToSpawn: 2.9268818
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 5
-    timeToSpawn: 3.9148092
+    timeToReachPerfect: 5.6
+    timeToSpawn: 3.4296181
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
-    timeToReachPerfect: 6.25
-    timeToSpawn: 5.373045
+    timeToReachPerfect: 6.2
+    timeToSpawn: 4.4460897
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
-    timeToReachPerfect: 6.4
-    timeToSpawn: 5.523045
+    timeToReachPerfect: 6.35
+    timeToSpawn: 4.5960894
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
-    timeToReachPerfect: 6.95
-    timeToSpawn: 6.073045
+    timeToReachPerfect: 6.75
+    timeToSpawn: 4.99609
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
-    timeToReachPerfect: 6.3
-    timeToSpawn: 5.213441
+    timeToReachPerfect: 7.1
+    timeToSpawn: 4.926882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 6.8
-    timeToSpawn: 5.7148094
+    timeToReachPerfect: 7.6
+    timeToSpawn: 5.429618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
     timeToReachPerfect: 8.05
-    timeToSpawn: 7.173045
+    timeToSpawn: 6.29609
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
     timeToReachPerfect: 8.2
-    timeToSpawn: 7.323045
+    timeToSpawn: 6.4460897
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
-    timeToReachPerfect: 8.75
-    timeToSpawn: 7.873045
+    timeToReachPerfect: 8.6
+    timeToSpawn: 6.8460903
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
-    timeToReachPerfect: 8.2
-    timeToSpawn: 7.1134405
+    timeToReachPerfect: 9
+    timeToSpawn: 6.826882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 8.7
-    timeToSpawn: 7.614809
+    timeToReachPerfect: 9.5
+    timeToSpawn: 7.3296185
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
     timeToReachPerfect: 9.95
-    timeToSpawn: 9.073045
+    timeToSpawn: 8.19609
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
     timeToReachPerfect: 10.15
-    timeToSpawn: 9.273045
+    timeToSpawn: 8.39609
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
-    timeToReachPerfect: 10.7
-    timeToSpawn: 9.823045
+    timeToReachPerfect: 10.55
+    timeToSpawn: 8.79609
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 10.4
-    timeToSpawn: 9.314809
+    timeToReachPerfect: 11.1
+    timeToSpawn: 8.929619
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
-    trail_number: 4
+    trail_number: 2
     timeToReachPerfect: 11.6
-    timeToSpawn: 10.723045
+    timeToSpawn: 9.426882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
-    trail_number: 3
-    timeToReachPerfect: 11
-    timeToSpawn: 9.914809
-    hasPaw: 0
-  - type: 0
-    trail_number: 4
+    trail_number: 1
     timeToReachPerfect: 12.2
-    timeToSpawn: 11.323045
+    timeToSpawn: 10.459013
     hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 12.35
+    timeToSpawn: 10.609014
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 1
+    timeToReachPerfect: 12.75
+    timeToSpawn: 11.009013
+    hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 11.6
-    timeToSpawn: 10.51481
+    timeToReachPerfect: 13.1
+    timeToSpawn: 10.929619
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
-    trail_number: 4
-    timeToReachPerfect: 12.8
-    timeToSpawn: 11.923045
+    trail_number: 2
+    timeToReachPerfect: 13.6
+    timeToSpawn: 11.426882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
-    trail_number: 3
-    timeToReachPerfect: 12.2
-    timeToSpawn: 11.114809
+    trail_number: 1
+    timeToReachPerfect: 14.2
+    timeToSpawn: 12.459013
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
-    trail_number: 4
-    timeToReachPerfect: 13.4
-    timeToSpawn: 12.523045
+    trail_number: 1
+    timeToReachPerfect: 14.35
+    timeToSpawn: 12.609014
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
-    trail_number: 3
-    timeToReachPerfect: 12.8
-    timeToSpawn: 11.714809
+    trail_number: 1
+    timeToReachPerfect: 12.75
+    timeToSpawn: 11.009013
     hasPaw: 0
-  - type: 0
-    trail_number: 4
-    timeToReachPerfect: 14
-    timeToSpawn: 13.123045
-    hasPaw: 0
-  - type: 0
-    trail_number: 3
-    timeToReachPerfect: 13.4
-    timeToSpawn: 12.314809
-    hasPaw: 0
-  - type: 0
-    trail_number: 4
-    timeToReachPerfect: 14.6
-    timeToSpawn: 13.723045
-    hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 14
-    timeToSpawn: 12.914809
+    timeToReachPerfect: 14.4
+    timeToSpawn: 12.229618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 4
-    timeToReachPerfect: 15.2
-    timeToSpawn: 14.323045
+    timeToReachPerfect: 15.6
+    timeToSpawn: 13.84609
     hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 15
+    timeToSpawn: 12.829618
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 16.2
+    timeToSpawn: 14.446091
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 15.6
+    timeToSpawn: 13.429619
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 16.8
+    timeToSpawn: 15.046089
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 16.2
+    timeToSpawn: 14.029619
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 17.4
+    timeToSpawn: 15.64609
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 16.8
+    timeToSpawn: 14.629618
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 18
+    timeToSpawn: 16.24609
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 17.4
+    timeToSpawn: 15.229618
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 18.6
+    timeToSpawn: 16.84609
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 3
+    timeToReachPerfect: 18
+    timeToSpawn: 15.829618
+    hasPaw: 0
+    hasSpawned: 1
+  - type: 0
+    trail_number: 4
+    timeToReachPerfect: 19.2
+    timeToSpawn: 17.44609
+    hasPaw: 0
+    hasSpawned: 1
   - type: 1
     trail_number: 1
-    timeToReachPerfect: 15.6
-    timeToSpawn: 14.729507
+    timeToReachPerfect: 17
+    timeToSpawn: 15.259013
     hasPaw: 0
+    hasSpawned: 1
   - type: 1
     trail_number: 2
-    timeToReachPerfect: 18.35
-    timeToSpawn: 17.263441
+    timeToReachPerfect: 18.95
+    timeToSpawn: 16.826881
     hasPaw: 0
+    hasSpawned: 1
   - type: 1
     trail_number: 3
-    timeToReachPerfect: 22.5
-    timeToSpawn: 21.414808
+    timeToReachPerfect: 23
+    timeToSpawn: 20.829618
     hasPaw: 0
+    hasSpawned: 1
   - type: 1
     trail_number: 4
-    timeToReachPerfect: 27.55
-    timeToSpawn: 26.673044
+    timeToReachPerfect: 27.1
+    timeToSpawn: 25.29609
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
-    timeToReachPerfect: 14.6
-    timeToSpawn: 13.51481
+    timeToReachPerfect: 16
+    timeToSpawn: 12.729618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 15.2
-    timeToSpawn: 14.114809
+    timeToSpawn: 13.029618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 15.8
-    timeToSpawn: 14.714809
+    timeToSpawn: 13.629619
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 16.4
-    timeToSpawn: 15.314809
+    timeToSpawn: 14.229618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 17
-    timeToSpawn: 15.914809
+    timeToSpawn: 14.829618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 17.6
-    timeToSpawn: 16.514809
+    timeToSpawn: 15.429619
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 18.2
-    timeToSpawn: 17.114809
+    timeToSpawn: 16.02962
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 18.8
-    timeToSpawn: 17.714808
+    timeToSpawn: 16.629618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 19.4
-    timeToSpawn: 18.314808
+    timeToSpawn: 17.229618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 20
-    timeToSpawn: 18.914808
+    timeToSpawn: 17.829618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 20.6
-    timeToSpawn: 19.514809
+    timeToSpawn: 18.429619
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 21.2
-    timeToSpawn: 20.114809
+    timeToSpawn: 19.02962
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 3
     timeToReachPerfect: 21.8
-    timeToSpawn: 20.714808
+    timeToSpawn: 19.629618
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 22.4
-    timeToSpawn: 21.31344
+    timeToSpawn: 20.226881
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 23
-    timeToSpawn: 21.91344
+    timeToSpawn: 20.826881
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 23.6
-    timeToSpawn: 22.513441
+    timeToSpawn: 21.426882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 24.2
-    timeToSpawn: 23.113441
+    timeToSpawn: 22.026882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 24.8
-    timeToSpawn: 23.71344
+    timeToSpawn: 22.62688
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 24.4
-    timeToSpawn: 23.31344
+    timeToSpawn: 22.226881
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 25
-    timeToSpawn: 23.91344
+    timeToSpawn: 22.826881
     hasPaw: 0
+    hasSpawned: 1
   - type: 1
     trail_number: 3
     timeToReachPerfect: 30.5
-    timeToSpawn: 29.414808
+    timeToSpawn: 28.329618
     hasPaw: 0
+    hasSpawned: 1
   - type: 1
     trail_number: 4
     timeToReachPerfect: 35.8
-    timeToSpawn: 34.923042
+    timeToSpawn: 34.04609
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 30.6
-    timeToSpawn: 29.513441
+    timeToSpawn: 28.426882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 31.2
-    timeToSpawn: 30.113441
+    timeToSpawn: 29.026882
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 1
     timeToReachPerfect: 32.45
-    timeToSpawn: 31.579508
+    timeToSpawn: 30.709015
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 1
     timeToReachPerfect: 32.6
-    timeToSpawn: 31.729506
+    timeToSpawn: 30.859013
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 1
     timeToReachPerfect: 33.1
-    timeToSpawn: 32.229504
+    timeToSpawn: 31.359013
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 32.5
-    timeToSpawn: 31.41344
+    timeToSpawn: 30.326881
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 33.1
-    timeToSpawn: 32.01344
+    timeToSpawn: 30.92688
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 1
     timeToReachPerfect: 34.35
-    timeToSpawn: 33.479504
+    timeToSpawn: 32.609013
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 1
     timeToReachPerfect: 34.55
-    timeToSpawn: 33.679504
+    timeToSpawn: 32.809013
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 1
     timeToReachPerfect: 35.05
-    timeToSpawn: 34.179504
+    timeToSpawn: 33.309013
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 34.4
-    timeToSpawn: 33.313442
+    timeToSpawn: 32.226883
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 35
-    timeToSpawn: 33.91344
+    timeToSpawn: 32.82688
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 1
     timeToReachPerfect: 36.25
-    timeToSpawn: 35.379505
+    timeToSpawn: 34.509014
     hasPaw: 0
+    hasSpawned: 0
   - type: 0
     trail_number: 1
     timeToReachPerfect: 36.4
-    timeToSpawn: 35.529507
+    timeToSpawn: 34.659016
     hasPaw: 0
+    hasSpawned: 0
   - type: 0
     trail_number: 1
     timeToReachPerfect: 36.95
-    timeToSpawn: 36.079506
+    timeToSpawn: 35.209015
     hasPaw: 0
+    hasSpawned: 0
   - type: 0
     trail_number: 2
     timeToReachPerfect: 36.3
-    timeToSpawn: 35.21344
+    timeToSpawn: 34.12688
     hasPaw: 0
+    hasSpawned: 1
   - type: 0
     trail_number: 2
     timeToReachPerfect: 36.9
-    timeToSpawn: 35.813442
+    timeToSpawn: 34.726883
     hasPaw: 0
+    hasSpawned: 0
   - type: 0
     trail_number: 1
     timeToReachPerfect: 38.15
-    timeToSpawn: 36.279507
+    timeToSpawn: 36.409016
     hasPaw: 0
+    hasSpawned: 0
   - type: 0
     trail_number: 1
     timeToReachPerfect: 38.3
-    timeToSpawn: 36.429504
+    timeToSpawn: 36.559013
     hasPaw: 0
+    hasSpawned: 0
   - type: 0
     trail_number: 1
     timeToReachPerfect: 38.85
-    timeToSpawn: 36.979504
+    timeToSpawn: 37.109013
     hasPaw: 0
+    hasSpawned: 0
   - type: 2
     trail_number: 5
     timeToReachPerfect: 40
-    timeToSpawn: 36.979504
+    timeToSpawn: 37.071896
     hasPaw: 0
+    hasSpawned: 0
+  - type: 2
+    trail_number: 5
+    timeToReachPerfect: 44
+    timeToSpawn: 41.071896
+    hasPaw: 0
+    hasSpawned: 0

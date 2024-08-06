@@ -31,7 +31,7 @@ public class LevelEndManager : MonoBehaviour
         GameManager.Instance.PauseGame();
         GetFinalData();
         pauseScreen.SetActive(true);
-        pauseMenuManager.UpdatePauseData();
+        pauseMenuManager.LevelEndPause();
         songCanvas.SetActive(false);
         blockContinueImage.SetActive(true);
         continueButton.interactable = false;

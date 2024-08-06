@@ -30,6 +30,8 @@ public class MainMenuManager : MonoBehaviour
     //Start is called before the first frame update
     void Start()
     {
+        SoundManager.Instance.LaunchMusic("0");
+
         if (GameManager.Instance.menuScreenHasBeenEntered == false)
         {
             OpenMainMenuScreen();
@@ -55,6 +57,8 @@ public class MainMenuManager : MonoBehaviour
 
 
         GameManager.Instance.menuScreenHasBeenEntered = true;
+
+        SoundManager.Instance.LaunchMusic("1");
     }
 
     public void OpenSongSelectionScreen()
@@ -75,7 +79,6 @@ public class MainMenuManager : MonoBehaviour
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[1];
         menusButtonHolderObj.SetActive(true);
-
     }
 
     public void OpenDripStoreScreen()
@@ -124,6 +127,8 @@ public class MainMenuManager : MonoBehaviour
 
         mainBackgroundObj.GetComponent<Image>().sprite = backgroundSprites[4];
         menusButtonHolderObj.SetActive(false);
+
+
     }
 
     public void HideButtonsHighlights()
@@ -136,6 +141,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void HideAllScreens()
     {
+        SoundManager.Instance.LaunchMusic("6");
+
         for (int i = 0; i < mainMenuScreen.Length; i++)
         {
             mainMenuScreen[i].SetActive(false);

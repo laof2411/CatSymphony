@@ -74,6 +74,8 @@ public class DripStoreManager : MonoBehaviour
         Update3DShownBongo();
 
         ChangeSelectionCat();
+
+
     }
 
     private void UpdateCurrentMoney()
@@ -109,6 +111,7 @@ public class DripStoreManager : MonoBehaviour
 
     public void MoveInList()
     {
+        SoundManager.Instance.LaunchMusic("3");
         switch (currentListSelection)
         {
             case 0:
@@ -380,6 +383,7 @@ public class DripStoreManager : MonoBehaviour
                             catStoreItem[selectionListCat].unlocked = true;
                             LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
                             UpdateItemPrice(catStoreItem[selectionListCat].itemCost, catStoreItem[selectionListCat].unlocked);
+                            SoundManager.Instance.LaunchMusic("1");
                         }
                         else
                         {
@@ -404,6 +408,7 @@ public class DripStoreManager : MonoBehaviour
                             clothesStoreItem[selectionListClothes].unlocked = true;
                             LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
                             UpdateItemPrice(clothesStoreItem[selectionListClothes].itemCost, clothesStoreItem[selectionListClothes].unlocked);
+                            SoundManager.Instance.LaunchMusic("1");
                         }
                         else
                         {
@@ -429,6 +434,7 @@ public class DripStoreManager : MonoBehaviour
                             accessoriesStoreItem[selectionListAccesories].unlocked = true;
                             LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
                             UpdateItemPrice(accessoriesStoreItem[selectionListAccesories].itemCost, accessoriesStoreItem[selectionListAccesories].unlocked);
+                            SoundManager.Instance.LaunchMusic("1");
                         }
                         else
                         {
@@ -452,6 +458,7 @@ public class DripStoreManager : MonoBehaviour
                             bongosStoreItem[selectionListBongo].unlocked = true;
                             LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
                             UpdateItemPrice(bongosStoreItem[selectionListBongo].itemCost, bongosStoreItem[selectionListBongo].unlocked);
+                            SoundManager.Instance.LaunchMusic("1");
                         }
                         else
                         {
@@ -484,6 +491,8 @@ public class DripStoreManager : MonoBehaviour
 
         lightframesAdOns[0].SetActive(true);
         LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
+
+        SoundManager.Instance.LaunchMusic("2");
     }
 
     public void ChangeSelectionClothes()
@@ -496,6 +505,8 @@ public class DripStoreManager : MonoBehaviour
 
         lightframesAdOns[1].SetActive(true);
         LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
+
+        SoundManager.Instance.LaunchMusic("2");
     }
 
     public void ChangeSelectionAccesories()
@@ -508,6 +519,8 @@ public class DripStoreManager : MonoBehaviour
 
         lightframesAdOns[2].SetActive(true);
         LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
+
+        SoundManager.Instance.LaunchMusic("2");
     }
 
     public void ChangeSelectionBongo()
@@ -519,6 +532,8 @@ public class DripStoreManager : MonoBehaviour
 
         lightframesAdOns[3].SetActive(true);
         LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
+
+        SoundManager.Instance.LaunchMusic("2");
     }
 
 

@@ -12693,6 +12693,86 @@ MonoBehaviour:
   movementRight: 0
   buyButton: {fileID: 841462509}
   buyButtonFont: {fileID: 360029023}
+--- !u!1 &1845920703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1845920705}
+  - component: {fileID: 1845920704}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1845920704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845920703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a006d371b65714c8f079235d2928b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSounds:
+  - name: 0
+    clip: {fileID: 8300000, guid: 5eed2cca1e650384c882fd95be4805de, type: 3}
+    loop: 1
+    volume: 0.7
+    audioSource: {fileID: 0}
+  - name: 1
+    clip: {fileID: 8300000, guid: 25cef360ccdc81d4ea46f3e5dc158cd5, type: 3}
+    loop: 0
+    volume: 1
+    audioSource: {fileID: 0}
+  - name: 2
+    clip: {fileID: 8300000, guid: 11e15f44e1e3bab46b5dc902cd6171d7, type: 3}
+    loop: 0
+    volume: 1
+    audioSource: {fileID: 0}
+  - name: 3
+    clip: {fileID: 8300000, guid: a967c70cd0fca5041bf2cc2b68dce631, type: 3}
+    loop: 0
+    volume: 1
+    audioSource: {fileID: 0}
+  - name: 4
+    clip: {fileID: 8300000, guid: 24ddb39408a89184b8d2ec50aa669110, type: 3}
+    loop: 0
+    volume: 0.4
+    audioSource: {fileID: 0}
+  - name: 5
+    clip: {fileID: 8300000, guid: 24ddb39408a89184b8d2ec50aa669110, type: 3}
+    loop: 0
+    volume: 0.3
+    audioSource: {fileID: 0}
+  - name: 6
+    clip: {fileID: 8300000, guid: 2a9d5b1b785d2bf459eef7904591cd44, type: 3}
+    loop: 0
+    volume: 1
+    audioSource: {fileID: 0}
+--- !u!4 &1845920705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845920703}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846590567
 GameObject:
   m_ObjectHideFlags: 0
@@ -12989,8 +13069,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 2/3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ae385f87fb8183740a5edd9e10bc73b1, type: 2}
+  m_sharedMaterial: {fileID: 8604525532899834874, guid: ae385f87fb8183740a5edd9e10bc73b1,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14795,3 +14876,4 @@ SceneRoots:
   - {fileID: 307429849}
   - {fileID: 935576062}
   - {fileID: 1444902734}
+  - {fileID: 1845920705}

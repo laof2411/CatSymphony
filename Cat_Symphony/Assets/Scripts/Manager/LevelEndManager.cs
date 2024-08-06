@@ -37,6 +37,7 @@ public class LevelEndManager : MonoBehaviour
         continueButton.interactable = false;
 
         GameManager.Instance.UpdateLevelScoresAndStars(finalScore, finalStars, finalPaws);
+        AddNekoinsToGameManager();
     }
 
     private void GetFinalData()

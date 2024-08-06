@@ -73,6 +73,7 @@ public class DripStoreManager : MonoBehaviour
         Update3DShownAccesory();
         Update3DShownBongo();
 
+
         ChangeSelectionCat();
 
 
@@ -355,7 +356,7 @@ public class DripStoreManager : MonoBehaviour
     {
         if (unlocked)
         {
-            itemPricePlaceholder.text = "$ --";
+            itemPricePlaceholder.text = "SOLD";
         }
         else if (!unlocked)
         {

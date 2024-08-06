@@ -25,7 +25,13 @@ public class SoundManager : MonoBehaviour
             s.audioSource.clip = s.clip;
             s.audioSource.loop = s.loop;
             s.audioSource.volume = s.volume;
+
         }
+
+        //for (int i = 0; i < gameSounds.Length; i++)
+        //{
+        //    gameVolumes[i] = gameSounds[i].audioSource.volume;
+        //}
     }
 
     public void LaunchMusic(string nombre)
@@ -39,7 +45,7 @@ public class SoundManager : MonoBehaviour
             }
         }
 
-        Debug.LogError("No Existe esa cancion");
+        Debug.LogError("No Existe cancion: " + nombre);
     }
 
     public void StopMusic(string nombre)
@@ -54,5 +60,21 @@ public class SoundManager : MonoBehaviour
         }
 
         Debug.LogError("No Existe esa cancion");
+    }
+
+
+    public Sound[] gameVolumes;
+
+    public void ModifyMusic()
+    {
+        float newValue;
+        foreach (Sound s in gameSounds)
+        {
+            newValue = s.volume * (GameManager.Instance.settings.effectsVolume/100);
+            s.volume = newValue;
+            Debug.Log(newValue);
+        }
+
+        //Debug.LogError("No Existe esa cancion");
     }
 }

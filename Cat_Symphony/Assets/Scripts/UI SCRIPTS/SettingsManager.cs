@@ -69,6 +69,8 @@ public class SettingsManager : MonoBehaviour
     {
 
         GameManager.Instance.settings.musicVolume = _sliderMusic.value;
+
+
         if (audioManager != null)
         {
 
@@ -90,6 +92,7 @@ public class SettingsManager : MonoBehaviour
 
         }
 
+        //SoundManager.Instance.ModifyMusic();
     }
 
     public void ReturnToPauseMenu()

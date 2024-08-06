@@ -373,7 +373,8 @@ public class SongSelectionManager : MonoBehaviour
     {
         int selectedLevel = selectedDificulty + ((selectedSong -1) * 3);
 
-        SoundManager.Instance.LaunchMusic("0");
+        SoundManager.Instance.LaunchMusic("1");
+        SoundManager.Instance.StopMusic("0");
 
         Debug.Log("Level: " + selectedSong + ", Dificulty: " + selectedDificulty + "; selected ID: " + selectedLevel);
         GameManager.Instance.LoadLevel(selectedLevel);

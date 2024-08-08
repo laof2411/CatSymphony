@@ -67,9 +67,8 @@ public class HUDManager : MonoBehaviour
 
     public void OpenPauseMenu()
     {
-
-        pauseMenu.SetActive(true);
         pauseManager.UpdatePauseData();
+        pauseMenu.SetActive(true);
         pauseButton.SetActive(false);
         GameManager.Instance.PauseGame();
 

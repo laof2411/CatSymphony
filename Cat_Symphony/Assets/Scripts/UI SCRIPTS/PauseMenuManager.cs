@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -9,10 +10,18 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI pawsText;
+
     [SerializeField] private GameObject[] fillStars;
     [SerializeField] private GameObject[] victoryStars;
+    [SerializeField] private GameObject[] victorySparkles;
+    [SerializeField] private GameObject[] victoryImage;
 
     [SerializeField] private GameObject settingsObject;
+
+    //private void Start()
+    //{
+    //    StartCoroutine(Umf(2));
+    //}
 
     public void UpdatePauseData()
     {
@@ -20,9 +29,11 @@ public class PauseMenuManager : MonoBehaviour
         scoreText.text = "Score: " + GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentScore().ToString();
         pawsText.text = GameObject.FindAnyObjectByType<PawsManager>().ReturnCurrentPaws().ToString() + " / " + GameObject.FindAnyObjectByType<PawsManager>().maxNumberOfPaws.ToString();
 
-        Debug.Log("Stars: " + GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStars());
 
-        switch (GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStars())
+        int stars = GameObject.FindAnyObjectByType<ScoreManager>().ReturnCurrentStars();
+        Debug.Log("Stars: " + stars);
+
+        switch (stars)
         {
 
             case 1:
@@ -52,11 +63,96 @@ public class PauseMenuManager : MonoBehaviour
         }
     }
 
-    IEnumerator Umf(float seconds)
+    IEnumerator Umf(int type)
     {
-        yield return new WaitForSeconds(seconds);
+        //victoryStars[0].SetActive(true);
+        //victoryStars[1].SetActive(true);
+        //victoryStars[2].SetActive(true);
 
-        SoundManager.Instance.LaunchMusic("1");
+        yield return new WaitForSeconds(1.2f);
+
+
+        victorySparkles[0].SetActive(false);
+        victorySparkles[1].SetActive(false);
+        victorySparkles[2].SetActive(false);
+
+
+
+        switch (type)
+        {
+            case 0:
+                {
+                    victoryImage[0].SetActive(false);
+                    victoryImage[1].SetActive(false);
+                    victoryImage[2].SetActive(false);
+
+                    SoundManager.Instance.LaunchMusic("1");
+                    victoryImage[0].SetActive(true);
+                    victorySparkles[0].SetActive(true);
+                    break;
+                }
+            case 1:
+                {
+                    victoryImage[0].SetActive(false);
+                    victoryImage[1].SetActive(false);
+                    victoryImage[2].SetActive(false);
+
+                    SoundManager.Instance.LaunchMusic("1");
+                    victoryImage[0].SetActive(true);
+                    victorySparkles[0].SetActive(true);
+
+                    yield return new WaitForSeconds(1f);
+
+
+                    victoryImage[0].SetActive(false);
+                    victoryImage[1].SetActive(false);
+                    victoryImage[2].SetActive(false);
+
+                    SoundManager.Instance.LaunchMusic("1");
+                    victoryImage[1].SetActive(true);
+                    victorySparkles[1].SetActive(true);
+                    break;
+                }
+            case 2:
+                {
+                    victoryImage[0].SetActive(false);
+                    victoryImage[1].SetActive(false);
+                    victoryImage[2].SetActive(false);
+
+                    SoundManager.Instance.LaunchMusic("1");
+                    victoryImage[0].SetActive(true);
+                    victorySparkles[0].SetActive(true);
+
+                    Debug.Log("1");
+
+                    yield return new WaitForSeconds(1f);
+
+                    victoryImage[0].SetActive(false);
+                    victoryImage[1].SetActive(false);
+                    victoryImage[2].SetActive(false);
+
+                    SoundManager.Instance.LaunchMusic("1");
+                    victoryImage[1].SetActive(true);
+                    victorySparkles[1].SetActive(true);
+
+                    Debug.Log("2");
+
+                    yield return new WaitForSeconds(1f);
+
+                    victoryImage[0].SetActive(false);
+                    victoryImage[1].SetActive(false);
+                    victoryImage[2].SetActive(false);
+
+                    SoundManager.Instance.LaunchMusic("1");
+                    victoryImage[2].SetActive(true);
+                    victorySparkles[2].SetActive(true);
+
+                    Debug.Log("3");
+                    break;
+                }
+        }
+
+
     }
 
     public void LevelEndPause()
@@ -76,7 +172,7 @@ public class PauseMenuManager : MonoBehaviour
                 {
                     victoryStars[0].SetActive(true);
 
-                    StartCoroutine(Umf(0.2f));
+                    StartCoroutine(Umf(0));
                     break;
                 }
             case 2:
@@ -84,9 +180,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryStars[0].SetActive(true);
                     victoryStars[1].SetActive(true);
 
-                    StartCoroutine(Umf(0.2f));
-                    StartCoroutine(Umf(1.2f));
-                    StartCoroutine(Umf(2.2f));
+                    StartCoroutine(Umf(1));
                     break;
                 }
             case 3:
@@ -95,9 +189,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryStars[1].SetActive(true);
                     victoryStars[2].SetActive(true);
 
-                    StartCoroutine(Umf(0.2f));
-                    StartCoroutine(Umf(1.2f));
-                    StartCoroutine(Umf(2.2f));
+                    StartCoroutine(Umf(2));
                     break;
                 }
 

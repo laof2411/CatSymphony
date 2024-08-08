@@ -28,6 +28,7 @@ public class NoteTouchManager : MonoBehaviour
             noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
             animationsManager.TapBongo(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
             audioManager.PlayBongoSound();
+            animationsManager.StartParticles(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
 
         }
         else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= greatDistance)
@@ -38,6 +39,7 @@ public class NoteTouchManager : MonoBehaviour
             noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
             animationsManager.TapBongo(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
             audioManager.PlayBongoSound();
+            animationsManager.StartParticles(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
 
         }
         else if (Vector3.Distance(transformObjective.position, noteTransform.position) <= okayDistance)
@@ -48,6 +50,7 @@ public class NoteTouchManager : MonoBehaviour
             noteTransform.GetComponent<BaseNoteScript>().CheckForPaw();
             animationsManager.TapBongo(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
             audioManager.PlayBongoSound();
+            animationsManager.StartParticles(noteTransform.GetComponent<BaseNoteScript>().trailNumber);
 
         }
         else

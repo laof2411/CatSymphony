@@ -12,6 +12,22 @@ public class HoldTapNoteEvent : BaseNoteScript, IPointerDownHandler, IPointerUpH
 
     [SerializeField] private LayerMask layerMask;
 
+    public override void Start()
+    {
+
+        if (isFirstNote)
+        {
+
+            if (hasPaw)
+            {
+
+                pawObject.SetActive(true);
+
+            }
+
+        }
+
+    }
 
     public void OnPointerDown(PointerEventData eventData)
     {

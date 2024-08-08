@@ -101,8 +101,9 @@ public class AudioManager : MonoBehaviour
         if (GameManager.Instance.settings.bongoSoundsActive)
         {
 
-
+            audioClips[3].time = 0;
             audioClips[3].Play();
+
 
         }
 

@@ -26,10 +26,39 @@ public class GameManager : MonoBehaviour
 
     public SettingsData settings;
 
+    public bool[] itemCatBought = new bool[] { false, true, true, true, true };
+    public bool[] itemClothesBought = new bool[] { false, true, true, true, true };
+    public bool[] itemAccesoriesBought = new bool[] { false, true, true, true, true };
+    public bool[] itemBongoBought = new bool[] { false, true, true, true, true };
+
     void Awake()
     {
         if (Instance == null)
         {
+            itemCatBought[0] = false;
+            itemCatBought[0] = true;
+            itemCatBought[0] = true;
+            itemCatBought[0] = true;
+            itemCatBought[0] = true;
+
+            itemClothesBought[0] = false;
+            itemClothesBought[0] = true;
+            itemClothesBought[0] = true;
+            itemClothesBought[0] = true;
+            itemClothesBought[0] = true;
+
+            itemAccesoriesBought[0] = false;
+            itemAccesoriesBought[0] = true;
+            itemAccesoriesBought[0] = true;
+            itemAccesoriesBought[0] = true;
+            itemAccesoriesBought[0] = true;
+
+            itemBongoBought[0] = false;
+            itemBongoBought[0] = true;
+            itemBongoBought[0] = true;
+            itemBongoBought[0] = true;
+            itemBongoBought[0] = true;
+
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
@@ -39,9 +68,13 @@ public class GameManager : MonoBehaviour
         }
 
 
+        Debug.Log("AWAKE!!");
+
         if (GameObject.FindAnyObjectByType<DripStoreManager>() == null) return;
         dripStore = GameObject.FindAnyObjectByType<DripStoreManager>().gameObject;
-        songSelectionManager = GameObject.FindAnyObjectByType<SongSelectionManager>().gameObject;
+        //songSelectionManager = GameObject.FindAnyObjectByType<SongSelectionManager>().gameObject;
+
+
     }
 
     void Start()
@@ -122,11 +155,10 @@ public class GameManager : MonoBehaviour
     #region LoadScenes
     public void LoadLevel(int levelID)
     {
-
-        if(dripStore != null)
+        if (dripStore != null)
         {
 
-        currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
+            currentCatLooks = dripStore.GetComponent<DripStoreManager>().RecompileInfo();
 
         }
 
@@ -135,23 +167,33 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
 
         DebuggingCatsLooks();
+        //FindAnyObjectByType(LookChanger()).UpdateCatLooks();
+
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
 
-        if(songSelectionManager != null)
-        {
+        //songSelectionManager = FindAnyObjectByType<SongSelectionManager>().gameObject;
+        //dripStore = GameObject.FindAnyObjectByType<DripStoreManager>().gameObject;
 
-        songSelectionManager.GetComponent<SongSelectionManager>().UpdateStars();
+        //if (songSelectionManager != null)
+        //{
 
-        }
+        //    songSelectionManager.GetComponent<SongSelectionManager>().UpdateStars();
+
+        //}
+    }
+
+    public void CollectDripstore(GameObject drip)
+    {
+        dripStore = drip;
     }
 
     private void DebuggingCatsLooks()
     {
-        Debug.Log("currentCatLooks: " + currentCatLooks[0] + ", " + currentCatLooks[1] + ", " + currentCatLooks[2] + ", " + currentCatLooks[3]);
+        Debug.Log("A. currentCatLooks: " + currentCatLooks[0] + ", " + currentCatLooks[1] + ", " + currentCatLooks[2] + ", " + currentCatLooks[3]);
     }
 
     #endregion

@@ -26,8 +26,8 @@ public class DripStoreManager : MonoBehaviour
     [SerializeField] public GameObject[] accessoriesStore3D = new GameObject[5];
 
     [SerializeField] public StoreItem[] bongosStoreItem = new StoreItem[5];
-    [SerializeField] public Material[] bongosStore3D = new Material[5];
-
+    [SerializeField] public GameObject[] bongosStore3D = new GameObject[5];
+    [SerializeField] public Material[] bongosStoreTest3D = new Material[5];
 
     [SerializeField] private int currentListSelection;
 
@@ -76,6 +76,25 @@ public class DripStoreManager : MonoBehaviour
 
         ChangeSelectionCat();
 
+        for (int i = 0; i< 5; i++)
+        {
+            Debug.Log(GameManager.Instance.itemCatBought[i]);
+            catStoreItem[i].unlocked = GameManager.Instance.itemCatBought[i];
+            clothesStoreItem[i].unlocked = GameManager.Instance.itemClothesBought[i];
+            accessoriesStoreItem[i].unlocked = GameManager.Instance.itemAccesoriesBought[i];
+            bongosStoreItem[i].unlocked = GameManager.Instance.itemBongoBought[i];
+        }
+
+        GameManager.Instance.CollectDripstore(this.gameObject);
+
+        if (catStoreItem[selectionListCat].unlocked == true)
+        {
+            LockedOrUnlocked(true);
+        }
+        else
+        {
+            LockedOrUnlocked(false);
+        }
 
     }
 
@@ -316,9 +335,21 @@ public class DripStoreManager : MonoBehaviour
 
     private void Update3DShownBongo()
     {
-        bongoAvatar.GetComponent<MeshRenderer>().material = bongosStore3D[selectionListBongo];
-        bongoAvatar.GetComponent<MeshRenderer>().materials[0] = bongosStore3D[selectionListBongo];
-        bongoAvatar.GetComponent<MeshRenderer>().materials[1] = bongosStore3D[selectionListBongo];
+        //bongoAvatar.GetComponent<MeshRenderer>().material = null;
+        //bongoAvatar.GetComponent<Renderer>().material = bongosStore3D[selectionListBongo];
+        bongosStore3D[0].SetActive(false);
+        bongosStore3D[1].SetActive(false);
+        bongosStore3D[2].SetActive(false);
+        bongosStore3D[3].SetActive(false);
+        bongosStore3D[4].SetActive(false);
+
+        bongosStore3D[selectionListBongo].SetActive(true);
+
+        //bongoAvatar.GetComponent<Renderer>().material = null;
+        //bongoAvatar.GetComponent<Renderer>().material = bongosStoreTest3D[0];
+        //bongoAvatar.GetComponent<Renderer>().materials[0] = bongosStoreTest3D[0];
+        //bongoAvatar.GetComponent<Renderer>().materials[1] = bongosStoreTest3D[0];
+        //bongoAvatar.GetComponent<Renderer>().materials[2] = bongosStoreTest3D[0];
     }
 
     private void UpdateSelectionList(Sprite newSprite)
@@ -382,6 +413,8 @@ public class DripStoreManager : MonoBehaviour
                             GameManager.Instance.nekoins -= catStoreItem[selectionListCat].itemCost;
 
                             catStoreItem[selectionListCat].unlocked = true;
+                            GameManager.Instance.itemCatBought[selectionListCat] = true;
+
                             LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
                             UpdateItemPrice(catStoreItem[selectionListCat].itemCost, catStoreItem[selectionListCat].unlocked);
                             SoundManager.Instance.LaunchMusic("1");
@@ -394,6 +427,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
+                        SoundManager.Instance.LaunchMusic("7");
                     }
 
                     break;
@@ -407,6 +441,8 @@ public class DripStoreManager : MonoBehaviour
                             GameManager.Instance.nekoins -= clothesStoreItem[selectionListClothes].itemCost;
 
                             clothesStoreItem[selectionListClothes].unlocked = true;
+                            GameManager.Instance.itemClothesBought[selectionListClothes] = true;
+
                             LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
                             UpdateItemPrice(clothesStoreItem[selectionListClothes].itemCost, clothesStoreItem[selectionListClothes].unlocked);
                             SoundManager.Instance.LaunchMusic("1");
@@ -419,6 +455,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
+                        SoundManager.Instance.LaunchMusic("7");
                     }
 
 
@@ -433,6 +470,8 @@ public class DripStoreManager : MonoBehaviour
                             GameManager.Instance.nekoins -= accessoriesStoreItem[selectionListAccesories].itemCost;
 
                             accessoriesStoreItem[selectionListAccesories].unlocked = true;
+                            GameManager.Instance.itemAccesoriesBought[selectionListAccesories] = true;
+
                             LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
                             UpdateItemPrice(accessoriesStoreItem[selectionListAccesories].itemCost, accessoriesStoreItem[selectionListAccesories].unlocked);
                             SoundManager.Instance.LaunchMusic("1");
@@ -445,6 +484,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
+                        SoundManager.Instance.LaunchMusic("7");
                     }
 
                     break;
@@ -456,7 +496,10 @@ public class DripStoreManager : MonoBehaviour
                         if (GameManager.Instance.nekoins >= bongosStoreItem[selectionListBongo].itemCost)
                         {
                             GameManager.Instance.nekoins -= bongosStoreItem[selectionListBongo].itemCost;
+
                             bongosStoreItem[selectionListBongo].unlocked = true;
+                            GameManager.Instance.itemBongoBought[selectionListBongo] = true;
+
                             LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
                             UpdateItemPrice(bongosStoreItem[selectionListBongo].itemCost, bongosStoreItem[selectionListBongo].unlocked);
                             SoundManager.Instance.LaunchMusic("1");
@@ -469,6 +512,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
+                        SoundManager.Instance.LaunchMusic("7");
                     }
 
                     break;

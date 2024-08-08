@@ -18,15 +18,18 @@ public class LookChanger : MonoBehaviour
     [SerializeField] public GameObject[] accessoriesStore3D = new GameObject[5];
 
 
-    [SerializeField] public Material[] bongosStore3D = new Material[5];
+    [SerializeField] public GameObject[] bongos3DA = new GameObject[5];
+    [SerializeField] public GameObject[] bongos3DB = new GameObject[5];
 
     [SerializeField] public int[] looks = new int[4];
+
+
 
     private void Start()
     {
         looks = GameManager.Instance.currentCatLooks;
 
-        Debug.Log("currentCatLooks: " + looks[0] + ", " + looks[1] + ", " + looks[2] + ", " + looks[3]);
+        Debug.Log("B. currentCatLooks: " + looks[0] + ", " + looks[1] + ", " + looks[2] + ", " + looks[3]);
 
         Update3DShownCat();
         Update3DShownClothes();
@@ -63,13 +66,21 @@ public class LookChanger : MonoBehaviour
 
     private void Update3DShownBongo()
     {
-        bongoAvatar1.GetComponent<MeshRenderer>().material = bongosStore3D[looks[3]];
-        bongoAvatar1.GetComponent<MeshRenderer>().materials[0] = bongosStore3D[looks[3]];
-        bongoAvatar1.GetComponent<MeshRenderer>().materials[1] = bongosStore3D[looks[3]];
+        bongos3DA[0].SetActive(false);
+        bongos3DA[1].SetActive(false);
+        bongos3DA[2].SetActive(false);
+        bongos3DA[3].SetActive(false);
+        bongos3DA[4].SetActive(false);
 
-        bongoAvatar2.GetComponent<MeshRenderer>().material = bongosStore3D[looks[3]];
-        bongoAvatar2.GetComponent<MeshRenderer>().materials[0] = bongosStore3D[looks[3]];
-        bongoAvatar2.GetComponent<MeshRenderer>().materials[1] = bongosStore3D[looks[3]];
+        bongos3DA[looks[3]].SetActive(true);
+
+        bongos3DB[0].SetActive(false);
+        bongos3DB[1].SetActive(false);
+        bongos3DB[2].SetActive(false);
+        bongos3DB[3].SetActive(false);
+        bongos3DB[4].SetActive(false);
+
+        bongos3DB[looks[3]].SetActive(true);
     }
 
 }

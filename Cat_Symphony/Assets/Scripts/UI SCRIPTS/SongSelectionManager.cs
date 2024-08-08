@@ -67,6 +67,9 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private GameObject pawsGO;
     [SerializeField] private TextMeshProUGUI pawsShower;
 
+    [SerializeField] private Image discCover;
+    [SerializeField] private Sprite[] coverSprites;
+
     private void Start()
     {
         originalPosition[0] = songSelection1[0].transform.position;
@@ -196,6 +199,8 @@ public class SongSelectionManager : MonoBehaviour
         songSelection2[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         songSelection3[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
 
+        discCover.sprite = coverSprites[0];
+
         LevelDificultySelection();
     }
 
@@ -229,6 +234,8 @@ public class SongSelectionManager : MonoBehaviour
         songSelection1[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         songSelection3[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
 
+        discCover.sprite = coverSprites[1];
+
         LevelDificultySelection();
     }
 
@@ -255,6 +262,8 @@ public class SongSelectionManager : MonoBehaviour
 
         songSelection1[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         songSelection2[0].transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+
+        discCover.sprite = coverSprites[2]; 
 
         LevelDificultySelection();
     }

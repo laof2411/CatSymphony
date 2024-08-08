@@ -7,10 +7,29 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
     public Sound[] gameSounds;
 
+    public float[] originalGameVolumes;
+
     void Awake()
     {
         if (Instance == null)
         {
+            originalGameVolumes = new float[gameSounds.Length];
+            int tracker = 0;
+
+            foreach (Sound s in gameSounds)
+            {
+                s.audioSource = gameObject.AddComponent<AudioSource>();
+                s.audioSource.clip = s.clip;
+                s.audioSource.loop = s.loop;
+                s.audioSource.volume = s.volume;
+
+                originalGameVolumes[tracker] = s.audioSource.volume;
+
+                tracker++;
+            }
+
+
+
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
@@ -18,15 +37,11 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-            
-        foreach (Sound s in gameSounds)
-        {
-            s.audioSource = gameObject.AddComponent<AudioSource>();
-            s.audioSource.clip = s.clip;
-            s.audioSource.loop = s.loop;
-            s.audioSource.volume = s.volume;
 
-        }
+
+           
+
+
 
         //for (int i = 0; i < gameSounds.Length; i++)
         //{
@@ -68,13 +83,29 @@ public class SoundManager : MonoBehaviour
     public void ModifyMusic()
     {
         float newValue;
-        foreach (Sound s in gameSounds)
+        for(int i = 0; i < originalGameVolumes.Length; i++)
         {
-            newValue = s.volume * (GameManager.Instance.settings.effectsVolume/100);
-            s.volume = newValue;
-            Debug.Log(newValue);
+            //AudioSource audioSource[] = new AudioSource[gameObject.GetComponents<AudioSource>()];
+            AudioSource[] audioSource = gameObject.GetComponents<AudioSource>();
+
+            newValue = originalGameVolumes[i] * GameManager.Instance.settings.effectsVolume;
+            gameSounds[i].volume = newValue / 100f;
+            audioSource[i].volume = newValue / 100f;
+
+            Debug.Log("Song: " + audioSource[i].name + "; new value: " + newValue);
+
+            //gameSounds[i].volume = ;
+
+            //newValue = s.volume * (GameManager.Instance.settings.effectsVolume/100);
+            //s.volume = newValue;
+            //Debug.Log(newValue);
         }
 
-        //Debug.LogError("No Existe esa cancion");
+        //foreach (Sound s in gameSounds)
+        //{
+        //    AudioSource[] audioSource = gameObject.GetComponents<AudioSource>(); 
+        //}
+
+            //Debug.LogError("No Existe esa cancion");
     }
 }

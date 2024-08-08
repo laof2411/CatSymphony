@@ -13,6 +13,7 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private GameObject settingsObject;
     [SerializeField] private AudioManager audioManager;
 
+    [SerializeField] private GameObject menuSong;   
 
     public void GetSettingsValues()
     {
@@ -66,6 +67,11 @@ public class SettingsManager : MonoBehaviour
 
     }
 
+    public void GaineMenuMusic(GameObject a)
+    {
+        menuSong = a;
+    }
+
     public void ChangeVolumeMusic()
     {
 
@@ -75,10 +81,13 @@ public class SettingsManager : MonoBehaviour
 
         if (audioManager != null)
         {
-
             audioManager.UpdateAudioSettings();
+        }
 
+        if (menuSong != null)
+        {
 
+            menuSong.GetComponent<AudioSource>().volume = 1 * (GameManager.Instance.settings.musicVolume / 100);
         }
     }
 

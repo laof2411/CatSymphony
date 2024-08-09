@@ -86,7 +86,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryImage[1].SetActive(false);
                     victoryImage[2].SetActive(false);
 
-                    SoundManager.Instance.LaunchMusic("1");
+                    SoundManager.Instance.PlaySound("1");
                     victoryImage[0].SetActive(true);
                     victorySparkles[0].SetActive(true);
                     break;
@@ -97,7 +97,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryImage[1].SetActive(false);
                     victoryImage[2].SetActive(false);
 
-                    SoundManager.Instance.LaunchMusic("1");
+                    SoundManager.Instance.PlaySound("1");
                     victoryImage[0].SetActive(true);
                     victorySparkles[0].SetActive(true);
 
@@ -108,7 +108,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryImage[1].SetActive(false);
                     victoryImage[2].SetActive(false);
 
-                    SoundManager.Instance.LaunchMusic("1");
+                    SoundManager.Instance.PlaySound("1");
                     victoryImage[1].SetActive(true);
                     victorySparkles[1].SetActive(true);
                     break;
@@ -119,7 +119,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryImage[1].SetActive(false);
                     victoryImage[2].SetActive(false);
 
-                    SoundManager.Instance.LaunchMusic("1");
+                    SoundManager.Instance.PlaySound("1");
                     victoryImage[0].SetActive(true);
                     victorySparkles[0].SetActive(true);
 
@@ -131,7 +131,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryImage[1].SetActive(false);
                     victoryImage[2].SetActive(false);
 
-                    SoundManager.Instance.LaunchMusic("1");
+                    SoundManager.Instance.PlaySound("1");
                     victoryImage[1].SetActive(true);
                     victorySparkles[1].SetActive(true);
 
@@ -143,7 +143,7 @@ public class PauseMenuManager : MonoBehaviour
                     victoryImage[1].SetActive(false);
                     victoryImage[2].SetActive(false);
 
-                    SoundManager.Instance.LaunchMusic("1");
+                    SoundManager.Instance.PlaySound("1");
                     victoryImage[2].SetActive(true);
                     victorySparkles[2].SetActive(true);
 

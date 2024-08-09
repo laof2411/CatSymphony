@@ -30,6 +30,7 @@ public class ScoreManager : MonoBehaviour
 
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.firstStarScore;
                 percentage /= 3;
+                Mathf.Clamp(percentage, 0, 0.33f);
 
                 //currentStars = 0;
 
@@ -40,6 +41,7 @@ public class ScoreManager : MonoBehaviour
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.secondStarScore;
                 percentage /= 3;
                 percentage *= 2;
+                Mathf.Clamp(percentage, 0.33f, 0.66f);
 
                 //currentStars = 1;
             }
@@ -47,7 +49,8 @@ public class ScoreManager : MonoBehaviour
             {
 
                 percentage = (float)currentScore / (float)GameManager.Instance.levelData.thirdStarScore;
-               // currentStars = 2;
+                Mathf.Clamp(percentage, 0.66f, 1f);
+                // currentStars = 2;
             }
             else
             {

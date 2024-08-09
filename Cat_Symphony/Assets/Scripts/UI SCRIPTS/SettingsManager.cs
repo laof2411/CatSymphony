@@ -53,7 +53,7 @@ public class SettingsManager : MonoBehaviour
 
             bongoSoundsCheckMark.SetActive(false);
 
-            SoundManager.Instance.LaunchMusic("8");
+            SoundManager.Instance.PlaySound("8");
         }
         else if (!GameManager.Instance.settings.bongoSoundsActive)
         {
@@ -61,7 +61,7 @@ public class SettingsManager : MonoBehaviour
 
             bongoSoundsCheckMark.SetActive(true);
 
-            SoundManager.Instance.LaunchMusic("8");
+            SoundManager.Instance.PlaySound("8");
         }
 
         if (audioManager != null)
@@ -84,7 +84,7 @@ public class SettingsManager : MonoBehaviour
 
         GameManager.Instance.settings.musicVolume = _sliderMusic.value;
 
-        SoundManager.Instance.LaunchMusic("8");
+        SoundManager.Instance.PlaySound("8");
 
         if (audioManager != null)
         {
@@ -103,7 +103,7 @@ public class SettingsManager : MonoBehaviour
         GameManager.Instance.settings.effectsVolume = _sliderEffect.value;
 
 
-        SoundManager.Instance.LaunchMusic("8");
+        SoundManager.Instance.PlaySound("8");
 
         if (audioManager != null)
         {

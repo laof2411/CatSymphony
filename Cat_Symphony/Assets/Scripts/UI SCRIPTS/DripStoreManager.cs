@@ -131,7 +131,7 @@ public class DripStoreManager : MonoBehaviour
 
     public void MoveInList()
     {
-        SoundManager.Instance.LaunchMusic("3");
+        SoundManager.Instance.PlaySound("3");
         switch (currentListSelection)
         {
             case 0:
@@ -417,7 +417,7 @@ public class DripStoreManager : MonoBehaviour
 
                             LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
                             UpdateItemPrice(catStoreItem[selectionListCat].itemCost, catStoreItem[selectionListCat].unlocked);
-                            SoundManager.Instance.LaunchMusic("1");
+                            SoundManager.Instance.PlaySound("1");
                         }
                         else
                         {
@@ -427,7 +427,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
-                        SoundManager.Instance.LaunchMusic("7");
+                        SoundManager.Instance.PlaySound("7");
                     }
 
                     break;
@@ -445,7 +445,7 @@ public class DripStoreManager : MonoBehaviour
 
                             LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
                             UpdateItemPrice(clothesStoreItem[selectionListClothes].itemCost, clothesStoreItem[selectionListClothes].unlocked);
-                            SoundManager.Instance.LaunchMusic("1");
+                            SoundManager.Instance.PlaySound("1");
                         }
                         else
                         {
@@ -455,7 +455,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
-                        SoundManager.Instance.LaunchMusic("7");
+                        SoundManager.Instance.PlaySound("7");
                     }
 
 
@@ -474,7 +474,7 @@ public class DripStoreManager : MonoBehaviour
 
                             LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
                             UpdateItemPrice(accessoriesStoreItem[selectionListAccesories].itemCost, accessoriesStoreItem[selectionListAccesories].unlocked);
-                            SoundManager.Instance.LaunchMusic("1");
+                            SoundManager.Instance.PlaySound("1");
                         }
                         else
                         {
@@ -484,7 +484,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
-                        SoundManager.Instance.LaunchMusic("7");
+                        SoundManager.Instance.PlaySound("7");
                     }
 
                     break;
@@ -502,7 +502,7 @@ public class DripStoreManager : MonoBehaviour
 
                             LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
                             UpdateItemPrice(bongosStoreItem[selectionListBongo].itemCost, bongosStoreItem[selectionListBongo].unlocked);
-                            SoundManager.Instance.LaunchMusic("1");
+                            SoundManager.Instance.PlaySound("1");
                         }
                         else
                         {
@@ -512,7 +512,7 @@ public class DripStoreManager : MonoBehaviour
                     else
                     {
                         Debug.Log("Item already adquired");
-                        SoundManager.Instance.LaunchMusic("7");
+                        SoundManager.Instance.PlaySound("7");
                     }
 
                     break;
@@ -537,7 +537,7 @@ public class DripStoreManager : MonoBehaviour
         lightframesAdOns[0].SetActive(true);
         LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
 
-        SoundManager.Instance.LaunchMusic("2");
+        SoundManager.Instance.PlaySound("2");
     }
 
     public void ChangeSelectionClothes()
@@ -551,7 +551,7 @@ public class DripStoreManager : MonoBehaviour
         lightframesAdOns[1].SetActive(true);
         LockedOrUnlocked(clothesStoreItem[selectionListClothes].unlocked);
 
-        SoundManager.Instance.LaunchMusic("2");
+        SoundManager.Instance.PlaySound("2");
     }
 
     public void ChangeSelectionAccesories()
@@ -565,7 +565,7 @@ public class DripStoreManager : MonoBehaviour
         lightframesAdOns[2].SetActive(true);
         LockedOrUnlocked(accessoriesStoreItem[selectionListAccesories].unlocked);
 
-        SoundManager.Instance.LaunchMusic("2");
+        SoundManager.Instance.PlaySound("2");
     }
 
     public void ChangeSelectionBongo()
@@ -578,7 +578,7 @@ public class DripStoreManager : MonoBehaviour
         lightframesAdOns[3].SetActive(true);
         LockedOrUnlocked(bongosStoreItem[selectionListBongo].unlocked);
 
-        SoundManager.Instance.LaunchMusic("2");
+        SoundManager.Instance.PlaySound("2");
     }
 
 

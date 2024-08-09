@@ -22,6 +22,7 @@ public class PawsManager : MonoBehaviour
         
         numberOfPaws++;
         hudManager.UpdatePawsText(numberOfPaws);
+        SoundManager.Instance.PlaySound("10");
 
     }
 

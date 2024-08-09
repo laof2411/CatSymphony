@@ -382,7 +382,7 @@ public class SongSelectionManager : MonoBehaviour
     {
         int selectedLevel = selectedDificulty + ((selectedSong -1) * 3);
 
-        SoundManager.Instance.LaunchMusic("1");
+        SoundManager.Instance.PlaySound("1");
         SoundManager.Instance.StopMusic("0");
 
         Debug.Log("Level: " + selectedSong + ", Dificulty: " + selectedDificulty + "; selected ID: " + selectedLevel);
@@ -416,7 +416,7 @@ public class SongSelectionManager : MonoBehaviour
         songSelection2[2].SetActive(false);
         songSelection3[2].SetActive(false);
 
-        SoundManager.Instance.LaunchMusic("4");
+        SoundManager.Instance.PlaySound("4");
         NoPaws();
     }
 
@@ -441,7 +441,7 @@ public class SongSelectionManager : MonoBehaviour
 
         UpdatePaws();
 
-        SoundManager.Instance.LaunchMusic("5");
+        SoundManager.Instance.PlaySound("5");
 
         switch (selectedSong)
         {

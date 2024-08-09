@@ -44,7 +44,7 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    public void LaunchMusic(string nombre)
+    public void PlaySound(string nombre)
     {
         foreach (Sound s in gameSounds)
         {

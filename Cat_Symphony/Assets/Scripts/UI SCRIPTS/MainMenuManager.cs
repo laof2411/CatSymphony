@@ -58,7 +58,7 @@ public class MainMenuManager : MonoBehaviour
 
         GameManager.Instance.menuScreenHasBeenEntered = true;
 
-        SoundManager.Instance.LaunchMusic("1");
+        SoundManager.Instance.PlaySound("1");
     }
 
     public void OpenSongSelectionScreen()
@@ -141,7 +141,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void HideAllScreens()
     {
-        SoundManager.Instance.LaunchMusic("6");
+        SoundManager.Instance.PlaySound("6");
 
         for (int i = 0; i < mainMenuScreen.Length; i++)
         {

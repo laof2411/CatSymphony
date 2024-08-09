@@ -13,7 +13,14 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private GameObject settingsObject;
     [SerializeField] private AudioManager audioManager;
 
-    [SerializeField] private GameObject menuSong;   
+    [SerializeField] private GameObject menuSong;
+
+    private void Start()
+    {
+        _sliderMusic.value = GameManager.Instance.settings.musicVolume;
+        _sliderEffect.value = GameManager.Instance.settings.effectsVolume;
+        TurnOnOffBongoSounds();
+    }
 
     public void GetSettingsValues()
     {
@@ -106,7 +113,7 @@ public class SettingsManager : MonoBehaviour
 
         }
 
-        //SoundManager.Instance.ModifyMusic();
+        SoundManager.Instance.ModifyMusic();
     }
 
     public void ReturnToPauseMenu()

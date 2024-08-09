@@ -28,7 +28,10 @@ public class SoundManager : MonoBehaviour
                 tracker++;
             }
 
-
+            for (int i = 0; i < gameSounds.Length; i++)
+            {
+                originalGameVolumes[i] = gameSounds[i].audioSource.volume;
+            }
 
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -39,14 +42,6 @@ public class SoundManager : MonoBehaviour
         }
 
 
-           
-
-
-
-        //for (int i = 0; i < gameSounds.Length; i++)
-        //{
-        //    gameVolumes[i] = gameSounds[i].audioSource.volume;
-        //}
     }
 
     public void LaunchMusic(string nombre)

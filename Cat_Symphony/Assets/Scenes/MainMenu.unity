@@ -6841,6 +6841,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 986f38cd157fe6d48a68be79fd62c97e, type: 3}
   - {fileID: 21300000, guid: 495b0cc7c48697344bd307f476b681e2, type: 3}
   - {fileID: 21300000, guid: cf5eab6ef7b0c464d813660c9e5c77d9, type: 3}
+  canSound: 0
   newLocation1: 0
   newLocation2: 0
   newLocation3: 0
@@ -14336,6 +14337,8 @@ MonoBehaviour:
   - {fileID: 1602350581}
   - {fileID: 388502577}
   - {fileID: 1244126035}
+  canSound: 0
+  songSelectionObj: {fileID: 871507845}
 --- !u!1 &2097692155
 GameObject:
   m_ObjectHideFlags: 0
@@ -14786,6 +14789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139893606193609, guid: 8e66725ef59ce874bba901f443765a8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

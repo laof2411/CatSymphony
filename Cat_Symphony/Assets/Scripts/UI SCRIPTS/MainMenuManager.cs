@@ -27,9 +27,14 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject[] moveThroughHighlight = new GameObject[3];
     [SerializeField] private GameObject[] moveThroughMainMenuNormal = new GameObject[3];
 
+    [SerializeField] private bool canSound = false;
+
+    [SerializeField] private GameObject songSelectionObj;
+
     //Start is called before the first frame update
     void Start()
     {
+        canSound = false;
         //SoundManager.Instance.LaunchMusic("0");
 
         if (GameManager.Instance.menuScreenHasBeenEntered == false)
@@ -41,6 +46,17 @@ public class MainMenuManager : MonoBehaviour
 
             OpenSongSelectionScreen();
         }
+
+        StartCoroutine(CanSound());
+    }
+
+    IEnumerator CanSound()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        canSound = true;
+
+        songSelectionObj.GetComponent<SongSelectionManager>().CanSound();
     }
 
     void OpenMainMenuScreen()
@@ -57,8 +73,6 @@ public class MainMenuManager : MonoBehaviour
 
 
         GameManager.Instance.menuScreenHasBeenEntered = true;
-
-        SoundManager.Instance.PlaySound("1");
     }
 
     public void OpenSongSelectionScreen()
@@ -141,7 +155,11 @@ public class MainMenuManager : MonoBehaviour
 
     public void HideAllScreens()
     {
-        SoundManager.Instance.PlaySound("6");
+        if (canSound)
+        {
+            SoundManager.Instance.PlaySound("6");
+        }
+
 
         for (int i = 0; i < mainMenuScreen.Length; i++)
         {

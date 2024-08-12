@@ -19,7 +19,25 @@ public class SettingsManager : MonoBehaviour
     {
         _sliderMusic.value = GameManager.Instance.settings.musicVolume;
         _sliderEffect.value = GameManager.Instance.settings.effectsVolume;
-        TurnOnOffBongoSounds();
+
+
+        if (GameManager.Instance.settings.bongoSoundsActive)
+        {
+            GameManager.Instance.settings.bongoSoundsActive = false;
+
+            bongoSoundsCheckMark.SetActive(false);
+        }
+        else if (!GameManager.Instance.settings.bongoSoundsActive)
+        {
+            GameManager.Instance.settings.bongoSoundsActive = true;
+
+            bongoSoundsCheckMark.SetActive(true);
+        }
+
+        if (audioManager != null)
+        {
+            audioManager.UpdateAudioSettings();
+        }
     }
 
     public void GetSettingsValues()

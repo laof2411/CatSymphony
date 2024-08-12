@@ -74,7 +74,13 @@ public class DripStoreManager : MonoBehaviour
         Update3DShownBongo();
 
 
-        ChangeSelectionCat();
+        currentListSelection = 0;
+        ShutdownLightFrame();
+
+        UpdateItemName(catStoreItem[selectionListCat].itemName);
+
+        lightframesAdOns[0].SetActive(true);
+        LockedOrUnlocked(catStoreItem[selectionListCat].unlocked);
 
         for (int i = 0; i< 5; i++)
         {
@@ -365,7 +371,7 @@ public class DripStoreManager : MonoBehaviour
             buyButton.GetComponent<Image>().color = Color.grey;
 
             buyButtonFont.text = "Equip";
-            buyButtonFont.color = Color.white;
+            buyButtonFont.color = Color.grey;
         }
         else if (!unlocked)
         {

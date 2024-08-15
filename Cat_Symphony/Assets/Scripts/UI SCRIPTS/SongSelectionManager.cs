@@ -70,13 +70,18 @@ public class SongSelectionManager : MonoBehaviour
     [SerializeField] private Image discCover;
     [SerializeField] private Sprite[] coverSprites;
 
+    [SerializeField] private bool canSound;
+
     private void Start()
     {
+        canSound = false;
+
         originalPosition[0] = songSelection1[0].transform.position;
         originalPosition[1] = songSelection2[0].transform.position;
         originalPosition[2] = songSelection3[0].transform.position;
 
         ResetSeletionToDefault();
+
         menuTitle.SetActive(true);
 
         selectedSong = 1;
@@ -95,10 +100,20 @@ public class SongSelectionManager : MonoBehaviour
         DificultyStudentSelected();
 
         pawsGO.SetActive(false);
+
+        //Debug.Log("CanSound1");
+        //StartCoroutine(CanSound());
+        //Debug.Log("CanSound2");
     }
     public float newLocation1;
     public float newLocation2;
     public float newLocation3;
+
+
+    public void CanSound()
+    {
+        canSound = true;
+    }
 
 
     public void UpdateLevelInfo()
@@ -416,7 +431,13 @@ public class SongSelectionManager : MonoBehaviour
         songSelection2[2].SetActive(false);
         songSelection3[2].SetActive(false);
 
-        SoundManager.Instance.PlaySound("4");
+        if (canSound == true)
+        {
+            Debug.Log("Can sound is true");
+
+            SoundManager.Instance.PlaySound("4");
+        }
+
         NoPaws();
     }
 
@@ -441,7 +462,13 @@ public class SongSelectionManager : MonoBehaviour
 
         UpdatePaws();
 
-        SoundManager.Instance.PlaySound("5");
+        if (canSound == true)
+        {
+            Debug.Log("Can sound is true");
+
+            SoundManager.Instance.PlaySound("5");
+        }
+
 
         switch (selectedSong)
         {

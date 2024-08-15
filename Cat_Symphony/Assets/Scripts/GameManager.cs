@@ -26,38 +26,42 @@ public class GameManager : MonoBehaviour
 
     public SettingsData settings;
 
-    public bool[] itemCatBought = new bool[] { false, true, true, true, true };
-    public bool[] itemClothesBought = new bool[] { false, true, true, true, true };
-    public bool[] itemAccesoriesBought = new bool[] { false, true, true, true, true };
-    public bool[] itemBongoBought = new bool[] { false, true, true, true, true };
+    public bool[] itemCatBought = new bool[] { true, false, false, false, false };
+    public bool[] itemClothesBought = new bool[] { true, false, false, false, false };
+    public bool[] itemAccesoriesBought = new bool[] { true, false, false, false, false };
+    public bool[] itemBongoBought = new bool[] { true, false, false, false, false };
+
+    public GameObject screen;
 
     void Awake()
     {
         if (Instance == null)
         {
-            itemCatBought[0] = false;
             itemCatBought[0] = true;
-            itemCatBought[0] = true;
-            itemCatBought[0] = true;
-            itemCatBought[0] = true;
+            itemCatBought[1] = false;
+            itemCatBought[2] = false;
+            itemCatBought[3] = false;
+            itemCatBought[4] = false;
 
-            itemClothesBought[0] = false;
             itemClothesBought[0] = true;
-            itemClothesBought[0] = true;
-            itemClothesBought[0] = true;
-            itemClothesBought[0] = true;
+            itemClothesBought[1] = false;
+            itemClothesBought[2] = false;
+            itemClothesBought[3] = false;
+            itemClothesBought[4] = false;
 
-            itemAccesoriesBought[0] = false;
             itemAccesoriesBought[0] = true;
-            itemAccesoriesBought[0] = true;
-            itemAccesoriesBought[0] = true;
-            itemAccesoriesBought[0] = true;
+            itemAccesoriesBought[1] = false;
+            itemAccesoriesBought[2] = false;
+            itemAccesoriesBought[3] = false;
+            itemAccesoriesBought[4] = false;
 
-            itemBongoBought[0] = false;
             itemBongoBought[0] = true;
-            itemBongoBought[0] = true;
-            itemBongoBought[0] = true;
-            itemBongoBought[0] = true;
+            itemBongoBought[1] = false;
+            itemBongoBought[2] = false;
+            itemBongoBought[3] = false;
+            itemBongoBought[4] = false;
+
+            StartCoroutine(WaitASecond());
 
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -169,11 +173,25 @@ public class GameManager : MonoBehaviour
         DebuggingCatsLooks();
         //FindAnyObjectByType(LookChanger()).UpdateCatLooks();
 
+
+        StartCoroutine(WaitASecond());
+    }
+
+    private IEnumerator WaitASecond()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        screen = GameObject.FindGameObjectWithTag("MoveScreen");
+        GameObject.FindGameObjectWithTag("MoveScreen").SetActive(false);
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+
+
+        StartCoroutine(WaitASecond());
+
 
         //songSelectionManager = FindAnyObjectByType<SongSelectionManager>().gameObject;
         //dripStore = GameObject.FindAnyObjectByType<DripStoreManager>().gameObject;

@@ -7049,7 +7049,7 @@ PrefabInstance:
     - target: {fileID: 1475614723580631873, guid: 019fc52fc2069e64d9f40a7a66b855b2,
         type: 3}
       propertyPath: nekoins
-      value: 1000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1475614723580631873, guid: 019fc52fc2069e64d9f40a7a66b855b2,
         type: 3}

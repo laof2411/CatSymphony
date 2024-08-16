@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
             {
 
                 levelEndManager.EndLevelPublicMethod();
+                GameManager.Instance.PauseGame();
 
             }
 
